@@ -1,0 +1,52 @@
+:root{
+    /*Color set 1 is used in 'header' tag*/
+    --bColor1: #6b705c; /*background color 1*/
+    --cColor1: #ddbea9; /*content color 1*/
+    /*Color set 2 is used in 'body' tag*/
+    --bColor2: #a5a58d;
+    --cColor2: #ffe8d6;
+
+    --hoverColor: #b7b7a4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    background-color: var(--bColor2);
+    color: var(--cColor2);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: var(--bColor1);
+    color: var(--cColor1);
+    
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    min-width: 300 px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--cColor1);
+    font-weight: bold;
+}
+
+nav a:hover{
+    color:var(--hoverColor);
+}
+
+@media screen and (max-width: 768px) {
+    header,
+    main {
+      flex-direction: column;
+    }
+  }
