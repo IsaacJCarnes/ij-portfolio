@@ -1,20 +1,31 @@
 :root{
     /*Color set 1 is used in 'header' tag*/
-    --bColor1: #6b705c; /*background color 1*/
-    --cColor1: #ddbea9; /*content color 1*/
+    --backColor1: #6b705c; /*background color 1*/
+    --contColor1: #ddbea9; /*content color 1*/
     /*Color set 2 is used in 'body' tag*/
-    --bColor2: #a5a58d;
-    --cColor2: #ffe8d6;
+    --backColor2: #a5a58d;
+    --contColor2: #ffe8d6;
 
     --hoverColor: #b7b7a4;
     --complColor: #cb997e;
+
+    --color1: #f8f9fa;
+    --color2: #e9ecef;
+    --color3: #dee2e6;
+    --color4: #ced4da;/*Body background Color*/
+    --color5: #adb5bd;/*Header Background Color*/
+    --color6: #6c757d;
+    --color7: #495057;/*Header Hover Color*/
+    --color8: #343a40;
+    --color9: #212529; /*Header Content Color*/
+
 }
 
 body {
     display: flex;
     flex-direction: column;
     line-height: 1.3;
-    background-color: var(--bColor2);
+    background-color: var(--color4);
 }
 
 header {
@@ -22,8 +33,8 @@ header {
     justify-content: space-around;
     align-items: center;
     padding-left: 25%;
-    background-color: var(--bColor1);
-    color: var(--cColor1);
+    background-color: var(--color5);
+    color: var(--color9);
     
 }
 
@@ -43,7 +54,7 @@ nav a{
 }
 
 nav a:hover{
-    color:var(--hoverColor);
+    color:var(--color7);
 }
 
 header h1{
@@ -76,21 +87,68 @@ body content{
     margin: 0.5%;
 }
 
-content div{
-    position: relative;
-    right: 5%;
-}
-
 content aside{
     display: flex;
     justify-content: center;
     border-left: 2px solid;
     width: 20%;
-    color: var(--cColor2);
+    color: var(--color8);
 }
 
 .contentArea{
-    color: var(--cColor2);
+
+    position:relative;
+    right: 5%;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    color: var(--color8);
+
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--color2);
+    padding:0.5%;
+
+    width: 60%;
+    min-height:40px;
+}
+
+.showcaseArea{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 40%;
+}
+
+.hoveredContent{
+    border-style: solid;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.rowContent{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.showcaseBox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 160px;
+    width: 160px;
+    border-style: solid;
+    border-color: var(--color2);
+    margin:1%;
+}
+
+.showcaseBox img{
+    width: 160px;
+    height:160px;
 }
 
 @media screen and (max-width: 768px) {
