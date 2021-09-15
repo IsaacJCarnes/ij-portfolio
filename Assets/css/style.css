@@ -1,16 +1,6 @@
 :root{
-    /*Color set 1 is used in 'header' tag*/
-    --backColor1: #6b705c; /*background color 1*/
-    --contColor1: #ddbea9; /*content color 1*/
-    /*Color set 2 is used in 'body' tag*/
-    --backColor2: #a5a58d;
-    --contColor2: #ffe8d6;
-
-    --hoverColor: #b7b7a4;
-    --complColor: #cb997e;
-
     --color1: #f8f9fa;
-    --color2: #e9ecef;
+    --color2: #e9ecef;/*Border Color*/
     --color3: #dee2e6;
     --color4: #ced4da;/*Body background Color*/
     --color5: #adb5bd;/*Header Background Color*/
@@ -18,7 +8,6 @@
     --color7: #495057;/*Header Hover Color*/
     --color8: #343a40;
     --color9: #212529; /*Header Content Color*/
-
 }
 
 body {
@@ -123,12 +112,6 @@ content aside{
     height: 40%;
 }
 
-.hoveredContent{
-    border-style: solid;
-    min-width: 40px;
-    min-height: 40px;
-}
-
 .rowContent{
     display:flex;
     flex-direction: row;
@@ -144,6 +127,7 @@ content aside{
     border-style: solid;
     border-color: var(--color2);
     margin:1%;
+    background-clip: content-box;
 }
 
 .showcaseBox img{
