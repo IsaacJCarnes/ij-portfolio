@@ -15,11 +15,23 @@ const projects = [
     "Scaredy Cat on Scratch"
   ),
   new Project(
-    "Placeholder",
-    "",
-    "https://via.placeholder.com/160",
-    "Placeholder Image"
+    "Maze Runner",
+    "https://github.com/IsaacJCarnes/MazeGen",
+    "./Assets/images/mazeGen.PNG",
+    "The Maze Runner"
   ),
+  new Project(
+    "Weather Dashboard",
+    "https://github.com/IsaacJCarnes/weather-dash-ij",
+    "./Assets/images/weatherDash.PNG",
+    "Weather Dashboard"
+  ),
+  new Project(
+    "Work Calender",
+    "https://github.com/IsaacJCarnes/work-calender-ij",
+    "./Assets/images/workDay.PNG",
+    "Work Day Scheduler"
+  )
 ];
 
 function fillShowcase(){
