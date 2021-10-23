@@ -105,11 +105,12 @@ content aside{
     min-height:40px;
 }
 
-.showcaseArea{
+#showcaseArea{
     display: flex;
     flex-direction: column;
     width: 70%;
     height: 40%;
+    overflow: hidden;
 }
 
 .rowContent{
@@ -119,9 +120,13 @@ content aside{
 }
 
 .showcaseBox{
-    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+}
+
+.showcaseBox a{
+    display: flex;
+    justify-content: left;
     height: 160px;
     width: 160px;
     border-style: solid;
@@ -130,7 +135,7 @@ content aside{
     background-clip: content-box;
 }
 
-.showcaseBox img{
+.showcaseBox a img{
     width: 160px;
     height:160px;
 }
