@@ -32,10 +32,12 @@
 
         <content class="d-flex" id="work">
             <section class="d-flex flex-column align-items-center" style="width: 80%">
-                <section id="showcaseArea">
+                <section id="showcaseArea" onclick="showcaseSelect(event)">
                 </section>
 
-                <section id="highlight"></section>
+                <section class="d-flex flex-column align-items-center" id="highlight" onclick="takeToProject()">
+                    <h3 style="text-align: center;">Click a project from the showcase to view it</h3>
+                </section>
             </section>
 
             <aside>

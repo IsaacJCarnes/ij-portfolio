@@ -138,7 +138,10 @@ content aside{
     border-color: var(--color2);
 }
 
-#highlight
+#highlight:hover{
+    border-style:solid;
+    background-clip: content-box;
+}
 
 @media screen and (max-width: 768px) {
     header,
