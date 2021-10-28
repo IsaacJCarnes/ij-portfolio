@@ -12,19 +12,19 @@ const projects = [
   new Project(
     "Maze Runner",
     "https://github.com/IsaacJCarnes/MazeGen",
-    "./Assets/images/mazeGen.PNG",
+    "./Assets/images/mazeGen.png",
     "The Maze Runner"
   ),
   new Project(
     "Weather Dashboard",
     "https://github.com/IsaacJCarnes/weather-dash-ij",
-    "./Assets/images/weatherDash.PNG",
+    "./Assets/images/weatherDash.png",
     "Weather Dashboard"
   ),
   new Project(
     "Work Calender",
     "https://github.com/IsaacJCarnes/work-calender-ij",
-    "./Assets/images/workDay.PNG",
+    "./Assets/images/workDay.png",
     "Work Day Scheduler"
   ), new Project(
     "Scaredy Cat Scratch Game",
