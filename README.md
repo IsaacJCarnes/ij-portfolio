@@ -8,3 +8,5 @@ Here is a screenshot of the website
 ![Alt text](https://github.com/IsaacJCarnes/ij-portfolio/blob/main/Assets/images/webScreenshot.png "Website Screenshot")
 
 Author: Isaac Joshua Carnes
+
+Needs: links to github and linkedin
