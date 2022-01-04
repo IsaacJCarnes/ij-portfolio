@@ -81,41 +81,13 @@ function fillShowcase(){
     });
 }
 
-const highlightPhotoSize = 240
-function selectProject(projectNum){
-    highlight.innerHTML = "";
-    selectedProject = projects[projectNum];
-
-    let heading = document.createElement("h2");
-    heading.textContent = selectedProject.name;
-    heading.setAttribute("class", "text-light");
-    heading.setAttribute("style", "text-align: center;");
-    highlight.appendChild(heading);
-    
-    let picHolder = document.createElement("div");
-    picHolder.setAttribute("class", "border")
-    picHolder.setAttribute("style", "width:" + highlightPhotoSize + "px; height:" + highlightPhotoSize +"px; margin:10px;")
-
-    let showcaseLink = document.createElement("a");
-    //showcaseLink.setAttribute("href", selectedProject.link);
-
-    let showcaseImg = document.createElement("img");
-    showcaseImg.setAttribute("style", "width:" + (highlightPhotoSize-3) + "px; height:" + (highlightPhotoSize-3) +"px;")
-    showcaseImg.setAttribute("src", selectedProject.photo);
-    showcaseImg.setAttribute("alt", selectedProject.alt);
-    
-    highlight.appendChild(picHolder);
-    picHolder.appendChild(showcaseLink);
-    showcaseLink.appendChild(showcaseImg);
-}
-
 function showcaseSelect(event){
   let elem = event.target;
   if(elem.nodeName == "IMG"){
     //selectProject(elem.dataset.projectNum);
     showModal(elem.dataset.projectNum);
   } else {
-    //document.getElementById('myModal').modal('hide');
+    $('#myModal').modal('hide');
   }
 }
 
