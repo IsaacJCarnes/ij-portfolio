@@ -12,34 +12,34 @@ var Project = function (name, deployedLink, projectLink, photo, altTxt) {
 const projects = [
   new Project(
     "Maze Runner",
-    "",
+    "https://isaacjcarnes.github.io/MazeGen/",
     "https://github.com/IsaacJCarnes/MazeGen",
     "./Assets/images/mazeGen.png",
     "The Maze Runner"
   ),
   new Project(
     "The Dog Endorsement Website",
-    "",
+    "https://dog-endorsement-website.herokuapp.com/",
     "https://github.com/IsaacJCarnes/DogEndorsementWebsite",
     "./Assets/images/endorsementWebsite.png",
     "The Dog Endorsement Website"
   ),
   new Project(
     "Weather Dashboard",
-    "",
+    "https://isaacjcarnes.github.io/weather-dash-ij/",
     "https://github.com/IsaacJCarnes/weather-dash-ij",
     "./Assets/images/weatherDash.png",
     "Weather Dashboard"
   ),
   new Project(
     "Work Calender",
-    "",
+    "https://isaacjcarnes.github.io/work-calender-ij/",
     "https://github.com/IsaacJCarnes/work-calender-ij",
     "./Assets/images/workDay.png",
     "Work Day Scheduler"
   ), new Project(
     "Scaredy Cat Scratch Game",
-    "",
+    "https://scratch.mit.edu/projects/560457275/fullscreen/",
     "https://scratch.mit.edu/projects/560457275/",
     "./Assets/images/scaredyCat.PNG",
     "Scaredy Cat on Scratch"
@@ -121,7 +121,7 @@ function showcaseSelect(event){
 
 function takeToProject(){
     if(selectedProject != null){
-        window.open(selectedProject.link);
+      window.open(selectedProject.link);
     }
 }
 fillShowcase();
