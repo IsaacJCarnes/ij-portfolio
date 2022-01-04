@@ -109,17 +109,17 @@ content aside{
     display: flex;
     position: relative;
     /*right: 15%;*/
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content:space-evenly;
     align-content: space-around;
     width: 40%;
-    height: 170px;
+    height: 300px;
     overflow: hidden;
 }
 
 .showcaseBox{
-    height: 60px;
-    width: 60px;
+    height: 120px;
+    width: 120px;
     border-style: solid;
     border-color: var(--color2);
     margin:1%;
@@ -127,20 +127,8 @@ content aside{
 }
 
 .showcaseBox a img{
-    width: 58px;
-    height:58px;
-}
-
-#highlight{
-    border-style: dotted;
-    width: 380px;
-    height: 380px;
-    border-color: var(--color2);
-}
-
-#highlight:hover{
-    border-style:solid;
-    background-clip: content-box;
+    width: 118px;
+    height:118px;
 }
 
 @media screen and (max-width: 768px) {
