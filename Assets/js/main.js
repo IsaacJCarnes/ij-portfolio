@@ -16,6 +16,12 @@ const projects = [
     "The Maze Runner"
   ),
   new Project(
+    "The Dog Endorsement Website",
+    "https://github.com/IsaacJCarnes/DogEndorsementWebsite",
+    "./Assets/images/endorsementWebsite.png",
+    "The Dog Endorsement Website"
+  ),
+  new Project(
     "Weather Dashboard",
     "https://github.com/IsaacJCarnes/weather-dash-ij",
     "./Assets/images/weatherDash.png",
@@ -59,6 +65,7 @@ function selectProject(projectNum){
 
     let heading = document.createElement("h2");
     heading.textContent = selectedProject.name;
+    heading.setAttribute("class", "text-light");
     heading.setAttribute("style", "text-align: center;");
     highlight.appendChild(heading);
     

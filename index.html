@@ -9,23 +9,23 @@
         <link rel="stylesheet" href="./Assets/css/style.css" />
     </head>
 
-    <body>
-        <header>
-            <h1>Isaac Joshua's Portfolio</h1>
+    <body class="bg-dark">
+        <header class="bg-secondary">
+            <h1 class="text-light">Isaac Joshua's Portfolio</h1>
             <nav>
                 <ul>
-                    <li><a href="#aboutMe">About Me</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contactMe">Contact Me</a></li>
-                    <li><a href="#">Resume</a></li>
+                    <li><a href="#aboutMe" class="text-light">About Me</a></li>
+                    <li><a href="#work" class="text-light">Work</a></li>
+                    <li><a href="#contactMe" class="text-light">Contact Me</a></li>
+                    <li><a href="#" class="text-light">Resume</a></li>
                 </ul>
             </nav>
         </header>
 
         <content class="aboutMe" id="aboutMe">
-            <div class="contentArea">I am a front-end developer from Pittburgh Pennyslvania. I enjoy 3D modeling and coding as it relates to art.</div>
+            <div class="contentArea text-light bg-secondary">I am a full-stack developer from Pittburgh, Pennyslvania. I enjoy 3D modeling and coding as it relates to art.</div>
 
-            <aside>
+            <aside class="text-light">
                 <h2>About Me</h2>
             </aside>
         </content>
@@ -35,22 +35,22 @@
                 <section id="showcaseArea" onclick="showcaseSelect(event)">
                 </section>
 
-                <section class="d-flex flex-column align-items-center" id="highlight" onclick="takeToProject()">
-                    <h3 style="text-align: center;">Click a project from the showcase to view it</h3>
+                <section class="d-flex bg-secondary flex-column align-items-center" id="highlight" onclick="takeToProject()">
+                    <h3 class="text-light" style="text-align: center;">Click a project from the showcase to view it</h3>
                 </section>
             </section>
 
-            <aside>
+            <aside class="text-light">
                 <h2>Work</h2>
             </aside>
         </content>
 
-        <content class="contactMe" id="contactMe">
-            <section class= "contentArea">
+        <content class="contactMe d-flex" id="contactMe">
+            <section class="contentArea bg-secondary text-light">
                 <div>Email: *********@gmail.com <br>Phone: ###-###-####</div>
-                <div style="margin-left:20px"><a href = "https://github.com/IsaacJCarnes">Github</a></div>
+                <div style="margin-left:20px"><a class="text-light" href = "https://github.com/IsaacJCarnes">Github</a></div>
             </section>
-            <aside>
+            <aside class="text-light">
                 <h2>Contact Me</h2>
             </aside>
         </content>
