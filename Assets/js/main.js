@@ -41,7 +41,7 @@ const projects = [
     "Scaredy Cat Scratch Game",
     "https://scratch.mit.edu/projects/560457275/fullscreen/",
     "https://scratch.mit.edu/projects/560457275/",
-    "./Assets/images/scaredyCat.PNG",
+    "./Assets/images/scaredyCat.png",
     "Scaredy Cat on Scratch"
   ),
 ];
