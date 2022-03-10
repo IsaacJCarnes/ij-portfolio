@@ -23,6 +23,7 @@ function App() {
           <Route exact path="/portfolio" element={<Portfolio />} />
           <Route exact path="/contactMe" element={<ContactMe />} />
           <Route exact path="/resume" element={<Resume />} />
+          <Route exact path="/*" element={<AboutMe />} />
         </Routes>
       </div>
       <Footer />
