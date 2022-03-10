@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ij-portfolio/static/css/main.72d3ba5b.css",
+    "main.js": "/ij-portfolio/static/js/main.dc5d498e.js",
+    "static/js/787.d6510390.chunk.js": "/ij-portfolio/static/js/787.d6510390.chunk.js",
+    "static/media/me.jpg": "/ij-portfolio/static/media/me.1cfc167428f3946259e7.jpg",
+    "static/media/endorsementWebsite.png": "/ij-portfolio/static/media/endorsementWebsite.f456c2e1ea11a8c40546.png",
+    "static/media/mazeGen.png": "/ij-portfolio/static/media/mazeGen.130309df810d1b642baf.png",
+    "static/media/cardGraphix.png": "/ij-portfolio/static/media/cardGraphix.c47bcfcfb1d82fc4e18c.png",
+    "static/media/resumeCarnes.pdf": "/ij-portfolio/static/media/resumeCarnes.733de4d8875160ec0397.pdf",
+    "static/media/scaredyCat.png": "/ij-portfolio/static/media/scaredyCat.8d18efae11d25a9bf29c.png",
+    "static/media/weatherDash.png": "/ij-portfolio/static/media/weatherDash.3fad1b0be00f976f658e.png",
+    "index.html": "/ij-portfolio/index.html",
+    "main.72d3ba5b.css.map": "/ij-portfolio/static/css/main.72d3ba5b.css.map",
+    "main.dc5d498e.js.map": "/ij-portfolio/static/js/main.dc5d498e.js.map",
+    "787.d6510390.chunk.js.map": "/ij-portfolio/static/js/787.d6510390.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72d3ba5b.css",
+    "static/js/main.dc5d498e.js"
+  ]
+}
