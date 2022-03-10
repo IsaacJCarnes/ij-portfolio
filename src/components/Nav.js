@@ -2,16 +2,17 @@ import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 
 export default function Nav(){
+    const basePath = "ij-portfolio/";
     function navbarItem(name, contentLink){  //Name and link for state variable
         this.name = name;
         this.contentLink = contentLink;
     };
 
     const navItems = [ //Items and their value
-     new navbarItem("About Me", "ij-portfolio"),
-     new navbarItem("Portfolio", "portfolio"),
-     new navbarItem("Contact Me", "contactMe"), 
-     new navbarItem("Resume", "resume")
+     new navbarItem("About Me", basePath),
+     new navbarItem("Portfolio", basePath + "portfolio"),
+     new navbarItem("Contact Me", basePath + "contactMe"), 
+     new navbarItem("Resume", basePath + "resume")
     ];
 
     const location = useLocation();

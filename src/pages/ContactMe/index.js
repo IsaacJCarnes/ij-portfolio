@@ -6,7 +6,7 @@ import { useForm, ValidationError } from '@formspree/react';
 export default function Contact(){
     const [state, handleSubmit] = useForm("mknybvql");
     if (state.succeeded) {
-        window.location.href = "/react-portfolio-ij";
+        window.location.href = "/ij-portfolio/";
     }
 
     return (
