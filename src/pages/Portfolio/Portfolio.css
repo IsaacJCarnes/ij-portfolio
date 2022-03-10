@@ -1,0 +1,107 @@
+.PortfolioContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 65vh;
+}
+
+.SelectorContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 85vw;
+  height: 5vh;
+}
+  
+.SelectorBorder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1vw;
+  width: auto;
+  height: 5vh;
+  overflow: hidden;
+  border: 1px black solid;
+  border-radius: 30%;
+  box-shadow: 1 1;
+}
+
+.SelectorImg{
+  height: 5vh;
+}
+  
+.ProjectDisplay{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 95%;
+  justify-content: center;
+}
+
+.ProjectDisplayName{
+  font-size: 7vmin;
+  color: #FFF8F0;
+}
+
+.ProjectImgContainer{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80vw;
+  height: auto;
+  overflow: hidden;
+  margin-top: 2vh;
+}
+
+.ProjectImgContainer img{
+  width: 80vw;
+  height: auto;
+}
+
+.ButtonContainer button{
+  width:max-content;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  border-radius: 50%;
+  background-color: #2A0C4E;
+  color: #FFF8F0;
+}
+
+@media only screen and (min-width: 891px) { /*Big Screens*/
+    .PortfolioContainer{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .SelectorContainer{
+        flex-direction: column;
+        width: 12vw;
+        height: 65vh; /*60*/
+    }
+
+    .SelectorBorder{
+      width: 9vw;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .SelectorImg{
+      width: 11vw;
+      height: auto;
+      max-height: 12vh;
+    }
+
+    .ProjectDisplay{
+      height: 64vh;
+    }
+
+    .ProjectImgContainer{
+      width: 60vw;
+    }
+
+    .ProjectDisplayName{
+      font-size: 40px;
+    }
+}

@@ -1,0 +1,18 @@
+.FooterContainer{
+    height: fit-content;
+    width: 85vw;
+    height: 7vh;
+    margin: 2;
+    background-color: #51355A;
+}
+
+.FooterContainer button{
+    width: 45px;
+    height: 45px;
+    border-style: none;
+    background-color: unset;
+}
+
+.FooterContainer button img{
+    color: '';
+}

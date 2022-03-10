@@ -1,0 +1,27 @@
+.AboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 65vh;
+  margin: 5px;
+}
+
+.AboutContainer h3 {
+    font-size: 7vmin;
+  color: #fff8f0;
+}
+
+.AboutContainer p {
+  color: #fff8f0;
+  font-size: 4vmin;
+}
+
+@media only screen and (min-width: 810px) { /*Big Screens*/
+    .AboutContainer h3 {
+        font-size: 5vmin;
+    }
+    .AboutContainer p{
+        font-size: 2.7vmin;
+      }
+}

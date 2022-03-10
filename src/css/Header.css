@@ -1,0 +1,73 @@
+/*Includes Header and Nav Data*/
+.HeaderArea{
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    padding: 0;
+    background-color: #51355A;
+  }
+  
+  .HeaderName{
+    margin-top: 0%;
+    margin-bottom: 5%;
+    font-size: 25px;
+    color: #FFF8F0;
+  }
+  
+  .NavBar{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content:space-evenly;
+  }
+  
+  .NavBar a{
+    margin-left: .8vw;
+    padding-right: .4vw;
+    margin-top: 0.2vh;
+    text-align: right;
+    font-size: 1.7vmax;
+    font-weight: 600;
+    text-decoration: none;
+    border-right: solid 1px #FFF8F0;
+  }
+
+  .TextNormal{
+    color: #FFF8F0;
+  }
+
+  .TextNormal:hover{
+    color: #FFF8F0;
+  }
+
+  .TextSelected{
+    color: #2A0C4E;
+  }
+
+  .TextSelected:hover{
+    color: #2A0C4E;
+  }
+  
+  @media only screen and (min-width: 891px) { /*Big Screens*/
+    .HeaderArea{
+      flex-direction: row;
+    }
+  
+    .HeaderName{
+      font-size:40pt;
+    }
+  
+    .NavBar{
+      position: absolute;
+      top: 1.6vmin;
+      right: 7.5vw;
+      flex-direction: column;
+    }
+  
+    .NavBar a{
+      font-size: 1.2vmax;
+      margin-top: 0;
+      border-right: none 1px #FFF8F0;
+    }
+  }

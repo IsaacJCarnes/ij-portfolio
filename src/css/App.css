@@ -1,0 +1,28 @@
+/* Current Color Pallette **MAY NEED WORK**
+Page Background: #2A0C4E
+Component Background: #51355A
+*/
+
+.App {
+  text-align: center;
+}
+
+.FullPage {
+  background-color: #2A0C4E;
+}
+
+.ContentDiv{
+  width: 85vw;
+  height: 75vh;
+  background-color: #51355A;
+}
+
+.ResumeText{
+  color: #FFF8F0;
+}
+
+@media only screen and (min-width: 810px) { /*Big Screens*/
+  .ContentDiv{
+    height: 78vh; /*68*/
+  }
+}

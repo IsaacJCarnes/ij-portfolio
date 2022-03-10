@@ -1,0 +1,51 @@
+.ContactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95vw;
+  height: auto;
+  max-height: 60vh;
+  margin: 5px;
+}
+
+.ContactContainer h1 {
+  color: #fff8f0;
+  font-size: 7vmin;
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContactForm div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.ContactForm label {
+  color: #fff8f0;
+}
+
+.ContactForm input {
+  width: 60vw;
+}
+
+.ContactForm textarea {
+  width: 60vw;
+  max-height: 12vh;
+}
+
+@media only screen and (min-width: 810px) { /*Big Screens*/ 
+    .ContactForm input{
+      width: 20vw;
+    }
+    
+    .ContactForm textarea{
+      width: 20vw;
+    }
+  }
