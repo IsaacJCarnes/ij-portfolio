@@ -14,6 +14,14 @@
   font-size: 7vmin;
 }
 
+.ContactContainer p {
+  color: #fff8f0;
+  position: fixed;
+  right: 14%;
+  bottom: 12%;
+  font-size: 2vmin;
+}
+
 .ContactForm {
   display: flex;
   flex-direction: column;

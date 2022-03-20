@@ -11,7 +11,7 @@ export default function Footer(){
 
     const openLinkedin = (e) => { //Opens my linkedIn
         e.preventDefault();
-        window.open('https://www.linkedin.com/in/isaac-carnes-39122a219/');
+        window.open('https://www.linkedin.com/in/isaac-j-carnes/');
     };
 
     return(

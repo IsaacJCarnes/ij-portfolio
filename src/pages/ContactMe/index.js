@@ -34,6 +34,7 @@ export default function Contact(){
 
             <button className="btn btn-block btn-info" disabled={state.submitting}>Submit</button>
             </form>
+            <p>Or email me directly at <a href="mailto:isaacjdeveloper@gmail.com">IsaacJDeveloper@gmail.com</a></p>
         </section>
       );
 }
