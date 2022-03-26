@@ -2,9 +2,10 @@
 .HeaderArea{
     display: flex;
     flex-direction: column;
-    width: 85vw;
+    width: 95vw;
+    height: 15vh;
     padding: 0;
-    background-color: #51355A;
+    border-bottom: 1px dotted white;
   }
   
   .HeaderName{
@@ -38,15 +39,15 @@
   }
 
   .TextNormal:hover{
-    color: #FFF8F0;
+    color: #e9e1d8;
   }
 
   .TextSelected{
-    color: #2A0C4E;
+    color: #dbd35a;
   }
 
   .TextSelected:hover{
-    color: #2A0C4E;
+    color: #c5bd52;
   }
   
   @media only screen and (min-width: 891px) { /*Big Screens*/

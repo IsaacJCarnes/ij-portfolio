@@ -2,9 +2,14 @@
 Page Background: #2A0C4E
 Component Background: #51355A
 */
+@font-face {
+  font-family: CrtFont;
+  src: url(../assets/Glass_TTY_VT220.ttf);
+}
+
 
 *{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: CrtFont, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App {
@@ -12,21 +17,14 @@ Component Background: #51355A
 }
 
 .FullPage {
-  background-color: #2A0C4E;
+  background-color: #1d1d1d;
 }
 
 .ContentDiv{
-  width: 85vw;
+  width: 95vw;
   height: 75vh;
-  background-color: #51355A;
 }
 
 .ResumeText{
   color: #FFF8F0;
-}
-
-@media only screen and (min-width: 810px) { /*Big Screens*/
-  .ContentDiv{
-    height: 78vh; /*68*/
-  }
 }
