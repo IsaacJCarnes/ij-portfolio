@@ -15,10 +15,14 @@ export default function Nav(){
      new navbarItem("Resume", basePath + "resume")
     ];
 
-    const location = useLocation();
+    let location = useLocation().pathname;
+    if(location === "/ij-portfolio"){ //Makes nav bar blue when url opens to /ij-portfolio
+        location = "/ij-portfolio/";
+    }
+    console.log(location);
 
     //Creates h4 elements out of navItems that depend on nav state for their text color
-    const navList = navItems.map((item, i) => <Link to={'/' + item.contentLink} className={location.pathname === ("/" + item.contentLink) ? "TextSelected" : "TextNormal"} key={i}>{item.name}</Link>);
+    const navList = navItems.map((item, i) => <Link to={'/' + item.contentLink} className={location === ("/" + item.contentLink) ? "TextSelected" : "TextNormal"} key={i}>{item.name}</Link>);
 
     return (
         <div className="NavBar">
