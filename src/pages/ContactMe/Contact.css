@@ -16,9 +16,9 @@
 
 .ContactContainer p {
   color: #fff8f0;
-  position: fixed;
-  right: 14%;
-  bottom: 12%;
+  position: absolute;
+  right: 9vw;
+  bottom: 12vh;
   font-size: 2vmin;
 }
 

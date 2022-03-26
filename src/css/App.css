@@ -3,6 +3,10 @@ Page Background: #2A0C4E
 Component Background: #51355A
 */
 
+*{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .App {
   text-align: center;
 }
