@@ -8,13 +8,16 @@
 }
 
 .AboutContainer h3 {
-    font-size: 7vmin;
+  font-size: 7vmin;
+  font-family: 'Courier New', Courier, monospace;
   color: #fff8f0;
+  margin-bottom: 2vh;
 }
 
 .AboutContainer p {
   color: #fff8f0;
-  font-size: 4vmin;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3.5vmin;
 }
 
 @media only screen and (min-width: 810px) { /*Big Screens*/

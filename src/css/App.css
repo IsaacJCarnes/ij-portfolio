@@ -28,3 +28,7 @@ Component Background: #51355A
 .ResumeText{
   color: #FFF8F0;
 }
+
+.EasyText{
+  font-family: 'Courier New', Courier, monospace;
+}

@@ -12,14 +12,17 @@
 .ContactContainer h1 {
   color: #fff8f0;
   font-size: 7vmin;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .ContactContainer p {
   color: #fff8f0;
   position: absolute;
-  right: 9vw;
-  bottom: 12vh;
-  font-size: 2vmin;
+  right: 5vw;
+  bottom: 10vh;
+  font-size: 2.5vmin;
+  font-family: 'Courier New', Courier, monospace;
+
 }
 
 .ContactForm {
@@ -37,23 +40,40 @@
 
 .ContactForm label {
   color: #fff8f0;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .ContactForm input {
   width: 60vw;
+  height: 5vh;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .ContactForm textarea {
   width: 60vw;
+  height: 8vh;
   max-height: 12vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ContactForm button {
+  font-family: 'Courier New', Courier, monospace;
+
 }
 
 @media only screen and (min-width: 810px) { /*Big Screens*/ 
+    .ContactForm label{
+      font-size: 3vmin;
+    }
     .ContactForm input{
-      width: 20vw;
+      width: 50vw;
     }
     
     .ContactForm textarea{
-      width: 20vw;
+      width: 50vw;
+    }
+
+    .ContactContainer p {
+      font-size: 2vmin;
     }
   }

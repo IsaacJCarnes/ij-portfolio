@@ -1,74 +1,84 @@
 /*Includes Header and Nav Data*/
-.HeaderArea{
-    display: flex;
+.HeaderArea {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 95vw;
+  height: 15vh;
+  border-bottom: 1px dotted white;
+}
+
+.HeaderName {
+  margin-top: 0%;
+  margin-bottom: 5%;
+  font-size: 25px;
+  color: #fff8f0;
+}
+
+.NavBar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.NavBar a {
+  margin-left: 0.8vw;
+  padding-right: 2vw;
+  margin-top: 0.2vh;
+  text-align: right;
+  font-size: 1.7vmax;
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+}
+.NavBar a:after{
+  position: relative;
+  content:"";
+  width: 1px;
+  height: .5vmax;
+  margin-left: 2vw;
+  border-right: dotted 1px #fff8f0;
+}
+
+.TextNormal {
+  color: #fff8f0;
+}
+
+.TextNormal:hover {
+  color: #e9e1d8;
+}
+
+.TextSelected {
+  color: #dbd35a;
+}
+
+.TextSelected:hover {
+  color: #c5bd52;
+}
+
+@media only screen and (min-width: 891px) { /*Big Screens*/
+  .HeaderName {
+    font-size: 40pt;
+  }
+
+  .NavBar {
+    position: absolute;
+    height: 14vh;
+    top: 1vmin;
+    right: 2.5vw;
     flex-direction: column;
-    width: 95vw;
-    height: 15vh;
-    padding: 0;
-    border-bottom: 1px dotted white;
-  }
-  
-  .HeaderName{
-    margin-top: 0%;
-    margin-bottom: 5%;
-    font-size: 25px;
-    color: #FFF8F0;
-  }
-  
-  .NavBar{
-    position: relative;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content:space-evenly;
-  }
-  
-  .NavBar a{
-    margin-left: .8vw;
-    padding-right: .4vw;
-    margin-top: 0.2vh;
-    text-align: right;
-    font-size: 1.7vmax;
-    font-weight: 600;
-    text-decoration: none;
-    border-right: solid 1px #FFF8F0;
   }
 
-  .TextNormal{
-    color: #FFF8F0;
+  .NavBar a {
+    font-size: 1.2vmax;
+    margin-top: 0;
+    border-right: none 1px #fff8f0;
   }
 
-  .TextNormal:hover{
-    color: #e9e1d8;
+  .NavBar a:after{
+    border-right: none;
   }
-
-  .TextSelected{
-    color: #dbd35a;
-  }
-
-  .TextSelected:hover{
-    color: #c5bd52;
-  }
-  
-  @media only screen and (min-width: 891px) { /*Big Screens*/
-    .HeaderArea{
-      flex-direction: row;
-    }
-  
-    .HeaderName{
-      font-size:40pt;
-    }
-  
-    .NavBar{
-      position: absolute;
-      top: 1.6vmin;
-      right: 7.5vw;
-      flex-direction: column;
-    }
-  
-    .NavBar a{
-      font-size: 1.2vmax;
-      margin-top: 0;
-      border-right: none 1px #FFF8F0;
-    }
-  }
+}

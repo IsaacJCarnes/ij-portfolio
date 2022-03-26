@@ -6,9 +6,8 @@ const AboutMe = () =>{
     return(
         <div className="AboutContainer">
             <h3>About Me</h3>
-            <br/>
-            <p className="text-center">Hi I'm Isaac Joshua, a fullstack developer from Pittsburgh, Pennsylvania. I enjoy 3d modeling, sound design and coding as it relates to art. My interest in technology started at a young age where I spent several summers in robotics camps during elementary school and later joined the lego robotics team in my middle school. Although originally I had my sights set on becoming a robotic engineer, I started coding in 10th grade and quickly realized that was my true passion.</p>
-            <div className='w-50 h-25 d-flex overflow-hidden justify-content-center align-items-center'><img width='150px' alt='Isaac Joshua' src={ProfilePic}></img></div>
+            <div className='w-50 h-25 d-flex overflow-hidden justify-content-center align-items-center'><img width='50vw' alt='Isaac Joshua' src={ProfilePic}></img></div>
+            <p className="text-center">Hi I'm Isaac Joshua, a fullstack developer from Pittsburgh, Pennsylvania. My interests include but are not limited to, 3D modeling, sound design and coding as it relates to art. My interest in technology started at a young age. I spent several summers in elementary school in several robotics camps, and in middle school joined my school's Lego robotics team. Although originally I had planned to become a robtic engineer, in 10th grade I started to learn and expirement with coding and quickly realized that was my true passion in life.</p>
         </div>
     )
 }
