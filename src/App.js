@@ -2,7 +2,7 @@ import './css/App.css';
 
 import {
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
 
 import AboutMe from "./pages/AboutMe";
