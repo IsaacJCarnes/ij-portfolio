@@ -25,20 +25,23 @@
 }
 
 .NavBar a {
+  display: flex;
+  align-items: center;
   margin-left: 0.8vw;
   padding-right: 2vw;
   margin-top: 0.2vh;
   text-align: right;
-  font-size: 1.7vmax;
+  font-size: 1.6vmax;
   font-weight: 600;
   text-decoration: none;
   width: fit-content;
+  font-family: 'Arial Narrow', Arial, sans-serif;
 }
 .NavBar a:after{
   position: relative;
   content:"";
   width: 1px;
-  height: .5vmax;
+  height: 1.3vmax;
   margin-left: 2vw;
   border-right: dotted 1px #fff8f0;
 }

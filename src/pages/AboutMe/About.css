@@ -18,7 +18,8 @@
   display: inline-block;
   position: absolute;
   content: "";
-  right: 18vw;
+  right: 17vw;
+  top: 17vh;
   width: 14vmin;
   height: 11vmin;
   background: url('../../assets/me.jpg') no-repeat;
@@ -28,17 +29,25 @@
   border: 1px white solid;
 }
 
+
 .AboutContainer p {
   color: #fff8f0;
   font-family: 'Courier New', Courier, monospace;
   font-size: 3.5vmin;
 }
 
+.lineBrk {
+  height: 1vh;
+}
+
 @media only screen and (min-width: 810px) { /*Big Screens*/
     .AboutContainer h3 {
         font-size: 5vmin;
     }
+    .AboutContainer h3:after {
+      top: 16.5vh;
+    }
     .AboutContainer p{
         font-size: 2.7vmin;
-      }
+    }
 }
