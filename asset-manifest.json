@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/ij-portfolio/static/css/main.172e430e.css",
-    "main.js": "/ij-portfolio/static/js/main.0a5e8ba1.js",
+    "main.css": "/ij-portfolio/static/css/main.90b0362b.css",
+    "main.js": "/ij-portfolio/static/js/main.3b421a68.js",
     "static/js/787.d6510390.chunk.js": "/ij-portfolio/static/js/787.d6510390.chunk.js",
-    "static/media/me.jpg": "/ij-portfolio/static/media/me.1cfc167428f3946259e7.jpg",
     "static/media/endorsementWebsite.png": "/ij-portfolio/static/media/endorsementWebsite.f456c2e1ea11a8c40546.png",
+    "static/media/me.jpg": "/ij-portfolio/static/media/me.fd52b179bf51f86f9ac3.jpg",
     "static/media/mazeGen.png": "/ij-portfolio/static/media/mazeGen.130309df810d1b642baf.png",
+    "static/media/Glass_TTY_VT220.ttf": "/ij-portfolio/static/media/Glass_TTY_VT220.60f65041b7228cef8385.ttf",
     "static/media/cardGraphix.png": "/ij-portfolio/static/media/cardGraphix.c47bcfcfb1d82fc4e18c.png",
-    "static/media/resumeCarnes.pdf": "/ij-portfolio/static/media/resumeCarnes.733de4d8875160ec0397.pdf",
+    "static/media/resumeCarnes.pdf": "/ij-portfolio/static/media/resumeCarnes.3af06e8750428bdf39a9.pdf",
     "static/media/scaredyCat.png": "/ij-portfolio/static/media/scaredyCat.8d18efae11d25a9bf29c.png",
     "static/media/weatherDash.png": "/ij-portfolio/static/media/weatherDash.3fad1b0be00f976f658e.png",
     "index.html": "/ij-portfolio/index.html",
-    "main.172e430e.css.map": "/ij-portfolio/static/css/main.172e430e.css.map",
-    "main.0a5e8ba1.js.map": "/ij-portfolio/static/js/main.0a5e8ba1.js.map",
+    "main.90b0362b.css.map": "/ij-portfolio/static/css/main.90b0362b.css.map",
+    "main.3b421a68.js.map": "/ij-portfolio/static/js/main.3b421a68.js.map",
     "787.d6510390.chunk.js.map": "/ij-portfolio/static/js/787.d6510390.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.172e430e.css",
-    "static/js/main.0a5e8ba1.js"
+    "static/css/main.90b0362b.css",
+    "static/js/main.3b421a68.js"
   ]
 }
