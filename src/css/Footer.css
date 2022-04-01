@@ -1,9 +1,9 @@
 .FooterContainer{
     height: fit-content;
-    width: 85vw;
-    height: 7vh;
+    width: 95vw;
+    height: 10vh;
     margin: 2;
-    background-color: #51355A;
+    border-top: 1px dotted white;
 }
 
 .FooterContainer button{

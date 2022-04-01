@@ -4,8 +4,8 @@ export default function WildPage() {
     }
   return (
     <div className="d-flex align-items-center flex-column">
-      <div className="text-white">Hello! There's nothing of interest here.</div>
-      <button type="button" class="btn btn-dark" onClick={ToHome}>To About Me</button>
+      <div className="text-white EasyText">Hello! There's nothing of interest here.</div>
+      <button type="button" class="btn btn-dark EasyText" onClick={ToHome}>To About Me</button>
     </div>
   );
 }

@@ -19,7 +19,6 @@ export default function Nav(){
     if(location === "/ij-portfolio"){ //Makes nav bar blue when url opens to /ij-portfolio
         location = "/ij-portfolio/";
     }
-    console.log(location);
 
     //Creates h4 elements out of navItems that depend on nav state for their text color
     const navList = navItems.map((item, i) => <Link to={'/' + item.contentLink} className={location === ("/" + item.contentLink) ? "TextSelected" : "TextNormal"} key={i}>{item.name}</Link>);
