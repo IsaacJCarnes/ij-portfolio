@@ -1,4 +1,4 @@
-import './Portfolio.css';
+import "./Portfolio.css";
 
 import React, { useState } from "react";
 
@@ -11,8 +11,8 @@ import {
 } from "../../assets/index.js";
 
 export default function Portfolio() {
-
-  var Project = function (name, deployedLink, projectLink, photo, altTxt) { //Project object
+  var Project = function (name, deployedLink, projectLink, photo, altTxt) {
+    //Project object
     this.name = name;
     this.deployedLink = deployedLink;
     this.projectLink = projectLink;
@@ -20,7 +20,8 @@ export default function Portfolio() {
     this.altTxt = altTxt;
   };
 
-  const projects = [ //Project array
+  const projects = [
+    //Project array
     new Project(
       "Card Graphix",
       "https://card-graphix.herokuapp.com/",
@@ -60,35 +61,91 @@ export default function Portfolio() {
 
   const [selectedProject, selectProject] = useState(0); //State change for selected project element
 
-  const pickProject = (e) => { //get index on chosen image and set selectedProject equal to it
+  const pickProject = (e) => {
+    //get index on chosen image and set selectedProject equal to it
     e.preventDefault();
     if (e.target.nodeName === "IMG") {
       selectProject(e.target.dataset.index);
     }
   };
 
-  let projectList = projects.map((item, i) => ( //Creates clickable images for each project
-    <div
-      className="SelectorBorder"
-      key={i}
-    >
-      <img
-        data-index={i}
-        src={item.photo}
-        alt={item.altTxt}
-        className="SelectorImg"
-      ></img>
-    </div>
-  ));
+  let projectList = projects.map(
+    (
+      item,
+      i //Creates clickable images for each project
+    ) => (
+      <div className="SelectorBorder" key={i}>
+        <img
+          data-index={i}
+          src={item.photo}
+          alt={item.altTxt}
+          className="SelectorImg"
+        ></img>
+      </div>
+    )
+  );
 
-  const openRepositoryLink = (e) => { //Get repository link from selected project
+  const openRepositoryLink = (e) => {
+    //Get repository link from selected project
     e.preventDefault();
     window.open(projects[selectedProject].projectLink);
   };
 
-  const openDeployedLink = (e) => { //Get deployed link from selected project
+  const openDeployedLink = (e) => {
+    //Get deployed link from selected project
     e.preventDefault();
     window.open(projects[selectedProject].deployedLink);
+  };
+
+  /* Code for flipping image to details on click */
+  const [imageShown, setImageShown] = useState(false); //State change for selected project element
+  let midAnim = false;
+  const ContentChange = () => {
+    if(midAnim === false){
+      midAnim = true;
+      let projContainer = document.getElementById("ProjectContentContainer");
+      projContainer.classList.remove("FlipIn");
+      projContainer.classList.add("FlipOut");
+    }
+  };
+
+  const SwapContent = () => {
+    let projImg = document.getElementById("ProjImg");
+    let projDesc = document.getElementById("ProjDesc");
+    if (midAnim) {
+      if (imageShown === true) {
+        projImg.style.display = "hidden";
+        projDesc.style.display = "initial";
+      } else {
+        projImg.style.display = "initial";
+        projDesc.style.display = "hidden";
+      }
+      setImageShown(!imageShown);
+      midAnim = false;
+    }
+    console.log(imageShown);
+    let projContainer = document.getElementById("ProjectContentContainer");
+    projContainer.classList.add("FlipIn");
+  };
+
+  const ProjImg = () => {
+    return (
+      <img
+        id="ProjImg"
+        height="500px"
+        src={projects[selectedProject].photo}
+        alt={projects[selectedProject].altTxt}
+        style={{ display: imageShown ? "initial" : "none" }}
+      ></img>
+    );
+  };
+
+  const ProjDescription = () => {
+    return (
+      <div id="ProjDesc" style={{ display: imageShown ? "none" : "initial" }}>
+        No Img
+      </div>
+    );
   };
 
   return (
@@ -103,24 +160,36 @@ export default function Portfolio() {
       </div>
 
       <div className="ProjectDisplay">
-        <h1 className='ProjectDisplayName'>{projects[selectedProject].name}</h1>
-        <div className='ProjectImgContainer'>
-          <img
-            height="500px"
-            src={projects[selectedProject].photo}
-            alt={projects[selectedProject].altTxt}
-          ></img></div>
+        <h1 className="ProjectDisplayName">{projects[selectedProject].name}</h1>
+        <div
+          id="ProjectContentContainer"
+          onClick={(e) => {
+            e.preventDefault();
+            ContentChange();
+          }}
+          onAnimationEnd={(e) => {
+            e.preventDefault();
+            SwapContent();
+          }}
+        >
+          {ProjImg()}
+          {ProjDescription()}
+        </div>
         <div className="ButtonContainer d-flex flex-row align-items-around justify-content-around w-75 m-2">
           <button
             type="button"
-            onClick={(e) => {openRepositoryLink(e)}}
+            onClick={(e) => {
+              openRepositoryLink(e);
+            }}
           >
             Repository
           </button>
 
           <button
             type="button"
-            onClick={(e) => {openDeployedLink(e)}}
+            onClick={(e) => {
+              openDeployedLink(e);
+            }}
           >
             Deployed
           </button>

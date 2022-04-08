@@ -47,19 +47,30 @@
   text-align: center;
 }
 
-.ProjectImgContainer {
+#ProjectContentContainer {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  width: 80vw;
-  height: auto;
+  align-items: center;
+  width: 82vw;
+  height: 50vh;
   overflow: hidden;
   margin-top: 2vh;
 }
 
-.ProjectImgContainer img {
-  width: 80vw;
+#ProjImg {
+  width: 90%;
   height: auto;
+}
+
+#ProjDesc{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  width: 90%;
+  height: 90%;
+  border: 1px dotted #fff8f0;
+  color: #fff8f0;
 }
 
 .ButtonContainer button {
@@ -70,6 +81,25 @@
   background-color: #333333;
   color: #fff8f0;
   font-family: 'Courier New', Courier, monospace;
+}
+
+.FlipOut{
+  animation-name: flipOut;
+  animation-duration: 1s;
+}
+
+.FlipIn{
+  animation-name: flipIn;
+  animation-duration: 1s;
+}
+
+@keyframes flipOut{
+  0%{transform: rotate3d(1, 0, 0, 0deg)}
+  100%{transform: rotate3d(1, 0, 0, 90deg)}
+}
+@keyframes flipIn{
+  0%{transform: rotate3d(1, 0, 0, 90deg)}
+  100%{transform: rotate3d(1, 0, 0, 0deg)}
 }
 
 @media only screen and (min-width: 891px) { /*Big Screens*/
@@ -100,8 +130,10 @@
     height: 64vh;
   }
 
-  .ProjectImgContainer {
+  #ProjectContentContainer {
     width: 60vw;
+    height: 50vh;
+    padding: 2vmin;
   }
 
   .ProjectDisplayName {
