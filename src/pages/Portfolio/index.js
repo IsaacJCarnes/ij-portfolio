@@ -85,24 +85,12 @@ export default function Portfolio() {
     )
   );
 
-  const openRepositoryLink = (e) => {
-    //Get repository link from selected project
-    e.preventDefault();
-    window.open(projects[selectedProject].projectLink);
-  };
-
-  const openDeployedLink = (e) => {
-    //Get deployed link from selected project
-    e.preventDefault();
-    window.open(projects[selectedProject].deployedLink);
-  };
-
   /* Code for flipping image to details on click */
   const [imageShown, setImageShown] = useState(false); //State change for selected project element
-  let midAnim = false;
+  const [midAnim, setMidAnim] = useState(false); //State change for in middle of animation
   const ContentChange = () => {
-    if(midAnim === false){
-      midAnim = true;
+    if (midAnim === false) {
+      setMidAnim(true);
       let projContainer = document.getElementById("ProjectContentContainer");
       projContainer.classList.remove("FlipIn");
       projContainer.classList.add("FlipOut");
@@ -121,7 +109,7 @@ export default function Portfolio() {
         projDesc.style.display = "hidden";
       }
       setImageShown(!imageShown);
-      midAnim = false;
+      setMidAnim(false);
     }
     console.log(imageShown);
     let projContainer = document.getElementById("ProjectContentContainer");
@@ -142,10 +130,47 @@ export default function Portfolio() {
 
   const ProjDescription = () => {
     return (
-      <div id="ProjDesc" style={{ display: imageShown ? "none" : "initial" }}>
-        No Img
+      <div id="ProjDesc" style={{ display: imageShown ? "none" : "flex" }}>
+        <div>No IMG</div>
+        <div className="ButtonContainer">
+          <button
+            type="button"
+            onClick={(e) => {
+              openRepositoryLink(e);
+            }}
+          >
+            Repository
+          </button>
+
+          <button
+            type="button"
+            onClick={(e) => {
+              openDeployedLink(e);
+            }}
+          >
+            Deployed
+          </button>
+        </div>
       </div>
     );
+  };
+
+  const openRepositoryLink = (e) => {
+    //Get repository link from selected project
+    e.preventDefault();
+    if(midAnim){
+      return;
+    }
+    window.open(projects[selectedProject].projectLink);
+  };
+
+  const openDeployedLink = (e) => {
+    //Get deployed link from selected project
+    e.preventDefault();
+    if(midAnim){
+      return;
+    }
+    window.open(projects[selectedProject].deployedLink);
   };
 
   return (
@@ -165,7 +190,9 @@ export default function Portfolio() {
           id="ProjectContentContainer"
           onClick={(e) => {
             e.preventDefault();
-            ContentChange();
+            if (e.target.type !== "button") {
+              ContentChange();
+            }
           }}
           onAnimationEnd={(e) => {
             e.preventDefault();
@@ -174,25 +201,6 @@ export default function Portfolio() {
         >
           {ProjImg()}
           {ProjDescription()}
-        </div>
-        <div className="ButtonContainer d-flex flex-row align-items-around justify-content-around w-75 m-2">
-          <button
-            type="button"
-            onClick={(e) => {
-              openRepositoryLink(e);
-            }}
-          >
-            Repository
-          </button>
-
-          <button
-            type="button"
-            onClick={(e) => {
-              openDeployedLink(e);
-            }}
-          >
-            Deployed
-          </button>
         </div>
       </div>
     </div>

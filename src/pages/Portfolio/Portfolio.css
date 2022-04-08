@@ -42,6 +42,7 @@
 
 .ProjectDisplayName {
   font-size: 7vmin;
+  height: 5vh;
   font-family: 'Courier New', Courier, monospace;
   color: #fff8f0;
   text-align: center;
@@ -49,9 +50,10 @@
 
 #ProjectContentContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 82vw;
+  width: 98vw;
   height: 50vh;
   overflow: hidden;
   margin-top: 2vh;
@@ -63,14 +65,25 @@
 }
 
 #ProjDesc{
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
+  align-items: center;
   text-align: center;
   width: 90%;
   height: 90%;
   border: 1px dotted #fff8f0;
+  border-radius: 2%;
   color: #fff8f0;
+}
+
+.ButtonContainer{
+  justify-self: end;
+  display: flex;
+  width: 80%;
+  margin: 1vmin;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .ButtonContainer button {
@@ -132,8 +145,10 @@
 
   #ProjectContentContainer {
     width: 60vw;
-    height: 50vh;
+    height: 60vh;
     padding: 2vmin;
+    margin-top: 0vh;
+
   }
 
   .ProjectDisplayName {
