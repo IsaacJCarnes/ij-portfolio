@@ -86,7 +86,7 @@ export default function Portfolio() {
   );
 
   /* Code for flipping image to details on click */
-  const [imageShown, setImageShown] = useState(false); //State change for selected project element
+  const [imageShown, setImageShown] = useState(true); //State change for selected project element
   const [midAnim, setMidAnim] = useState(false); //State change for in middle of animation
   const ContentChange = () => {
     if (midAnim === false) {
@@ -131,7 +131,7 @@ export default function Portfolio() {
   const ProjDescription = () => {
     return (
       <div id="ProjDesc" style={{ display: imageShown ? "none" : "flex" }}>
-        <div>No IMG</div>
+        <div style={{fontFamily:"'Courier New', Courier, monospace"}}>No IMG</div>
         <div className="ButtonContainer">
           <button
             type="button"
@@ -173,6 +173,13 @@ export default function Portfolio() {
     window.open(projects[selectedProject].deployedLink);
   };
 
+  const HelpText = () => {
+    if(imageShown){
+      return <p>Tap Inside The Image To See Related Content</p>
+    }
+    return <p>Tap Inside The Border To See The Image</p>
+  }
+
   return (
     <div className="PortfolioContainer">
       <div
@@ -203,6 +210,7 @@ export default function Portfolio() {
           {ProjDescription()}
         </div>
       </div>
+      {HelpText()}
     </div>
   );
 }
