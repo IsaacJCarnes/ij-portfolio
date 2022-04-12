@@ -76,7 +76,8 @@ export default function Portfolio() {
   const ProjDescription = () => {
     return (
       <div id="ProjDesc" style={{ display: imageShown ? "none" : "flex" }}>
-        <div style={{fontFamily:"'Courier New', Courier, monospace"}}>No IMG</div>
+        <p className="descText" style={{fontFamily:"'Courier New', Courier, monospace"}}>{projectData[selectedProject].summaryDesc}</p>
+        <p className="descText" style={{fontFamily:"'Courier New', Courier, monospace"}}>{projectData[selectedProject].techDesc}</p>
         <div className="ButtonContainer">
           <button
             type="button"
@@ -120,9 +121,9 @@ export default function Portfolio() {
 
   const HelpText = () => {
     if(imageShown){
-      return <p>Tap Inside The Image To See Related Content</p>
+      return <p className="HelpText">Tap Inside The Image To See Related Content</p>
     }
-    return <p>Tap Inside The Border To See The Image</p>
+    return <p className="HelpText">Tap Inside The Border To See The Image</p>
   }
 
   return (

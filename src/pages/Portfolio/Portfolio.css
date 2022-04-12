@@ -5,7 +5,7 @@
   height: 65vh;
 }
 
-.PortfolioContainer p {
+.HelpText {
   color: #fff8f09c;
   position: absolute;
   right: 5vw;
@@ -52,7 +52,7 @@
 
 .ProjectDisplayName {
   font-size: 7vmin;
-  height: 10vh;
+  height: 5vh;
   font-family: 'Courier New', Courier, monospace;
   color: #fff8f0;
   text-align: center;
@@ -76,15 +76,20 @@
 
 #ProjDesc{
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   width: 90%;
   height: 90%;
   border: 1px dotted #fff8f0;
   border-radius: 2%;
   color: #fff8f0;
+}
+
+.descText{
+  font-size: 4.5vmin;
+  text-align: left;
 }
 
 .ButtonContainer{
@@ -124,9 +129,13 @@
   0%{transform: rotate3d(1, 0, 0, 90deg)}
   100%{transform: rotate3d(1, 0, 0, 0deg)}
 }
-@media only screen and (min-width: 810px) { /*Slightly less Big Screens*/ 
-  .PortfolioContainer p {
-    font-size: 2vmin;
+
+@media only screen and (min-width: 500px) { /*Slightly less Big Screens*/ 
+  .ProjectDisplayName {
+    font-size: 3.9vh;
+  }
+  .descText{
+    font-size: 3.8vmin;
   }
 }
 
@@ -138,19 +147,20 @@
 
   .SelectorContainer {
     flex-direction: column;
-    width: 12vw;
+    align-items: center;
+    width: 15vw;
     height: 65vh; /*60*/
   }
 
   .SelectorBorder {
-    width: 9vw;
-    height: auto;
+    width: fit-content;
+    height: 7.5vh;
     overflow: hidden;
   }
 
   .SelectorImg {
-    width: 11vw;
-    height: auto;
+    width: auto;
+    height: 7.5vh;
     max-height: 12vh;
   }
 
@@ -159,14 +169,23 @@
   }
 
   #ProjectContentContainer {
-    width: 60vw;
+    width: 70vw;
     height: 60vh;
     padding: 2vmin;
     margin-top: 0vh;
 
   }
+  #ProjDesc{
+    height: 100%
+  }
 
-  .ProjectDisplayName {
-    font-size: 38px;
+  .descText{
+    font-size: 3.7vmin;
+  }
+
+  .ButtonContainer button {
+    width: 15vw;
+    height: 5vh;
+    font-size: 2vmin;
   }
 }
