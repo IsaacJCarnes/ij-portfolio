@@ -7,9 +7,8 @@ Component Background: #51355A
   src: url(../assets/Glass_TTY_VT220.ttf);
 }
 
-
 *{
-  font-family: CrtFont, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: CrtFont, 'Courier New', Courier, monospace;
 }
 
 .App {
