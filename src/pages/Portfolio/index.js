@@ -82,6 +82,7 @@ export default function Portfolio() {
     }
   };
 
+  /* Page Content */
   const ProjImg = () => {
     if (lastProject !== null) {
       return (
@@ -233,6 +234,16 @@ export default function Portfolio() {
     );
   };
 
+  const HelpText = () => {
+    if (imageShown) {
+      return (
+        <p className="HelpText">Tap Inside The Image To See Related Content</p>
+      );
+    }
+    return <p className="HelpText">Tap Inside The Border To See The Image</p>;
+  };
+
+  /* Methods for opening project links */
   const openRepositoryLink = (e) => {
     //Get repository link from selected project
     e.preventDefault();
@@ -249,15 +260,6 @@ export default function Portfolio() {
       return;
     }
     window.open(projectData[selectedProject].deployedLink);
-  };
-
-  const HelpText = () => {
-    if (imageShown) {
-      return (
-        <p className="HelpText">Tap Inside The Image To See Related Content</p>
-      );
-    }
-    return <p className="HelpText">Tap Inside The Border To See The Image</p>;
   };
 
   return (
