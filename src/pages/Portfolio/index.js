@@ -2,16 +2,32 @@ import "./Portfolio.css";
 
 import React, { useState } from "react";
 
-import {projectData} from './projectData.js';
+import { projectData } from "./projectData.js";
 
 export default function Portfolio() {
   const [selectedProject, selectProject] = useState(0); //State change for selected project element
+  const [lastProject, setLastProject] = useState(0);
+
+  const [imageShown, setImageShown] = useState(true); //State change for selected project element
+  const [midAnim, setMidAnim] = useState(false); //State change for in middle of animation
 
   const pickProject = (e) => {
     //get index on chosen image and set selectedProject equal to it
     e.preventDefault();
+    if(e.target.dataset.index === selectedProject){
+      return;
+    }
     if (e.target.nodeName === "IMG") {
+      setLastProject(selectedProject);
       selectProject(e.target.dataset.index);
+      if(imageShown){
+        let last = document.getElementById("LastImg");
+        let curr = document.getElementById("CurrentImg");
+        last.classList.add("FadeOut");
+        curr.classList.add("FadeIn");
+      }
+
+
     }
   };
 
@@ -32,8 +48,6 @@ export default function Portfolio() {
   );
 
   /* Code for flipping image to details on click */
-  const [imageShown, setImageShown] = useState(true); //State change for selected project element
-  const [midAnim, setMidAnim] = useState(false); //State change for in middle of animation
   const ContentChange = () => {
     if (midAnim === false) {
       setMidAnim(true);
@@ -56,28 +70,60 @@ export default function Portfolio() {
       }
       setImageShown(!imageShown);
       setMidAnim(false);
+      let projContainer = document.getElementById("ProjectContentContainer");
+      projContainer.classList.add("FlipIn");
     }
-    let projContainer = document.getElementById("ProjectContentContainer");
-    projContainer.classList.add("FlipIn");
   };
 
-  const ProjImg = () => {
+  const ProjImg = (project) => {
+    if (lastProject !== null) {
+      return (
+        <div id="ProjImg"
+        style={{ display: imageShown ? "initial" : "none" }}>
+          <img
+            id="CurrentImg"
+            src={projectData[project].photo}
+            alt={projectData[project].altTxt}
+            style={{ display: imageShown ? "initial" : "none" }}
+            onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}
+          ></img>
+          <img
+            id="LastImg"
+            src={projectData[lastProject].photo}
+            alt={projectData[lastProject].altTxt}
+            style={{ display: imageShown ? "initial" : "none" }}
+            onAnimationEnd={(e) => e.target.classList.remove("FadeOut")}
+          ></img>
+        </div>
+      );
+    }
     return (
-      <img
-        id="ProjImg"
-        height="500px"
-        src={projectData[selectedProject].photo}
-        alt={projectData[selectedProject].altTxt}
-        style={{ display: imageShown ? "initial" : "none" }}
-      ></img>
+      <div id="ProjImg">
+        <img
+          id="CurrentImg"
+          src={projectData[project].photo}
+          alt={projectData[project].altTxt}
+          style={{ display: imageShown ? "initial" : "none" }}
+        ></img>
+      </div>
     );
   };
 
-  const ProjDescription = () => {
+  const ProjDescription = (project) => {
     return (
       <div id="ProjDesc" style={{ display: imageShown ? "none" : "flex" }}>
-        <p className="descText" style={{fontFamily:"'Courier New', Courier, monospace"}}>{projectData[selectedProject].summaryDesc}</p>
-        <p className="descText" style={{fontFamily:"'Courier New', Courier, monospace"}}>{projectData[selectedProject].techDesc}</p>
+        <p
+          className="descText"
+          style={{ fontFamily: "'Courier New', Courier, monospace" }}
+        >
+          {projectData[project].summaryDesc}
+        </p>
+        <p
+          className="descText"
+          style={{ fontFamily: "'Courier New', Courier, monospace" }}
+        >
+          {projectData[project].techDesc}
+        </p>
         <div className="ButtonContainer">
           <button
             type="button"
@@ -104,7 +150,7 @@ export default function Portfolio() {
   const openRepositoryLink = (e) => {
     //Get repository link from selected project
     e.preventDefault();
-    if(midAnim){
+    if (midAnim) {
       return;
     }
     window.open(projectData[selectedProject].projectLink);
@@ -113,18 +159,20 @@ export default function Portfolio() {
   const openDeployedLink = (e) => {
     //Get deployed link from selected project
     e.preventDefault();
-    if(midAnim){
+    if (midAnim) {
       return;
     }
     window.open(projectData[selectedProject].deployedLink);
   };
 
   const HelpText = () => {
-    if(imageShown){
-      return <p className="HelpText">Tap Inside The Image To See Related Content</p>
+    if (imageShown) {
+      return (
+        <p className="HelpText">Tap Inside The Image To See Related Content</p>
+      );
     }
-    return <p className="HelpText">Tap Inside The Border To See The Image</p>
-  }
+    return <p className="HelpText">Tap Inside The Border To See The Image</p>;
+  };
 
   return (
     <div className="PortfolioContainer">
@@ -138,7 +186,9 @@ export default function Portfolio() {
       </div>
 
       <div className="ProjectDisplay">
-        <h1 className="ProjectDisplayName">{projectData[selectedProject].name}</h1>
+        <h1 className="ProjectDisplayName">
+          {projectData[selectedProject].name}
+        </h1>
         <div
           id="ProjectContentContainer"
           onClick={(e) => {
@@ -152,8 +202,8 @@ export default function Portfolio() {
             SwapContent();
           }}
         >
-          {ProjImg()}
-          {ProjDescription()}
+          {ProjImg(selectedProject)}
+          {ProjDescription(selectedProject)}
         </div>
       </div>
       {HelpText()}
