@@ -20,16 +20,20 @@ export default function Portfolio() {
     if (e.target.nodeName === "IMG") {
       setLastProject(selectedProject);
       selectProject(e.target.dataset.index);
+      let lastName = document.getElementById("LastName");
+      let currName = document.getElementById("ProjectName");
+      lastName.classList.add("FadeOut");
+      currName.classList.add("FadeIn");
       if (imageShown) {
-        let last = document.getElementById("LastImg");
-        let curr = document.getElementById("CurrentImg");
-        last.classList.add("FadeOut");
-        curr.classList.add("FadeIn");
+        let lastImg = document.getElementById("LastImg");
+        let currImg = document.getElementById("CurrentImg");
+        lastImg.classList.add("FadeOut");
+        currImg.classList.add("FadeIn");
       } else {
-        let last = document.getElementById("LastDesc");
-        let curr = document.getElementById("ProjDesc");
-        last.classList.add("FadeOut");
-        curr.classList.add("FadeIn");
+        let lastDesc = document.getElementById("LastDesc");
+        let currDesc = document.getElementById("ProjDesc");
+        lastDesc.classList.add("FadeOut");
+        currDesc.classList.add("FadeIn");
       }
     }
   };
@@ -268,9 +272,16 @@ export default function Portfolio() {
       </div>
 
       <div className="ProjectDisplay">
-        <h1 className="ProjectDisplayName">
-          {projectData[selectedProject].name}
-        </h1>
+        <div id="ProjectNameContainer">
+          <h1 id="ProjectName"
+          onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}>
+            {projectData[selectedProject].name}
+          </h1>
+          <h1 id="LastName"
+          onAnimationEnd={(e) => e.target.classList.remove("FadeOut")}>
+            {projectData[lastProject].name}
+          </h1>
+        </div>
         <div
           id="ProjectContentContainer"
           onClick={(e) => {
