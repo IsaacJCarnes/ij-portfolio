@@ -17,7 +17,7 @@ import Footer from "./components/Footer";
 function App() {
   const basePath = "/ij-portfolio/";
   return (
-    <div className='FullPage d-flex flex-column w-100 h-100 align-items-center'>
+    <div className='FullPage d-flex flex-column align-items-center'>
       <Header/>
       <div className="ContentDiv d-flex mt-2 mb-3 justify-content-center">
         <Routes>
