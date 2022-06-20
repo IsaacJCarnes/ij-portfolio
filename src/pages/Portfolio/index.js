@@ -14,20 +14,23 @@ export default function Portfolio() {
   const pickProject = (e) => {
     //get index on chosen image and set selectedProject equal to it
     e.preventDefault();
-    if(e.target.dataset.index === selectedProject){
+    if (e.target.dataset.index === selectedProject) {
       return;
     }
     if (e.target.nodeName === "IMG") {
       setLastProject(selectedProject);
       selectProject(e.target.dataset.index);
-      if(imageShown){
+      if (imageShown) {
         let last = document.getElementById("LastImg");
         let curr = document.getElementById("CurrentImg");
         last.classList.add("FadeOut");
         curr.classList.add("FadeIn");
+      } else {
+        let last = document.getElementById("LastDesc");
+        let curr = document.getElementById("ProjDesc");
+        last.classList.add("FadeOut");
+        curr.classList.add("FadeIn");
       }
-
-
     }
   };
 
@@ -75,15 +78,14 @@ export default function Portfolio() {
     }
   };
 
-  const ProjImg = (project) => {
+  const ProjImg = () => {
     if (lastProject !== null) {
       return (
-        <div id="ProjImg"
-        style={{ display: imageShown ? "initial" : "none" }}>
+        <div id="ProjImg" style={{ display: imageShown ? "initial" : "none" }}>
           <img
             id="CurrentImg"
-            src={projectData[project].photo}
-            alt={projectData[project].altTxt}
+            src={projectData[selectedProject].photo}
+            alt={projectData[selectedProject].altTxt}
             style={{ display: imageShown ? "initial" : "none" }}
             onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}
           ></img>
@@ -101,47 +103,127 @@ export default function Portfolio() {
       <div id="ProjImg">
         <img
           id="CurrentImg"
-          src={projectData[project].photo}
-          alt={projectData[project].altTxt}
+          src={projectData[selectedProject].photo}
+          alt={projectData[selectedProject].altTxt}
           style={{ display: imageShown ? "initial" : "none" }}
         ></img>
       </div>
     );
   };
 
-  const ProjDescription = (project) => {
-    return (
-      <div id="ProjDesc" style={{ display: imageShown ? "none" : "flex" }}>
-        <p
-          className="descText"
-          style={{ fontFamily: "'Courier New', Courier, monospace" }}
-        >
-          {projectData[project].summaryDesc}
-        </p>
-        <p
-          className="descText"
-          style={{ fontFamily: "'Courier New', Courier, monospace" }}
-        >
-          {projectData[project].techDesc}
-        </p>
-        <div className="ButtonContainer">
-          <button
-            type="button"
-            onClick={(e) => {
-              openRepositoryLink(e);
-            }}
-          >
-            Repository
-          </button>
+  const ProjDescription = () => {
+    if (lastProject !== null) {
+      return (
+        <div id="DescHolder" style={{ display: imageShown ? "none" : "flex" }}>
+          <div id="ProjDesc" 
+          style={{ display: imageShown ? "none" : "flex" }}
+          onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}>
+            <p
+              className="descText"
+              style={{ fontFamily: "'Courier New', Courier, monospace" }}
+            >
+              {projectData[selectedProject].summaryDesc}
+            </p>
+            <p
+              className="descText"
+              style={{ fontFamily: "'Courier New', Courier, monospace" }}
+            >
+              {projectData[selectedProject].techDesc}
+            </p>
+            <div className="ButtonContainer">
+              <button
+                type="button"
+                onClick={(e) => {
+                  openRepositoryLink(e);
+                }}
+              >
+                Repository
+              </button>
 
-          <button
-            type="button"
-            onClick={(e) => {
-              openDeployedLink(e);
-            }}
+              <button
+                type="button"
+                onClick={(e) => {
+                  openDeployedLink(e);
+                }}
+              >
+                Deployed
+              </button>
+            </div>
+          </div>
+          <div
+                id="LastDesc"
+                style={{ display: imageShown ? "none" : "flex" }}
+                onAnimationEnd={(e) => e.target.classList.remove("FadeOut")}
+              >
+                <p
+                  className="descText"
+                  style={{ fontFamily: "'Courier New', Courier, monospace" }}
+                >
+                  {projectData[lastProject].summaryDesc}
+                </p>
+                <p
+                  className="descText"
+                  style={{ fontFamily: "'Courier New', Courier, monospace" }}
+                >
+                  {projectData[lastProject].techDesc}
+                </p>
+                <div className="ButtonContainer">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      openRepositoryLink(e);
+                    }}
+                  >
+                    Repository
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      openDeployedLink(e);
+                    }}
+                  >
+                    Deployed
+                  </button>
+                </div>
+              </div>
+        </div>
+      );
+    }
+    return (
+      <div id="DescHolder" style={{ display: imageShown ? "none" : "flex" }}>
+        <div id="ProjDesc" style={{ display: imageShown ? "none" : "flex" }}>
+          <p
+            className="descText"
+            style={{ fontFamily: "'Courier New', Courier, monospace" }}
           >
-            Deployed
-          </button>
+            {projectData[selectedProject].summaryDesc}
+          </p>
+          <p
+            className="descText"
+            style={{ fontFamily: "'Courier New', Courier, monospace" }}
+          >
+            {projectData[selectedProject].techDesc}
+          </p>
+          <div className="ButtonContainer">
+            <button
+              type="button"
+              onClick={(e) => {
+                openRepositoryLink(e);
+              }}
+            >
+              Repository
+            </button>
+
+            <button
+              type="button"
+              onClick={(e) => {
+                openDeployedLink(e);
+              }}
+            >
+              Deployed
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -202,8 +284,8 @@ export default function Portfolio() {
             SwapContent();
           }}
         >
-          {ProjImg(selectedProject)}
-          {ProjDescription(selectedProject)}
+          {ProjImg()}
+          {ProjDescription()}
         </div>
       </div>
       {HelpText()}
