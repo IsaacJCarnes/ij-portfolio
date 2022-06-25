@@ -16,7 +16,7 @@ export default function Nav(){
     ];
 
     let location = useLocation().pathname;
-    if(location === "/ij-portfolio"){ //Makes nav bar blue when url opens to /ij-portfolio
+    if(location === "/ij-portfolio"){ //Makes nav bar selected when url opens to /ij-portfolio
         location = "/ij-portfolio/";
     }
 

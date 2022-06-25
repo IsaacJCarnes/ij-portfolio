@@ -63,10 +63,11 @@
   transform: translate(-50%, -50%);
 
   width: 100%;
-  font-size: 7vmin;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 6vmin;
+  font-family: Arial, Helvetica, sans-serif;
   color: #fff8f0;
   text-align: center;
+  font-style: italic;
 }
 
 #LastName {
@@ -77,10 +78,11 @@
   opacity: 0;
 
   width: 100%;
-  font-size: 7vmin;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 6vmin;
+  font-family: Arial, Helvetica, sans-serif;
   color: #fff8f0;
   text-align: center;
+  font-style: italic;
 }
 
 #ProjectContentContainer {
@@ -160,24 +162,27 @@
   width: 99%;
   height: 100%;
   color: #fff8f0;
+  z-index: -2;
 }
 
 .descText{
   font-size: 4.5vmin;
   text-align: center;
+  height: fit-content;
+  margin-bottom: 3%;
 }
 
 .ButtonContainer{
-  justify-self: end;
+  position: absolute;
+  top: 87%;
   display: flex;
-  width: 80%;
-  margin: 1vmin;
-  flex-direction: row;
-  justify-content: space-around;
+  width: 100%;
+  justify-content:space-around;
 }
 
 .ButtonContainer button {
-  width: max-content;
+  width: auto;
+  height: 15%;
   padding-right: 10px;
   padding-bottom: 3px;
   border-radius: 50%;
@@ -227,8 +232,11 @@
 
 
 @media only screen and (min-width: 500px) { /*Slightly less Big Screens*/ 
-  .ProjectDisplayName {
-    font-size: 3.9vh;
+  #ProjectName {
+    font-size: 4.2vmin;
+  }
+  #LastName {
+    font-size: 4.2vmin;
   }
   .descText{
     font-size: 3.8vmin;
@@ -239,6 +247,7 @@
   .PortfolioContainer {
     flex-direction: row;
     align-items: center;
+    width: 92vw;
   }
 
   .SelectorContainer {
@@ -250,14 +259,14 @@
 
   .SelectorBorder {
     width: fit-content;
-    height: 7.5vh;
+    height: 8vmin;
     overflow: hidden;
   }
 
   .SelectorImg {
     width: auto;
-    height: 7.5vh;
-    max-height: 12vh;
+    height: 8vmin;
+    max-height: 12min;
   }
 
   .ProjectDisplay {
@@ -271,9 +280,6 @@
     margin-top: 0vh;
 
   }
-  #ProjDesc{
-    height: 100%
-  }
 
   .descText{
     font-size: 3.7vmin;
@@ -281,7 +287,7 @@
 
   .ButtonContainer button {
     width: 15vw;
-    height: 5vh;
-    font-size: 2vmin;
+    height: auto;
+    font-size: 2.5vmin;
   }
 }

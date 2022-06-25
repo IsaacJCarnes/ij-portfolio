@@ -119,9 +119,9 @@ export default function Portfolio() {
   const ProjDescription = () => {
     if (lastProject !== null) {
       return (
-        <div id="DescHolder" style={{ display: imageShown ? "none" : "flex" }}>
+        <div id="DescHolder" style={{ display: imageShown ? "none" : "block" }}>
           <div id="ProjDesc" 
-          style={{ display: imageShown ? "none" : "flex" }}
+          style={{ display: imageShown ? "none" : "block" }}
           onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}>
             <p
               className="descText"
@@ -157,7 +157,7 @@ export default function Portfolio() {
           </div>
           <div
                 id="LastDesc"
-                style={{ display: imageShown ? "none" : "flex" }}
+                style={{ display: imageShown ? "none" : "block" }}
                 onAnimationEnd={(e) => e.target.classList.remove("FadeOut")}
               >
                 <p
@@ -275,14 +275,14 @@ export default function Portfolio() {
 
       <div className="ProjectDisplay">
         <div id="ProjectNameContainer">
-          <h1 id="ProjectName"
+          <div id="ProjectName"
           onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}>
             {projectData[selectedProject].name}
-          </h1>
-          <h1 id="LastName"
+          </div>
+          <div id="LastName"
           onAnimationEnd={(e) => e.target.classList.remove("FadeOut")}>
             {projectData[lastProject].name}
-          </h1>
+          </div>
         </div>
         <div
           id="ProjectContentContainer"
