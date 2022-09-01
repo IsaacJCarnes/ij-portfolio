@@ -9,6 +9,7 @@ Component Background: #51355A
 
 *{
   font-family: CrtFont, 'Courier New', Courier, monospace;
+  z-index: 2;
 }
 
 .App {
@@ -18,6 +19,9 @@ Component Background: #51355A
 .FullPage {
   background-color: #1d1d1d;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .ContentDiv{

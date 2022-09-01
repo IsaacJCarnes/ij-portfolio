@@ -13,6 +13,7 @@ import WildPage from "./pages/WildPage";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import MovingDots from "./components/MovingDots";
 
 function App() {
   const basePath = "/ij-portfolio/";
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/*" element={<WildPage />} />
         </Routes>
       </div>
+      <MovingDots />
       <Footer />
     </div>
   );

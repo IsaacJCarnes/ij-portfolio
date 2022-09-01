@@ -1,0 +1,9 @@
+.movingDot{
+    border-radius: 50%;
+    background-color: violet;
+    opacity: 60%;
+    z-index: 1;
+    position: absolute;
+    transition: left 2s, top 2s;
+    transition-timing-function: linear;
+}
