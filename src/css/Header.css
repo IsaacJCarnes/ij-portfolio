@@ -37,6 +37,7 @@
   text-decoration: none;
   width: fit-content;
   font-family: 'Arial Narrow', Arial, sans-serif;
+  transition: color .5s;
 }
 .NavBar a:after{
   position: relative;
