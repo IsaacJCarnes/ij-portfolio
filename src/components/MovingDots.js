@@ -1,15 +1,19 @@
 import '../css/MovingDots.css';
 
 import React, { useEffect, useState } from "react";
+import Shows from "./ObjectShow.js";
 
 const pageHeight = window.innerHeight;
 const pageWidth = window.innerWidth;
 
 export default function MovingDots(){
     console.log(window.innerHeight, window.innerWidth);
-    const circleDiameter = 20; //pixels
-    const circleVelocity = 80; //pixels
-    const [dotOptions, setDotOptions] = useState([{objectOptions: {currentAngle: 30, leftPixel: 5, topPixel: 5}, styleOptions: {left: "5px", top:"5px", width: circleDiameter+"px", height: circleDiameter+"px"}}]);
+    const vMin = Math.min(pageHeight, pageWidth);
+    const CurrentShow = Shows[0];
+    const circleDiameter = Math.ceil((CurrentShow.ShowParameters['objectWidth'] * vMin) / 100); //vmin to pixels
+    const circleVelocity = CurrentShow.ShowParameters['objectVelocity']; //pixels
+    console.log(circleDiameter + 'diameter');
+    const [dotOptions, setDotOptions] = useState(CurrentShow.ShowObjects);
 
     const getCircleTransform = (isX, targetIndex) => { //Change second parametyer to be angle
         let piRatio = Math.PI/180;
@@ -39,7 +43,7 @@ export default function MovingDots(){
         let changeY =  tempObj.objectOptions.topPixel + (circleVelocity * getCircleTransform(false, targetIndex));
         console.log(getCircleTransform(false, targetIndex), getCircleTransform(true, targetIndex));
 
-        if(changeX > pageWidth){
+        if(changeX+circleDiameter > pageWidth){
             changeX = pageWidth - circleDiameter;
             tempAngle = 180 - (tempAngle%360);
         } else if( 0 >= changeX){

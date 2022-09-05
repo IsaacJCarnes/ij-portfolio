@@ -9,7 +9,7 @@ Component Background: #51355A
 
 *{
   font-family: CrtFont, 'Courier New', Courier, monospace;
-  z-index: 2;
+  z-index: 10;
 }
 
 .App {
