@@ -17,6 +17,7 @@ Component Background: #51355A
 }
 
 .FullPage {
+  position: relative;
   background-color: #1d1d1d;
   height: 100%;
   width: 100%;
