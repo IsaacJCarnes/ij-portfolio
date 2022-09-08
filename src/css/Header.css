@@ -57,11 +57,11 @@
 }
 
 .TextSelected {
-  color: var(--text-selected-color);
+  color: var(--nav-selected-color);
 }
 
 .TextSelected:hover {
-  color: var(--text-selected-color);
+  color: var(--nav-selected-color);
 }
 
 @media only screen and (min-width: 891px) { /*Big Screens*/

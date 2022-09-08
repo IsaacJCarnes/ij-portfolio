@@ -1,12 +1,19 @@
 :root {
   --main-bg-color: #1d1d1d;
   --main-border-color: #fff8f0;
-  --nav-highlight-color: rgb(176, 179, 0);
   --main-text-color: #fff8f0;
+  --alt-text-color: #FFFFFF;
+  --nav-selected-color: rgb(176, 179, 0);
   --text-highlight-color: #e9e1d8;
-  --text-selected-color: #dbd35a;
   --background-text-color: #fff8f09c;
 }
+/*  --main-bg-color: #dddddd;
+  --main-border-color: #08070a;
+  --main-text-color: #08070a;
+  --alt-text-color: #FFFFFF;
+  --nav-selected-color: rgb(143, 0, 179);
+  --text-highlight-color: #604570;
+  --background-text-color: #5858579c;*/
 
 body {
   margin: 0;

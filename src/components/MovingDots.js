@@ -7,7 +7,6 @@ const pageHeight = window.innerHeight;
 const pageWidth = window.innerWidth;
 
 export default function MovingDots(){
-    console.log(window.innerHeight, window.innerWidth);
     const CurrentShow = shows[Math.floor(Math.random() * shows.length)];
     const circleDiameter = CurrentShow.ShowParameters['objectWidth']; //vmin to pixels
     const circleVelocity = CurrentShow.ShowParameters['objectVelocity']; //pixels
