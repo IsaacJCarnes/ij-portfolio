@@ -13,20 +13,20 @@ export default function MovingDots(){
     const circleVelocity = CurrentShow.ShowParameters['objectVelocity']; //pixels
     const [dotOptions, setDotOptions] = useState(CurrentShow.ShowObjects);
 
-    const getCircleTransform = (isX, targetIndex) => { //Change second parametyer to be angle
+    const getCircleTransform = (isX, angle) => { //Change second parametyer to be angle
         let piRatio = Math.PI/180;
         if(isX){
-            return Math.cos(dotOptions[targetIndex].objectOptions.currentAngle * piRatio);
+            return Math.cos(angle * piRatio);
         }else{
-            return Math.sin(dotOptions[targetIndex].objectOptions.currentAngle * piRatio);
+            return Math.sin(angle * piRatio);
         }
     }
 
     useEffect(() => {
         let newOptions = [...dotOptions];
         newOptions.forEach((movingObj, index) => {
-            let changeX = movingObj.objectOptions.leftPixel + (circleVelocity * getCircleTransform(true, index));
-            let changeY =  movingObj.objectOptions.topPixel + (circleVelocity * getCircleTransform(false, index));
+            let changeX = movingObj.objectOptions.leftPixel + (circleVelocity * getCircleTransform(true, movingObj.objectOptions.currentAngle));
+            let changeY =  movingObj.objectOptions.topPixel + (circleVelocity * getCircleTransform(false, movingObj.objectOptions.currentAngle));
             newOptions[index] = {objectOptions: {...movingObj.objectOptions, leftPixel: changeX, topPixel: changeY}, styleOptions: {...movingObj.styleOptions, left: changeX + 'px', top: changeY + 'px'}};
         });
         setDotOptions(newOptions);
@@ -37,8 +37,8 @@ export default function MovingDots(){
         let tempObj = {...newOptions[targetIndex]};
 
         let tempAngle = tempObj.objectOptions.currentAngle;
-        let changeX =  tempObj.objectOptions.leftPixel + (circleVelocity * getCircleTransform(true, targetIndex));
-        let changeY =  tempObj.objectOptions.topPixel + (circleVelocity * getCircleTransform(false, targetIndex));
+        let changeX =  tempObj.objectOptions.leftPixel + (circleVelocity * getCircleTransform(true, tempObj.objectOptions.currentAngle));
+        let changeY =  tempObj.objectOptions.topPixel + (circleVelocity * getCircleTransform(false, tempObj.objectOptions.currentAngle));
 
         if(changeX+circleDiameter > pageWidth){
             changeX = pageWidth - circleDiameter;

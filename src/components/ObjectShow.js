@@ -83,7 +83,7 @@ const Show1 = { //Rainbow Dot Show
 
 const colorArray = ["rgba(255, 0, 0, .45)", "rgba(255, 127, 0, .45)", "rgba(255, 255, 0, .45)", "rgba(0, 255, 0, .45)", "rgba(0, 0, 255, .45)", 'rgba(75, 0, 130, .45)', 'rgba(148, 0, 211, .45)'].sort(() => (Math.random() > .5) ? 1 : -1);
 const Show2Params = {objectWidth: vminToPx(25), objectVelocity: vminToPx(15), startingPx: vminToPx(30)};
-const Show2 = { //Rainbow Dot Show
+const Show2 = { //Random Color Squares
   ShowParameters: { objectWidth: Show2Params.objectWidth, objectVelocity: Show2Params.objectVelocity },
   ShowObjects: [
     {
