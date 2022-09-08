@@ -31,7 +31,9 @@ export default function MovingDots(){
         setDotOptions(newOptions);
     }, []);
 
-    const MoveCircle = (targetIndex) => { //Could use easing function for seconds when not going full width because of 
+    const MoveCircle = (targetIndex, event) => { //Could use easing function for seconds when not going full width because of 
+        if(event.propertyName !== 'top') return;
+        console.log(event);
         let newOptions = [...dotOptions];
         let tempObj = {...newOptions[targetIndex]};
 
@@ -60,7 +62,7 @@ export default function MovingDots(){
 
     const MovingObjects =
                     dotOptions.map((element, index) => {
-                        return <div key={"movingObj"+index} className="movingDot" style={element.styleOptions} onTransitionEndCapture={(e) => {e.preventDefault(); MoveCircle(index)}}/>
+                        return <div key={"movingObj"+index} className="movingDot" style={element.styleOptions} onTransitionEndCapture={(e) => {e.preventDefault(); MoveCircle(index, e)}}/>
                     });
 
     return(
