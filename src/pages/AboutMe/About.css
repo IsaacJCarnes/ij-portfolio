@@ -10,7 +10,7 @@
 .AboutContainer h3 {
   font-size: 7vmin;
   font-family: 'Courier New', Courier, monospace;
-  color: #fff8f0;
+  color: var(--main-text-color);
   margin-bottom: 2vh;
 }
 
@@ -26,12 +26,12 @@
   background-size: 110%;
   border-radius: 50%;
   background-position: 50% 30%;
-  border: 1px white solid;
+  border: 1px var(--main-border-color) solid;
 }
 
 
 .AboutContainer p {
-  color: #fff8f0;
+  color: var(--main-text-color);
   font-family: 'Courier New', Courier, monospace;
   font-size: 3.5vmin;
 }

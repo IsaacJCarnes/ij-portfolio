@@ -18,7 +18,7 @@ Component Background: #51355A
 
 .FullPage {
   position: relative;
-  background-color: #1d1d1d;
+  background-color: var(--main-bg-color);
   height: 100%;
   width: 100%;
   overflow-x: hidden;
@@ -31,7 +31,7 @@ Component Background: #51355A
 }
 
 .ResumeText{
-  color: #FFF8F0;
+  color: var(--main-text-color);
 }
 
 .EasyText{

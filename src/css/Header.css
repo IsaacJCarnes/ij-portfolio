@@ -5,14 +5,14 @@
   flex-direction: column;
   width: 95vw;
   height: 15vh;
-  border-bottom: 1px dotted white;
+  border-bottom: 1px dotted var(--main-border-color);
 }
 
 .HeaderName {
   margin-top: 0%;
   margin-bottom: 5%;
   font-size: 25px;
-  color: #fff8f0;
+  color: var(--main-text-color);
   width: fit-content;
 }
 
@@ -45,23 +45,23 @@
   width: 1px;
   height: 1.3vmax;
   margin-left: 2vw;
-  border-right: dotted 1px #fff8f0;
+  border-right: dotted 1px var(--main-border-color);
 }
 
 .TextNormal {
-  color: #fff8f0;
+  color: var(--main-text-color);
 }
 
 .TextNormal:hover {
-  color: #e9e1d8;
+  color: var(--text-highlight-color);
 }
 
 .TextSelected {
-  color: #dbd35a;
+  color: var(--text-selected-color);
 }
 
 .TextSelected:hover {
-  color: #c5bd52;
+  color: var(--text-selected-color);
 }
 
 @media only screen and (min-width: 891px) { /*Big Screens*/
@@ -80,7 +80,7 @@
   .NavBar a {
     font-size: 1.2vmax;
     margin-top: 0;
-    border-right: none 1px #fff8f0;
+    border-right: none 1px var(--main-border-color);
   }
 
   .NavBar a:after{

@@ -10,13 +10,13 @@
 }
 
 .ContactContainer h1 {
-  color: #fff8f0;
+  color: var(--main-text-color);
   font-size: 7vmin;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .ContactContainer p {
-  color: #fff8f09c;
+  color: var(--background-text-color);
   position: absolute;
   right: 5vw;
   bottom: 10vh;
@@ -39,7 +39,7 @@
 }
 
 .ContactForm label {
-  color: #fff8f0;
+  color: var(--main-text-color);
   font-family: 'Courier New', Courier, monospace;
 }
 
