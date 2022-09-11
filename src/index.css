@@ -1,4 +1,4 @@
-:root {
+/*:root {
   --main-bg-color: #1d1d1d;
   --main-border-color: #fff8f0;
   --main-text-color: #fff8f0;
@@ -6,6 +6,16 @@
   --nav-selected-color: rgb(176, 179, 0);
   --text-highlight-color: #e9e1d8;
   --background-text-color: #fff8f09c;
+}*/
+
+:root{
+  --main-bg-color: #E5ECE9;
+  --main-border-color: #969A97;
+  --main-text-color: #3d3f3d;
+  --alt-text-color: #969A97;
+  --nav-selected-color: #C60F7B;
+  --text-highlight-color: #7f837f;
+  --background-text-color: #7c7b7a;
 }
 /*  --main-bg-color: #dddddd;
   --main-border-color: #08070a;
