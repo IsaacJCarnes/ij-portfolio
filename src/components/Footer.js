@@ -1,7 +1,7 @@
 import '../css/Footer.css';
 
-import githubIcon from '../assets/icon-github.png';
-import linkedinIcon from'../assets/icon-linkedin.png';
+import githubIcon from '../assets/icon-github-black.png';
+import linkedinIcon from'../assets/icon-linkedin-black.png';
 
 export default function Footer(){
     const openGithub = (e) => { //Opens my github

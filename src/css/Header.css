@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 95vw;
   height: 15vh;
-  border-bottom: 1px dotted var(--main-border-color);
+  border-bottom: 1px solid var(--main-border-color);
 }
 
 .HeaderName {
@@ -45,7 +45,7 @@
   width: 1px;
   height: 1.3vmax;
   margin-left: 2vw;
-  border-right: dotted 1px var(--main-border-color);
+  border-right: solid 1px var(--main-border-color);
 }
 
 .TextNormal {
