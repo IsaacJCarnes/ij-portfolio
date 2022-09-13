@@ -33,7 +33,6 @@ export default function MovingDots(){
 
     const MoveCircle = (targetIndex, event) => { //Could use easing function for seconds when not going full width because of 
         if(event.propertyName !== 'top') return;
-        console.log(event);
         let newOptions = [...dotOptions];
         let tempObj = {...newOptions[targetIndex]};
 

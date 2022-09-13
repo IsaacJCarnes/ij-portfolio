@@ -13,7 +13,9 @@
   --main-border-color: #969A97;
   --main-text-color: #3d3f3d;
   --alt-text-color: #d3d3d3;
-  --nav-selected-color: #C60F7B;
+  --nav-first-color: #3d3f3d;
+  --nav-second-color: #e4e6d2;
+  --nav-third-color: #da20d0;
   --text-highlight-color: #7f837f;
   --background-text-color: #7c7b7a;
 }

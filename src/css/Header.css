@@ -37,7 +37,22 @@
   text-decoration: none;
   width: fit-content;
   font-family: 'Arial Narrow', Arial, sans-serif;
-  transition: color .5s;
+  transition: color .5s, background-position 1s;
+  background-image: linear-gradient(
+    -225deg,
+    var(--nav-first-color) 0%,
+    var(--nav-first-color) 35%,
+    var(--nav-second-color) 38%,
+    var(--nav-third-color) 45%
+  );
+  /*background-color: var(--main-text-color);*/
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 250% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .NavBar a:after{
   position: relative;
@@ -53,15 +68,16 @@
 }
 
 .TextNormal:hover {
+  background-position: 40% center;
   color: var(--text-highlight-color);
 }
 
 .TextSelected {
-  color: var(--nav-selected-color);
+  background-position: 80% center;
 }
 
 .TextSelected:hover {
-  color: var(--nav-selected-color);
+  background-position: 80% center;
 }
 
 @media only screen and (min-width: 891px) { /*Big Screens*/
