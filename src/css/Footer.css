@@ -2,7 +2,7 @@
     width: 95vw;
     height: 10vh;
     margin: 2;
-    border-top: 1px solid var(--main-border-color);
+    border-top: 2px solid var(--main-border-color);
 }
 
 .FooterContainer button{

@@ -16,6 +16,7 @@ const Show1 = { //Rainbow Dot Show
         width: Show1Params.objectWidth + "px",
         height: Show1Params.objectWidth + "px",
         backgroundColor: 'rgba(148, 0, 211, .45)',
+        background: "radial-gradient(circle at 100%, rgba(148, 0, 211, .65) 0%, rgba(148, 0, 211, .45) 40%, rgba(229, 236, 233, 0) 85%)",
       },
     },
     {
@@ -26,6 +27,7 @@ const Show1 = { //Rainbow Dot Show
         width: Show1Params.objectWidth + "px",
         height: Show1Params.objectWidth + "px",
         backgroundColor: 'rgba(75, 0, 130, .45)',
+        background: "radial-gradient(circle at 100%, rgba(75, 0, 130, .65) 0%, rgba(75, 0, 130, .45) 40%, rgba(229, 236, 233, 0) 85%)",
       },
     },
     {
@@ -36,6 +38,7 @@ const Show1 = { //Rainbow Dot Show
         width: Show1Params.objectWidth + "px",
         height: Show1Params.objectWidth + "px",
         backgroundColor: "rgba(0, 0, 255, .45)",
+        background: "radial-gradient(circle at 100%, rgba(0, 0, 255, .65) 0%, rgba(0, 0, 255, .45) 40%, rgba(229, 236, 233, 0) 85%)",
       },
     },
     {
@@ -46,6 +49,7 @@ const Show1 = { //Rainbow Dot Show
         width: Show1Params.objectWidth + "px",
         height: Show1Params.objectWidth + "px",
         backgroundColor: "rgba(0, 255, 0, .45)",
+        background: "radial-gradient(circle at 100%, rgba(0, 255, 0, .65) 0%, rgba(0, 255, 0, .45) 40%, rgba(229, 236, 233, 0) 85%)",
       },
     },
     {
@@ -56,6 +60,7 @@ const Show1 = { //Rainbow Dot Show
         width: Show1Params.objectWidth + "px",
         height: Show1Params.objectWidth + "px",
         backgroundColor: "rgba(255, 255, 0, .45)",
+        background: "radial-gradient(circle at 100%, rgba(255, 255, 0, .65) 0%, rgba(255, 255, 0, .45) 40%, rgba(229, 236, 233, 0) 85%)",
       },
     },
     {
@@ -66,6 +71,7 @@ const Show1 = { //Rainbow Dot Show
         width: Show1Params.objectWidth + "px",
         height: Show1Params.objectWidth + "px",
         backgroundColor: "rgba(255, 127, 0, .45)",
+        background: "radial-gradient(circle at 100%, rgba(255, 127, 0, .65) 0%, rgba(255, 127, 0, .45) 40%, rgba(229, 236, 233, 0) 85%)",
       },
     },
     {
@@ -76,6 +82,7 @@ const Show1 = { //Rainbow Dot Show
         width: Show1Params.objectWidth + "px",
         height: Show1Params.objectWidth + "px",
         backgroundColor: "rgba(255, 0, 0, .45)",
+        background: "radial-gradient(circle at 100%, rgba(255, 0, 0, .65) 0%, rgba(255, 0, 0, .45) 56%, rgba(229, 236, 233, 0) 85%)",
       },
     },
   ],
@@ -95,6 +102,7 @@ const Show2 = { //Random Color Squares
         height: Show2Params.objectWidth + "px",
         backgroundColor: colorArray[0],
         borderRadius: '0%',
+        borderTopLeftRadius: vminToPx(5) + "px " + vminToPx(5) + "px", 
       },
     },
     {
@@ -106,6 +114,7 @@ const Show2 = { //Random Color Squares
           height: Show2Params.objectWidth + "px",
           backgroundColor: colorArray[1],
           borderRadius: '0%',
+          borderTopRightRadius: vminToPx(5) + "px " + vminToPx(5) + "px", 
         },
       },
       {
@@ -117,6 +126,7 @@ const Show2 = { //Random Color Squares
           height: Show2Params.objectWidth + "px",
           backgroundColor: colorArray[2],
           borderRadius: '0%',
+          borderBottomRightRadius: vminToPx(5) + "px " + vminToPx(5) + "px", 
         },
       },
       {
@@ -128,6 +138,7 @@ const Show2 = { //Random Color Squares
           height: Show2Params.objectWidth + "px",
           backgroundColor: colorArray[3],
           borderRadius: '0%',
+          borderBottomLeftRadius: vminToPx(5) + "px " + vminToPx(5) + "px", 
         },
       },
   ],

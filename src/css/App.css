@@ -3,13 +3,14 @@ Page Background: #2A0C4E
 Component Background: #51355A
 */
 @font-face {
-  font-family: CrtFont;
-  src: url(../assets/Glass_TTY_VT220.ttf);
+  font-family: Delius;
+  src: url(../assets/Delius-Regular.ttf);
 }
 
 *{
-  font-family: CrtFont, 'Courier New', Courier, monospace;
+  font-family: Delius, 'Courier New', Courier, monospace;
   z-index: 10;
+  font-weight: 600;
 }
 
 .App {

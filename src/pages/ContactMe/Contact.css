@@ -11,8 +11,7 @@
 
 .ContactContainer h1 {
   color: var(--main-text-color);
-  font-size: 7vmin;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 6.4vmin;
 }
 
 .ContactContainer p {

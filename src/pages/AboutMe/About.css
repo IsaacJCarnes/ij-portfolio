@@ -8,8 +8,7 @@
 }
 
 .AboutContainer h3 {
-  font-size: 7vmin;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 6.4vmin;
   color: var(--main-text-color);
   margin-bottom: 2vh;
 }
