@@ -4,9 +4,9 @@ const vminToPx = (width) => {
 }
 
 
-const Show1Params = {objectWidth: vminToPx(13), objectVelocity: vminToPx(20)};
+const Show1Params = {showStyle: 'bounce', objectWidth: vminToPx(13), objectVelocity: vminToPx(20)};
 const Show1 = { //Rainbow Dot Show
-  ShowParameters: { objectWidth: Show1Params.objectWidth, objectVelocity: Show1Params.objectVelocity },
+  ShowParameters: { showStyle: Show1Params.showStyle, objectWidth: Show1Params.objectWidth, objectVelocity: Show1Params.objectVelocity },
   ShowObjects: [
     {
       objectOptions: { currentAngle: 20, leftPixel: 5, topPixel: 5 },
@@ -89,9 +89,9 @@ const Show1 = { //Rainbow Dot Show
 };
 
 const colorArray = ["rgba(255, 0, 0, .45)", "rgba(255, 127, 0, .45)", "rgba(255, 255, 0, .45)", "rgba(0, 255, 0, .45)", "rgba(0, 0, 255, .45)", 'rgba(75, 0, 130, .45)', 'rgba(148, 0, 211, .45)'].sort(() => (Math.random() > .5) ? 1 : -1);
-const Show2Params = {objectWidth: vminToPx(25), objectVelocity: vminToPx(15), startingPx: vminToPx(30)};
+const Show2Params = {showStyle: 'bounce', objectWidth: vminToPx(25), objectVelocity: vminToPx(15), startingPx: vminToPx(30)};
 const Show2 = { //Random Color Squares
-  ShowParameters: { objectWidth: Show2Params.objectWidth, objectVelocity: Show2Params.objectVelocity },
+  ShowParameters: { showStyle: Show2Params.showStyle, objectWidth: Show2Params.objectWidth, objectVelocity: Show2Params.objectVelocity },
   ShowObjects: [
     {
       objectOptions: { currentAngle: 250, leftPixel: Show2Params.startingPx, topPixel: Show2Params.startingPx },
@@ -143,6 +143,31 @@ const Show2 = { //Random Color Squares
       },
   ],
 };
+
+const randomSpeeds = [(Math.random() * vminToPx(2)) + vminToPx(3), (Math.random() * vminToPx(2)) + vminToPx(3) ,(Math.random() * vminToPx(2)) + vminToPx(3), (Math.random() * vminToPx(2)) + vminToPx(3), (Math.random() * vminToPx(2)) + vminToPx(3), (Math.random() * vminToPx(2)) + vminToPx(3), (Math.random() * vminToPx(2)) + vminToPx(3), (Math.random() * vminToPx(2)) + vminToPx(3), (Math.random() * vminToPx(2)) + vminToPx(3)];
+const Show3Params = {showStyle: 'rain', objectWidth: vminToPx(1.5), objectHeight: vminToPx(6), objectVelocity: randomSpeeds, startX: vminToPx(11), startY: '0'};
+const Show3 = { //Raining Xs
+  ShowParameters: { showStyle: Show3Params.showStyle, objectWidth: Show3Params.objectWidth, objectHeight: Show3Params.objectHeight, objectVelocity: Show3Params.objectVelocity },
+  ShowObjects: [
+    {
+      objectOptions: { currentAngle: 90, leftPixel: Show2Params.startingPx, topPixel: Show2Params.startingPx },
+      styleOptions: {
+        left: Show3Params.startX+ "px",
+        top: Show3Params.startY + "px",
+        width: "0px",
+        height: "0px",
+        borderRadius: '0%',
+        borderLeft: Show3Params.objectWidth + 'px solid transparent', 
+        borderRight:Show3Params.objectWidth + 'px solid transparent',
+        borderBottom: Show3Params.objectHeight + 'px solid rgba(0, 0, 0, .35)',
+
+        borderBottomRightRadius: '50%',
+        borderBottomLeftRadius: '50%',
+      },
+    }
+  ],
+};
+
 const Shows = [Show1, Show2];
 
 export default Shows;

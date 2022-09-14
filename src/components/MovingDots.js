@@ -8,6 +8,8 @@ const pageWidth = window.innerWidth;
 
 export default function MovingDots(){
     const CurrentShow = shows[new Date().getSeconds() % shows.length]; //Pseudo-random function
+    //const CurrentShow = shows[2];
+
     const circleDiameter = CurrentShow.ShowParameters['objectWidth']; //vmin to pixels
     const circleVelocity = CurrentShow.ShowParameters['objectVelocity']; //pixels
     const [dotOptions, setDotOptions] = useState(CurrentShow.ShowObjects);
@@ -24,6 +26,7 @@ export default function MovingDots(){
     useEffect(() => {
         let newOptions = [...dotOptions];
         newOptions.forEach((movingObj, index) => {
+            
             let changeX = movingObj.objectOptions.leftPixel + (circleVelocity * getCircleTransform(true, movingObj.objectOptions.currentAngle));
             let changeY =  movingObj.objectOptions.topPixel + (circleVelocity * getCircleTransform(false, movingObj.objectOptions.currentAngle));
             newOptions[index] = {objectOptions: {...movingObj.objectOptions, leftPixel: changeX, topPixel: changeY}, styleOptions: {...movingObj.styleOptions, left: changeX + 'px', top: changeY + 'px'}};
