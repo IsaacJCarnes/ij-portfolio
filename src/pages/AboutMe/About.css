@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 65vh;
-  margin: 5px;
+  margin: 0px;
 }
 
 .AboutContainer h3 {
@@ -48,6 +48,6 @@
       height: 10vmin;
     }
     .AboutContainer p{
-        font-size: 2.7vmin;
+        font-size: 3vmin;
     }
 }
