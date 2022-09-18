@@ -4,7 +4,7 @@
   justify-content: space-around;
   flex-direction: column;
   width: 95vw;
-  height: fit-content;
+  height: 15vh;
   border-bottom: 2px solid var(--main-border-color);
 }
 
@@ -14,6 +14,7 @@
   font-size: 6vw;
   color: var(--main-text-color);
   width: fit-content;
+  font-family: Playfair, 'Courier New', Courier, monospace;
 }
 
 .NavBar {
@@ -33,11 +34,11 @@
   padding-right: 2vw;
   margin-top: 0.2vh;
   text-align: right;
-  font-size: 1.2vh;
+  font-size: 3vw;
   font-weight: 600;
+  font-family: Playfair, 'Courier New', Courier, monospace;
   text-decoration: none;
   width: fit-content;
-  font-family: 'Arial Narrow', Arial, sans-serif;
   transition: color .5s, background-position 1s;
   background-image: linear-gradient(
     -225deg,

@@ -14,10 +14,7 @@ export default function Portfolio() {
   const pickProject = (e) => {
     //get index on chosen image and set selectedProject equal to it
     e.preventDefault();
-    if (e.target.dataset.index === selectedProject) {
-      return;
-    }
-    if (e.target.nodeName === "IMG") {
+    if (e.target.nodeName === "IMG" && Number(e.target.dataset.index) !== selectedProject) {
       setLastProject(selectedProject);
       selectProject(Number(e.target.dataset.index));
       let lastName = document.getElementById("LastName");

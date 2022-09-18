@@ -11,6 +11,8 @@
   font-size: 6.4vmin;
   color: var(--main-text-color);
   margin-bottom: 2vh;
+  font-family: Playfair, 'Courier New', Courier, monospace;
+
 }
 
 .AboutContainer h3:after {
@@ -31,8 +33,7 @@
 
 .AboutContainer p {
   color: var(--main-text-color);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 3.5vmin;
+  width: 90vw;
 }
 
 .lineBrk {

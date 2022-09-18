@@ -12,6 +12,7 @@
 .ContactContainer h1 {
   color: var(--main-text-color);
   font-size: 6.4vmin;
+  font-family: Playfair, 'Courier New', Courier, monospace;
 }
 
 .ContactContainer p {
@@ -20,8 +21,6 @@
   right: 5vw;
   bottom: 10vh;
   font-size: 2.5vmin;
-  font-family: 'Courier New', Courier, monospace;
-
 }
 
 .ContactForm {
@@ -39,13 +38,16 @@
 
 .ContactForm label {
   color: var(--main-text-color);
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .ContactForm input {
   width: 60vw;
   height: 5vh;
   font-family: 'Courier New', Courier, monospace;
+  border-radius: 2vmin 2vmin;
+  padding: 0px 2vmin 0px 2vmin;
+  background-color: rgba(255, 255, 255, .45);
+  border: 1px solid rgb(128, 128, 128);
 }
 
 .ContactForm textarea {
@@ -53,11 +55,25 @@
   height: 8vh;
   max-height: 12vh;
   font-family: 'Courier New', Courier, monospace;
+  border-radius: 2vmin 2vmin;
+  padding: 0px 2vmin 0px 2vmin;
+  background-color: rgba(255, 255, 255, .45);
+  border: 1px solid rgb(128, 128, 128);
 }
 
 .ContactForm button {
-  font-family: 'Courier New', Courier, monospace;
-
+  border-radius: 2vmin 2vmin;
+  background-color: black;
+  color: white;
+  transition:  background-color .5s, color .5s;
+}
+.ContactForm button:hover {
+  background-color: grey;
+  color: black;
+}
+.ContactForm button:active {
+  background-color: grey;
+  color: black;
 }
 
 @media only screen and (min-width: 810px) { /*Big Screens*/ 

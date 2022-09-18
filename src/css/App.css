@@ -7,8 +7,20 @@ Component Background: #51355A
   src: url(../assets/Delius-Regular.ttf);
 }
 
+@font-face {
+  font-family: SourceSans;
+  src: url(../assets/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: Playfair;
+  src: url(../assets/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+
+
 *{
-  font-family: Delius, 'Courier New', Courier, monospace;
+  font-family: SourceSans, 'Courier New', Courier, monospace;
   z-index: 10;
   font-weight: 600;
 }
@@ -36,5 +48,5 @@ Component Background: #51355A
 }
 
 .EasyText{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: SourceSans, 'Courier New', Courier, monospace;
 }
