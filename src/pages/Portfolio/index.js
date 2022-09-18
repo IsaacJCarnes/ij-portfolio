@@ -19,7 +19,7 @@ export default function Portfolio() {
     }
     if (e.target.nodeName === "IMG") {
       setLastProject(selectedProject);
-      selectProject(e.target.dataset.index);
+      selectProject(Number(e.target.dataset.index));
       let lastName = document.getElementById("LastName");
       let currName = document.getElementById("ProjectName");
       lastName.classList.add("FadeOut");
@@ -38,12 +38,12 @@ export default function Portfolio() {
     }
   };
 
-  let projectList = projectData.map(
+  const projectList = projectData.map(
     (
       item,
       i //Creates clickable images for each project
     ) => (
-      <div className="SelectorBorder" key={i}>
+      <div className={i !== selectedProject ? "SelectorBorder inactiveSelector" : "SelectorBorder activeSelector"} key={i}>
         <img
           data-index={i}
           src={item.photo}
