@@ -3,13 +3,12 @@ import '../css/MovingDots.css';
 import React, { useEffect, useState } from "react";
 import shows from "./ObjectShow.js";
 
-const pageHeight = window.innerHeight;
-const pageWidth = window.innerWidth;
+const pageHeight = document.documentElement.scrollHeight;
+const pageWidth = document.documentElement.scrollWidth;
 
 export default function MovingDots(){
     const CurrentShow = shows[new Date().getSeconds() % shows.length]; //Pseudo-random function
     //const CurrentShow = shows[2];
-
     const circleDiameter = CurrentShow.ShowParameters['objectWidth']; //vmin to pixels
     const circleVelocity = CurrentShow.ShowParameters['objectVelocity']; //pixels
     const [dotOptions, setDotOptions] = useState(CurrentShow.ShowObjects);
