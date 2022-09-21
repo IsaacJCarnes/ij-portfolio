@@ -134,6 +134,7 @@ export default function Portfolio() {
             </p>
             <div className="ButtonContainer">
               <button
+                className="styledButton"
                 type="button"
                 onClick={(e) => {
                   openRepositoryLink(e);
@@ -143,6 +144,7 @@ export default function Portfolio() {
               </button>
 
               <button
+                className="styledButton"
                 type="button"
                 onClick={(e) => {
                   openDeployedLink(e);
@@ -171,6 +173,7 @@ export default function Portfolio() {
                 </p>
                 <div className="ButtonContainer">
                   <button
+                    className="styledButton"
                     type="button"
                     onClick={(e) => {
                       openRepositoryLink(e);
@@ -180,6 +183,7 @@ export default function Portfolio() {
                   </button>
 
                   <button
+                    className="styledButton"
                     type="button"
                     onClick={(e) => {
                       openDeployedLink(e);
@@ -209,6 +213,7 @@ export default function Portfolio() {
           </p>
           <div className="ButtonContainer">
             <button
+              className="styledButton"
               type="button"
               onClick={(e) => {
                 openRepositoryLink(e);
@@ -218,6 +223,7 @@ export default function Portfolio() {
             </button>
 
             <button
+              className="styledButton"
               type="button"
               onClick={(e) => {
                 openDeployedLink(e);

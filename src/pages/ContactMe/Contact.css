@@ -63,17 +63,23 @@
 
 .ContactForm button {
   border-radius: 2vmin 2vmin;
-  background-color: black;
+  width: fit-content;
+  min-width: 5vw;
+  background-color: #333333;
   color: white;
-  transition:  background-color .5s, color .5s;
+  border: 0px;
+  transition: box-shadow .5s, transform .5s;
+  box-shadow: -.3vmin -.3vmin 0px .1vmin black;
+  border: 1px solid black;
+  transform: translate3d(0, 0, 0);
 }
 .ContactForm button:hover {
-  background-color: grey;
-  color: black;
+  box-shadow: -.15vmin -.15vmin 0px  .1vmin black;
+  transform: translate(-.15vmin, -.15vmin);
 }
 .ContactForm button:active {
-  background-color: grey;
-  color: black;
+  box-shadow: 0vmin 0vmin 0px  .1vmin black;
+  transform: translate(-.3vmin, -.3vmin);
 }
 
 @media only screen and (min-width: 810px) { /*Big Screens*/ 

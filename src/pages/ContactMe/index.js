@@ -32,7 +32,7 @@ export default function Contact(){
             <ValidationError prefix="Message" field="message" errors={state.errors}/>
             </div>
 
-            <button className="btn btn-block btn-info" disabled={state.submitting}>Submit</button>
+            <button disabled={state.submitting}>Submit</button>
             </form>
             <p>Or email me directly at <a href="mailto:isaacjdeveloper@gmail.com">IsaacJDeveloper@gmail.com</a></p>
         </section>

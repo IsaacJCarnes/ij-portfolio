@@ -29,19 +29,10 @@
   width: auto;
   height: 5vh;
   overflow: hidden;
-  border: 1px black solid;
   border-radius: 3vmin 3vmin;
 
+  border: 2px black solid;
   transition: box-shadow 1s, transform 1s;
-}
-
-.activeSelector{
-  box-shadow: 0vw 0vh 0px  .1vmin black;
-}
-
-.inactiveSelector{
-  box-shadow: -.4vmin -.4vmin 0vmin black;
-  transform: translate(.3vmin, .3vmin);
 }
 
 .SelectorImg {
@@ -206,6 +197,7 @@
   background-color: #333333;
   color: var(--main-bg-color);
   font-family: Playfair, 'Courier New', Courier, monospace;
+  border: 1px black;
 }
 
 .FlipOut{

@@ -50,3 +50,22 @@ Component Background: #51355A
 .EasyText{
   font-family: SourceSans, 'Courier New', Courier, monospace;
 }
+
+.activeSelector{
+  box-shadow: 0vw 0vh 0px  0.1vmin black;
+}
+
+.inactiveSelector{
+  box-shadow: -.3vmin -.3vmin 0px 0.1vmin black;
+  transform: translate(.3vmin, .3vmin);
+}
+
+.styledButton{
+  box-shadow: -.3vmin -.3vmin 0px 0.1vmin black;
+}
+
+.styledButton:hover{
+  box-shadow: 0vw 0vh 0px  .1vmin black;
+  transition: box-shadow .5s, transform .5s;
+  transform: translate(-.3vmin, -.3vmin);
+}
