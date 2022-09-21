@@ -88,8 +88,8 @@ const Show1 = { //Rainbow Dot Show
   ],
 };
 
-const colorArray = ["rgba(255, 0, 0, .45)", "rgba(255, 127, 0, .45)", "rgba(255, 255, 0, .45)", "rgba(0, 255, 0, .45)", "rgba(0, 0, 255, .45)", 'rgba(75, 0, 130, .45)', 'rgba(148, 0, 211, .45)'].sort(() => (Math.random() > .5) ? 1 : -1);
-const Show2Params = {showStyle: 'bounce', objectWidth: vminToPx(25), objectVelocity: vminToPx(15), startingPx: vminToPx(30)};
+const colorArray = ["rgba(255, 0, 0,", "rgba(255, 127, 0,", "rgba(255, 255, 0,", "rgba(0, 255, 0,", "rgba(0, 0, 255,", 'rgba(75, 0, 130,', 'rgba(148, 0, 211,'].sort(() => (Math.random() > .5) ? 1 : -1);
+const Show2Params = {showStyle: 'bounce', objectWidth: vminToPx(25), objectVelocity: vminToPx(15), startingPx: vminToPx(30), backSuffix: " .65)", backColorSuffix: " .45)"};
 const Show2 = { //Random Color Squares
   ShowParameters: { showStyle: Show2Params.showStyle, objectWidth: Show2Params.objectWidth, objectVelocity: Show2Params.objectVelocity },
   ShowObjects: [
@@ -100,7 +100,8 @@ const Show2 = { //Random Color Squares
         top: Show2Params.startingPx + "px",
         width: Show2Params.objectWidth + "px",
         height: Show2Params.objectWidth + "px",
-        backgroundColor: colorArray[0],
+        backgroundColor: colorArray[0] + Show2Params.backColorSuffix,
+        background: "radial-gradient(farthest-corner at 0% 0%, " + colorArray[0] + Show2Params.backSuffix + " 0%, rgba(229, 236, 233, 0) 86%)",
         borderRadius: '0%',
         borderTopLeftRadius: vminToPx(5) + "px " + vminToPx(5) + "px", 
       },
@@ -112,7 +113,8 @@ const Show2 = { //Random Color Squares
           top: Show2Params.startingPx + "px",
           width: Show2Params.objectWidth + "px",
           height: Show2Params.objectWidth + "px",
-          backgroundColor: colorArray[1],
+          backgroundColor: colorArray[1] + Show2Params.backColorSuffix,
+          background: "radial-gradient(farthest-corner at 100% 0%, " + colorArray[1] + Show2Params.backSuffix + " 0%, rgba(229, 236, 233, 0) 86%)",
           borderRadius: '0%',
           borderTopRightRadius: vminToPx(5) + "px " + vminToPx(5) + "px", 
         },
@@ -124,7 +126,8 @@ const Show2 = { //Random Color Squares
           top: (Show2Params.startingPx+Show2Params.objectWidth) + "px",
           width: Show2Params.objectWidth + "px",
           height: Show2Params.objectWidth + "px",
-          backgroundColor: colorArray[2],
+          backgroundColor: colorArray[2] + Show2Params.backColorSuffix,
+          background: "radial-gradient(farthest-corner at 100% 100%, " + colorArray[2] + Show2Params.backSuffix + " 0%, rgba(229, 236, 233, 0) 86%)",
           borderRadius: '0%',
           borderBottomRightRadius: vminToPx(5) + "px " + vminToPx(5) + "px", 
         },
@@ -136,7 +139,8 @@ const Show2 = { //Random Color Squares
           top: (Show2Params.startingPx+Show2Params.objectWidth) + "px",
           width: Show2Params.objectWidth + "px",
           height: Show2Params.objectWidth + "px",
-          backgroundColor: colorArray[3],
+          backgroundColor: colorArray[3] + Show2Params.backColorSuffix,
+          background: "radial-gradient(farthest-corner at 0% 100%, " + colorArray[3] + Show2Params.backSuffix + " 0%, rgba(229, 236, 233, 0) 86%)",
           borderRadius: '0%',
           borderBottomLeftRadius: vminToPx(5) + "px " + vminToPx(5) + "px", 
         },
