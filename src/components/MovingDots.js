@@ -55,29 +55,45 @@ export default function MovingDots(){
         let changeY =  startY + (circleVelocity * getCircleTransform(false, tempObj.objectOptions.currentAngle));
 
         if(changeX+circleDiameter > pageWidth){
-            //console.log("Point A (",startX,",",startY,") Point B(",changeX,changeY,") Point C(",(pageWidth-circleDiameter),changeY,")");
+            let angle = (90*Math.PI/180)-(find_angle({x: startX, y: startY}, {x: changeX, y: changeY}, {x: (pageWidth-circleDiameter), y: changeY})); //Gets unknown angle
+            if(startY < changeY){ //Dampens vertical movement if horizontal is changed
+                changeY = changeY - Math.round((changeX-(pageWidth-circleDiameter))/Math.tan(angle));
+            } else if(startY > changeY){
+                changeY = changeY + Math.round((changeX-(pageWidth-circleDiameter))/Math.tan(angle));
+            }
+
             changeX = pageWidth - circleDiameter;
             tempAngle = 180 - (tempAngle%360);
         } else if( 0 >= changeX){
-            //console.log("Point A (",startX,",",startY,") Point B(",changeX,changeY,") Point C(",0,changeY,")");
+            let angle = (90*Math.PI/180)-(find_angle({x: startX, y: startY}, {x: changeX, y: changeY}, {x: 0, y: changeY})); //Gets unknown angle
+            if(startY < changeY){ //Dampens vertical movement if horizontal is changed
+                changeY = changeY + Math.round((changeX)/Math.tan(angle));
+            } else if(startY > changeY){
+                changeY = changeY - Math.round((changeX)/Math.tan(angle));
+            }
+
             changeX = 0;
             tempAngle = 180 - (tempAngle%360);
         }
 
         if(changeY+circleDiameter > pageHeight){
-            console.log("Point A (",startX,",",startY,") Point B(",changeX,changeY,") Point C(",changeX,(pageHeight-circleDiameter),")");
             let angle = (90*Math.PI/180)-(find_angle({x: startX, y: startY}, {x: changeX, y: changeY}, {x: changeX, y: (pageHeight-circleDiameter)})); //Gets unknown angle
-            console.log("Angle ", angle, " Distance ", changeY-(pageHeight-circleDiameter));
-            console.log((changeY-(pageHeight-circleDiameter))/Math.tan(angle));
-            if(startX < changeX){
+            if(startX < changeX){ //Dampens horizontal movement if vertical is changed
                 changeX = changeX - Math.round((changeY-(pageHeight-circleDiameter))/Math.tan(angle));
             } else if(startX > changeX){
                 changeX = changeX + Math.round((changeY-(pageHeight-circleDiameter))/Math.tan(angle));
             }
+
             changeY = pageHeight - circleDiameter;
             tempAngle = 360 - (tempAngle%360);
         } else if( 0 >= changeY){
-            //console.log("Point A (",startX,",",startY,") Point B(",changeX,changeY,") Point C(",changeX,0,")");
+            let angle = (90*Math.PI/180)-(find_angle({x: startX, y: startY}, {x: changeX, y: changeY}, {x: changeX, y: 0})); //Gets unknown angle
+            if(startX < changeX){ //Dampens horizontal movement if vertical is changed
+                changeX = changeX + Math.round(changeY/Math.tan(angle));
+            } else if(startX > changeX){
+                changeX = changeX - Math.round(changeY/Math.tan(angle));
+            }
+
             changeY = 0;
             tempAngle = 360 - (tempAngle%360);
         }
