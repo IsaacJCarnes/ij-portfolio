@@ -22,6 +22,16 @@ export default function MovingDots(){
         }
     }
 
+    function find_angle(A,B,C, asRadians = false) { /* https://stackoverflow.com/questions/17763392/how-to-calculate-in-javascript-angle-between-3-points */
+        var AB = Math.pow(B.x-A.x,2)+ Math.pow(B.y-A.y,2);    
+        var BC = Math.pow(B.x-C.x,2)+ Math.pow(B.y-C.y,2); 
+        var AC = Math.pow(C.x-A.x,2)+ Math.pow(C.y-A.y,2);
+        if(asRadians){
+            return Math.acos((AB + BC - AC)/(4*BC*AB));
+        }
+        return (Math.acos((AB + BC - AC)/Math.sqrt(4*BC*AB)));
+    }
+
     useEffect(() => {
         let newOptions = [...dotOptions];
         newOptions.forEach((movingObj, index) => {
@@ -39,21 +49,35 @@ export default function MovingDots(){
         let tempObj = {...newOptions[targetIndex]};
 
         let tempAngle = tempObj.objectOptions.currentAngle;
-        let changeX =  tempObj.objectOptions.leftPixel + (circleVelocity * getCircleTransform(true, tempObj.objectOptions.currentAngle));
-        let changeY =  tempObj.objectOptions.topPixel + (circleVelocity * getCircleTransform(false, tempObj.objectOptions.currentAngle));
+        let startX = tempObj.objectOptions.leftPixel;
+        let startY = tempObj.objectOptions.topPixel;
+        let changeX =  startX + (circleVelocity * getCircleTransform(true, tempObj.objectOptions.currentAngle));
+        let changeY =  startY + (circleVelocity * getCircleTransform(false, tempObj.objectOptions.currentAngle));
 
         if(changeX+circleDiameter > pageWidth){
+            //console.log("Point A (",startX,",",startY,") Point B(",changeX,changeY,") Point C(",(pageWidth-circleDiameter),changeY,")");
             changeX = pageWidth - circleDiameter;
             tempAngle = 180 - (tempAngle%360);
         } else if( 0 >= changeX){
+            //console.log("Point A (",startX,",",startY,") Point B(",changeX,changeY,") Point C(",0,changeY,")");
             changeX = 0;
             tempAngle = 180 - (tempAngle%360);
         }
 
         if(changeY+circleDiameter > pageHeight){
+            console.log("Point A (",startX,",",startY,") Point B(",changeX,changeY,") Point C(",changeX,(pageHeight-circleDiameter),")");
+            let angle = (90*Math.PI/180)-(find_angle({x: startX, y: startY}, {x: changeX, y: changeY}, {x: changeX, y: (pageHeight-circleDiameter)})); //Gets unknown angle
+            console.log("Angle ", angle, " Distance ", changeY-(pageHeight-circleDiameter));
+            console.log((changeY-(pageHeight-circleDiameter))/Math.tan(angle));
+            if(startX < changeX){
+                changeX = changeX - Math.round((changeY-(pageHeight-circleDiameter))/Math.tan(angle));
+            } else if(startX > changeX){
+                changeX = changeX + Math.round((changeY-(pageHeight-circleDiameter))/Math.tan(angle));
+            }
             changeY = pageHeight - circleDiameter;
             tempAngle = 360 - (tempAngle%360);
         } else if( 0 >= changeY){
+            //console.log("Point A (",startX,",",startY,") Point B(",changeX,changeY,") Point C(",changeX,0,")");
             changeY = 0;
             tempAngle = 360 - (tempAngle%360);
         }
