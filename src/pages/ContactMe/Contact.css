@@ -68,18 +68,7 @@
   background-color: #333333;
   color: white;
   border: 0px;
-  transition: box-shadow .5s, transform .5s;
-  box-shadow: -.3vmin -.3vmin 0px .1vmin black;
   border: 1px solid black;
-  transform: translate3d(0, 0, 0);
-}
-.ContactForm button:hover {
-  box-shadow: -.15vmin -.15vmin 0px  .1vmin black;
-  transform: translate(-.15vmin, -.15vmin);
-}
-.ContactForm button:active {
-  box-shadow: 0vmin 0vmin 0px  .1vmin black;
-  transform: translate(-.3vmin, -.3vmin);
 }
 
 @media only screen and (min-width: 810px) { /*Big Screens*/ 

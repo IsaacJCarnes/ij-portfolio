@@ -52,20 +52,26 @@ Component Background: #51355A
 }
 
 .activeSelector{
-  box-shadow: 0vw 0vh 0px  0.1vmin black;
+  box-shadow: 0px 0px 0px  1px black;
 }
 
 .inactiveSelector{
-  box-shadow: -.3vmin -.3vmin 0px 0.1vmin black;
-  transform: translate(.3vmin, .3vmin);
+  box-shadow: -5px -5px 0px 1px black;
+  transform: translate(5px, 5px);
 }
 
 .styledButton{
-  box-shadow: -.3vmin -.3vmin 0px 0.1vmin black;
+  box-shadow: -4px -4px 0px 1px black;
 }
 
 .styledButton:hover{
-  box-shadow: 0vw 0vh 0px  .1vmin black;
+  box-shadow: -2px -2px 0px  1px black;
   transition: box-shadow .5s, transform .5s;
-  transform: translate(-.3vmin, -.3vmin);
+  transform: translate(-2px, -2px);
+}
+
+.styledButton:active{
+  box-shadow: 0px 0px 0px  1px black;
+  transition: box-shadow .5s, transform .5s;
+  transform: translate(-4px, -4px);
 }
