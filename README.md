@@ -13,9 +13,9 @@ The user can access my portfolio work by going to 'portfolio' in the nav bar, se
 ## Link and Screenshots
 Here is a link to the [deployed site](https://isaacjcarnes.github.io/ij-portfolio/)
 
-![Landing Page for React Portfolio](./public/aboutMe.png)
+![Landing Page for React Portfolio](./public/aboutMe.jpg)
 
-![Portfolio for React Portfolio](./public/portfolioPage.png)
+![Portfolio for React Portfolio](./public/portfolioPage.jpg)
 
 ## Questions
 You can find me on [Github](https://github.com/IsaacJCarnes)
