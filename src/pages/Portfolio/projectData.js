@@ -21,12 +21,12 @@ export const projectData = [
     //Project array
     new Project(
       "Card Graphix",
-      "https://card-graphix.herokuapp.com/",
-      "https://github.com/wl0194/card-graphix",
+      "https://card-graphix.web.app/",
+      "https://github.com/IsaacJCarnes/card-graphix-firebase",
       { CardGraphix }.CardGraphix,
       "Card Building Website",
       "Used for creating and customizing buisness cards and exporting the design to a pdf.",
-      "Built using Apollo, Bootsrap, Express, JavaScript, React JS and Mongoose. Hosted on Heroku and also uses the Cloudinary API for uploading images to the site."
+      "Built using Apollo, Bootsrap, Express, JavaScript, React JS and Mongoose. Hosted on Firebase and also uses the Cloudinary API for uploading images to the site."
     ),
     new Project(
       "The Dog Endorsement Website",
