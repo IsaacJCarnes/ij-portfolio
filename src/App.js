@@ -29,6 +29,7 @@ function App() {
           <Route exact path="/*" element={<WildPage />} />
         </Routes>
       </div>
+      <MovingDots />
       <Footer />
     </div>
   );
