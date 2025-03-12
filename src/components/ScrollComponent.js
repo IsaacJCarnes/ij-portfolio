@@ -13,7 +13,7 @@ function ScrollComponent({ scrollProp, startX, startY, height, width, children, 
         if(startY !== undefined && verticalSpeed !== 0){
             setTopPx(topPx + (scrollChange * verticalSpeed))
         }
-    }, [scrollProp, horizontalSpeed, verticalSpeed, startX, startY])
+    }, [scrollProp, lastScrollProp, leftPx, topPx, horizontalSpeed, verticalSpeed, startX, startY])
     
     return (
         <div style={{ position: 'absolute', height: height ? `${height}px` : 'fit-content', width: width ? `${width}px` : 'fit-content', left:`${leftPx}px`, top:`${topPx}px`, overflow: 'hidden'}}>{children}</div>

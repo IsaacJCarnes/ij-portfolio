@@ -27,7 +27,7 @@ function App() {
     <div className='FullPage d-flex flex-column align-items-center'>
       <Header />
       <div className="ContentDiv">
-        <ScrollListener scrollProp={scrollPosition} setScrollProp={setScrollPosition} />
+        <ScrollListener scrollProp={scrollPosition} setScrollProp={setScrollPosition} minScroll={-530} maxScroll={3900}/>
         <div>{scrollPosition}</div>
         <ScrollComponent scrollProp={scrollPosition} startX={75} startY={0} horizontalSpeed={-1} verticalSpeed={-1}>
           <AboutMe />
@@ -35,7 +35,7 @@ function App() {
         <ScrollComponent scrollProp={scrollPosition} width={1500} height={600} startX={75} startY={600} verticalSpeed={-1}>
           <Portfolio />
         </ScrollComponent>
-        <ScrollComponent scrollProp={scrollPosition} width={1000} startX={2500} startY={25} horizontalSpeed={-1}>
+        <ScrollComponent scrollProp={scrollPosition} width={1000} startX={2600} startY={25} horizontalSpeed={-1}>
           <Resume />
         </ScrollComponent>
       </div>
