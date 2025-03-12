@@ -25,6 +25,10 @@ Component Background: #51355A
   font-weight: 600;
 }
 
+#root{
+  height: 100vh;
+}
+
 .App {
   text-align: center;
 }
@@ -39,8 +43,11 @@ Component Background: #51355A
 }
 
 .ContentDiv{
-  width: 95vw;
-  height: 75vh;
+  width: 100vw;
+  height: 100vh;
+  display:block;
+  position: relative;
+  overflow: hidden;
 }
 
 .ResumeText{
