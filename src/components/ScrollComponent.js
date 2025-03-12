@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
-function ScrollComponent({ scrollProp, startX, startY, height, width, children, movingUp = true, movingRight = true,  }) {
-    const [leftPx, setLeftPx] = useState(0);
-    const [topPx, setTopPx] = useState(0);
+function ScrollComponent({ scrollProp, startX, startY, height, width, children, verticalSpeed=0, horizontalSpeed=0,  }) {
+    const [lastScrollProp, setLastScrollProp] = useState(scrollProp)
+    const [leftPx, setLeftPx] = useState(startX - scrollProp);
+    const [topPx, setTopPx] = useState(startY - scrollProp);
     useEffect(() => {
-        if(startX !== undefined){
-            setLeftPx(scrollProp - startX * (movingRight ? 1 : -1))
+        var scrollChange = scrollProp-lastScrollProp;
+        setLastScrollProp(scrollProp);
+        if(startX !== undefined && horizontalSpeed !== 0){
+            setLeftPx(leftPx + (scrollChange * horizontalSpeed))
         }
-        if(startY !== undefined){
-            setTopPx(scrollProp - startY * (movingUp ? 1 : -1))
+        if(startY !== undefined && verticalSpeed !== 0){
+            setTopPx(topPx + (scrollChange * verticalSpeed))
         }
-    }, [scrollProp, movingRight, movingUp, startX, startY])
+    }, [scrollProp, horizontalSpeed, verticalSpeed, startX, startY])
     
     return (
         <div style={{ position: 'absolute', height: height ? `${height}px` : 'fit-content', width: width ? `${width}px` : 'fit-content', left:`${leftPx}px`, top:`${topPx}px`, overflow: 'hidden'}}>{children}</div>

@@ -29,13 +29,13 @@ function App() {
       <div className="ContentDiv">
         <ScrollListener scrollProp={scrollPosition} setScrollProp={setScrollPosition} />
         <div>{scrollPosition}</div>
-        <ScrollComponent scrollProp={scrollPosition} startX={0} startY={0}>
+        <ScrollComponent scrollProp={scrollPosition} startX={75} startY={0} horizontalSpeed={-1} verticalSpeed={-1}>
           <AboutMe />
         </ScrollComponent>
-        <ScrollComponent scrollProp={scrollPosition} width={1500} height={600} startY={-600}>
+        <ScrollComponent scrollProp={scrollPosition} width={1500} height={600} startX={75} startY={600} verticalSpeed={-1}>
           <Portfolio />
         </ScrollComponent>
-        <ScrollComponent scrollProp={scrollPosition} width={1000} startX={2500} movingRight={false}>
+        <ScrollComponent scrollProp={scrollPosition} width={1000} startX={2500} startY={25} horizontalSpeed={-1}>
           <Resume />
         </ScrollComponent>
       </div>
