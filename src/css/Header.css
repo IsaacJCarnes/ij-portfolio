@@ -3,9 +3,10 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  width: 95vw;
+  width: 100vw;
   height: 15vh;
-  border-bottom: 2px solid var(--main-border-color);
+  border-bottom: 4px solid var(--main-border-color);
+  background-color: var(--main-bg-color);
 }
 
 .HeaderName {

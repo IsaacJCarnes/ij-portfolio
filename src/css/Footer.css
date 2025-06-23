@@ -1,8 +1,12 @@
 .FooterContainer{
-    width: 95vw;
-    height: 10vh;
+    width: 100vw;
+    height: 15vh;
     margin: 2;
-    border-top: 2px solid var(--main-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 4px solid var(--main-border-color);
+    background-color: var(--main-bg-color);
 }
 
 .FooterContainer button{

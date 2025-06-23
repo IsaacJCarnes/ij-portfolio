@@ -12,7 +12,7 @@ export default function Header() {
     }
 
     return(
-        <div className="HeaderArea p-2 mt-2 rounded-top">
+        <div className="HeaderArea">
             <h1 className="HeaderName" onClick={(e) => handleClick(e)}>Isaac Joshua's Portfolio</h1>
 
             <Nav/>
