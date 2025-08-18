@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 import MovingDots from "./components/MovingDots";
 import ScrollListener from './components/ScrollListener';
 import ScrollComponent from './components/ScrollComponent';
+import SVGComponent from "./components/SVGPath";
 
 function App() {
 
@@ -24,22 +25,9 @@ function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   return (
-    <div className='FullPage d-flex flex-column align-items-center'>
+    <div className='FullPage'>
       <Header />
-      <div className="ContentDiv">
-        <ScrollListener scrollProp={scrollPosition} setScrollProp={setScrollPosition} minScroll={-530} maxScroll={3900}/>
-        <div>{scrollPosition}</div>
-        <ScrollComponent scrollProp={scrollPosition} startX={75} startY={0} horizontalSpeed={-1} verticalSpeed={-1}>
-          <AboutMe />
-        </ScrollComponent>
-        <ScrollComponent scrollProp={scrollPosition} width={1500} height={600} startX={75} startY={600} verticalSpeed={-1}>
-          <Portfolio />
-        </ScrollComponent>
-        <ScrollComponent scrollProp={scrollPosition} width={1000} startX={2600} startY={25} horizontalSpeed={-1}>
-          <Resume />
-        </ScrollComponent>
-      </div>
-      <MovingDots />
+      <SVGComponent />
       <Footer />
     </div>
   );

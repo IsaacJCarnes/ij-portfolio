@@ -1,20 +1,65 @@
 /*Includes Header and Nav Data*/
 .HeaderArea {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  width: 95vw;
-  height: 15vh;
-  border-bottom: 2px solid var(--main-border-color);
+  width: 100vw;
+  height: 12vmin;
+  z-index: 2;
 }
 
-.HeaderName {
-  margin-top: 0%;
-  margin-bottom: 5%;
-  font-size: 6vw;
-  color: var(--main-text-color);
-  width: fit-content;
-  font-family: Playfair, 'Courier New', Courier, monospace;
+.header1 {  
+  z-index: 0;
+  position: relative;
+  bottom: 0px;
+  margin: 0px;
+  padding: 10px;
+  font-size: 40px;
+  height: 10vmin;
+  color: var(--main-bg-color);
+  background-color: var(--main-text-color);
+  min-width: fit-content;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#circleHolder{
+  z-index: -1;
+  position: relative;
+  width: 20vmin;
+  height: 100%;  
+  margin-top: 3vmin;
+}
+
+#quarterCircle{
+  z-index: -3;
+  margin-left: -10vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  border: 10vw solid var(--main-text-color);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-top: 0;
+  width: 20vw;
+  height: 10vw;
+}
+#blockingCircle{
+  z-index: -2;
+  margin-left: -5vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  border: 10vw solid var(--main-bg-color);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-top: 0;
+  width: 12vw;
+  height: 7.5vw;
 }
 
 .NavBar {
@@ -83,8 +128,9 @@
 }
 
 @media only screen and (min-width: 891px) { /*Big Screens*/
-  .HeaderName {
-    font-size: 30pt;
+  .HeaderArea{
+    width: 100vw;
+    min-height: 70px;
   }
 
   .NavBar {

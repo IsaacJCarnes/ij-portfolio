@@ -9,9 +9,10 @@
 }*/
 
 :root{
-  --main-bg-color: #E5ECE9;
+  --main-bg-color: #090D2B;
   --main-border-color: #969A97;
-  --main-text-color: #3d3f3d;
+  --modal-bg-color: #2C4DDE;
+  --main-text-color: whitesmoke;
   --alt-text-color: #d3d3d3;
   --nav-first-color: #3d3f3d;
   --nav-second-color: #e4e6d2;
@@ -34,6 +35,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-bg-color);
 }
 
 code {

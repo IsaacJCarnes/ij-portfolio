@@ -1,0 +1,4 @@
+svg {
+  position: relative;
+  display: block; /* Removes any extra space below the SVG */
+}
