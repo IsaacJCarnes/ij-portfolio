@@ -1,7 +1,10 @@
 import "../css/ContentModal.css";
 
-export default function ContentModal({ content, isFlipped = false }) {
+export default function ContentModal({ content, isFlipped = false, isConnector = true }) {
   const getCircle = () => {
+    if(!isConnector){
+      return <></>
+    }
     if (isFlipped) {
       return (
         <div className="circleHolder flipped">
@@ -20,8 +23,14 @@ export default function ContentModal({ content, isFlipped = false }) {
     );
   };
 
+  const getClassName = () =>{
+    if(!isConnector){
+      return " noConnector";
+    }
+    return isFlipped ? " flipped" : "";
+  }
   return (
-    <div className={"ModalArea" + (isFlipped ? " flipped" : "")}>
+    <div className={"ModalArea" + getClassName()}>
       <div className={"ContentArea" + (isFlipped ? " flipped" : "")}>
         {content}
       </div>

@@ -9,7 +9,7 @@
 }*/
 
 :root{
-  --main-bg-color: #6970a5;
+  --main-bg-color: #202020;
   --main-border-color: #969A97;
   --modal-bg-color: #2C4DDE;
   --main-text-color: whitesmoke;
@@ -46,7 +46,7 @@ code {
 .background{
   margin-top: -2.5%;
   margin-left: -2.5%;
-  opacity: 50%;
+  opacity: 25%;
   z-index: -1;
   width: 105%;
   height: 105%;
