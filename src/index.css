@@ -9,7 +9,7 @@
 }*/
 
 :root{
-  --main-bg-color: #090D2B;
+  --main-bg-color: #6970a5;
   --main-border-color: #969A97;
   --modal-bg-color: #2C4DDE;
   --main-text-color: whitesmoke;
@@ -41,4 +41,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.background{
+  margin-top: -2.5%;
+  margin-left: -2.5%;
+  opacity: 50%;
+  z-index: -1;
+  width: 105%;
+  height: 105%;
+  position: absolute;
+  background-image: url(./assets/background.svg);
+  background-repeat: repeat;
+  background-size: 256px 256px;
 }

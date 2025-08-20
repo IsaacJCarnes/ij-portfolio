@@ -1,10 +1,4 @@
-import './css/App.css';
-
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
-import { useState } from "react";
+import "./css/App.css";
 
 import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
@@ -15,21 +9,21 @@ import WildPage from "./pages/WildPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ContentModal from "./components/ContentModal";
-import MovingDots from "./components/MovingDots";
-import ScrollListener from './components/ScrollListener';
-import ScrollComponent from './components/ScrollComponent';
-import SVGComponent from "./components/SVGPath";
 
 function App() {
-
-  const basePath = "/ij-portfolio/";
-  const [scrollPosition, setScrollPosition] = useState(0);
-
   return (
-    <div className='FullPage'>
-      <div style={{height:"50px"}}></div>
+    <div className="FullPage">
+      <div className="background" />
+      <div style={{ height: "50px" }}></div>
       <Header />
-      <ContentModal isFlipped={true} content={<div style={{height:"300px"}}>Content</div>}/>
+      <ContentModal
+        isFlipped={true}
+        content={<div style={{ height: "300px" }}>Content</div>}
+      />
+      <ContentModal
+        isFlipped={false}
+        content={<div style={{ height: "300px" }}>Content</div>}
+      />
       <Footer />
     </div>
   );
