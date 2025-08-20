@@ -14,6 +14,7 @@ import WildPage from "./pages/WildPage";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ContentModal from "./components/ContentModal";
 import MovingDots from "./components/MovingDots";
 import ScrollListener from './components/ScrollListener';
 import ScrollComponent from './components/ScrollComponent';
@@ -27,7 +28,7 @@ function App() {
   return (
     <div className='FullPage'>
       <Header />
-      <SVGComponent />
+      <ContentModal isFlipped={true} content={<div className="header1">Isaac Carnes</div>}/>
       <Footer />
     </div>
   );

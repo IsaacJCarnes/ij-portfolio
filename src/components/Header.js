@@ -1,7 +1,7 @@
 import "../css/Header.css";
 
 import { useNavigate } from "react-router-dom";
-import SVGComponent from "./SVGPath";
+import ContentModal from "./ContentModal";
 
 import Nav from "./Nav";
 
@@ -11,8 +11,11 @@ export default function Header() {
     e.preventDefault();
     navigate("/ij-portfolio/");
   }
-
-  return (
+return (
+    <ContentModal content={<div className="header1">Isaac Carnes</div>}/>
+);
+  /*return (
+    <ContentModal
     <div className="HeaderArea">
       <div className="header1" onClick={(e) => handleClick(e)}>
         Isaac Carnes
@@ -22,5 +25,5 @@ export default function Header() {
         <div id="blockingCircle"></div>
       </div>
     </div>
-  );
+  );*/
 }

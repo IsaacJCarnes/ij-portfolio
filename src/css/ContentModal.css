@@ -1,0 +1,139 @@
+/*Includes Header and Nav Data*/
+.ModalArea {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  width: 100vw;
+  height: 15vh;
+  z-index: 2;
+  grid-template-columns: [line1] 84% [line2] 15% [end];
+  grid-template-rows: [row1] 75% [row2] 5% [row3] 20% [end];
+}
+
+.ModalArea.flipped {
+  grid-template-columns: [line1] 15% [line2] 84% [end];
+}
+
+.ContentArea {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  z-index: 0;
+  position: relative;
+  bottom: 0px;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  height: 75%;
+  color: var(--main-bg-color);
+  background-color: var(--main-text-color);
+  min-width: fit-content;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.ContentArea.flipped {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.circleArea {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: -1;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.circleArea.flipped {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.circleArea span {
+  position: relative;
+  height: 5vh;
+  width: 100%;
+}
+
+.circleHolder {
+  z-index: -1;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  position: relative;
+  margin-left: -1px;
+  width: 100%;
+  min-height: 100%;
+  height: inherit;
+  margin-top: -1px;
+}
+
+.circleHolder.flipped {
+  transform: scaleX(-1);
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.quarterCircle {
+  z-index: -3;
+  margin-left: -10vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  border: 10vw solid var(--main-text-color);
+  border-radius: 25% 75% 0 0 / 100% 100% 0 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-top: 0;
+  width: 20vw;
+  height: 10vw;
+}
+
+.blockingCircle {
+  z-index: -2;
+  margin-left: -5vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  border: 10vw solid var(--main-bg-color);
+  border-radius: 25% 65% 0 0 / 100% 100% 0 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-top: 0;
+  width: 12vw;
+  height: 7.5vw;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  /* Styles applied when the viewport width is greater than or equal to its height */
+  .circleHolder {
+    margin-top: 7vh;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  /* Styles applied when the viewport height is greater than or equal to its width */
+  body {
+    background-color: lightcoral;
+  }
+}
+
+@media (aspect-ratio: 1/1) {
+  /* Styles applied when the viewport width and height are equal */
+  body {
+    background-color: lightgreen;
+  }
+}
