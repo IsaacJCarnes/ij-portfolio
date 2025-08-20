@@ -27,8 +27,9 @@ function App() {
 
   return (
     <div className='FullPage'>
+      <div style={{height:"50px"}}></div>
       <Header />
-      <ContentModal isFlipped={true} content={<div className="header1">Isaac Carnes</div>}/>
+      <ContentModal isFlipped={true} content={<div style={{height:"300px"}}>Content</div>}/>
       <Footer />
     </div>
   );

@@ -1,19 +1,14 @@
-/*Includes Header and Nav Data*/
-.HeaderArea {
-  position: relative;
-  padding: 0px;
-  margin: 0px;
+.header{
+  height: 100%;
+  width: 100%;
   display: flex;
-  width: 100vw;
-  height: 14vmin;
-  z-index: 2;
+  justify-content: center;
+  align-items: center;
 }
 
-.header1 {  
-  z-index: 0;
+.header h1{
   position: relative;
-  margin: 0px;
-  font-size: 20px;
+  font-size: 1fr;
   color: var(--main-bg-color);
   min-width: fit-content;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

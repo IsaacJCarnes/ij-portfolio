@@ -12,7 +12,7 @@ export default function Header() {
     navigate("/ij-portfolio/");
   }
 return (
-    <ContentModal content={<div className="header1">Isaac Carnes</div>}/>
+    <ContentModal content={<div className="header"><h1>Isaac Carnes' Portfolio</h1></div>}/>
 );
   /*return (
     <ContentModal

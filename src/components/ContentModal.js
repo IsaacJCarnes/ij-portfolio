@@ -2,33 +2,26 @@ import "../css/ContentModal.css";
 
 export default function ContentModal({ content, isFlipped = false }) {
   const getCircle = () => {
-    if (!isFlipped) {
+    if (isFlipped) {
       return (
-        <div className="circleArea">
-            <span />
-          <div className="circleHolder">
-            <div className="quarterCircle"></div>
-            <div className="blockingCircle"></div>
+        <div className="circleHolder flipped">
+          <div className="outerCircle flipped">
+            <div className="innerCircle" />
           </div>
         </div>
       );
     }
-    return <></>;
-  };
-  const getFlippedCircle = () => {
-    if (isFlipped) {
-      return (
-        <div className="circleHolder flipped">
-          <div className="quarterCircle"></div>
-          <div className="blockingCircle"></div>
+    return (
+      <div className="circleHolder">
+        <div className="outerCircle">
+          <div className="innerCircle" />
         </div>
-      );
-    }
-    return <></>;
+      </div>
+    );
   };
+
   return (
     <div className={"ModalArea" + (isFlipped ? " flipped" : "")}>
-      {getFlippedCircle()}
       <div className={"ContentArea" + (isFlipped ? " flipped" : "")}>
         {content}
       </div>
