@@ -9,7 +9,6 @@
 .header h1{
   position: relative;
   font-size: 1fr;
-  color: var(--main-bg-color);
   min-width: fit-content;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

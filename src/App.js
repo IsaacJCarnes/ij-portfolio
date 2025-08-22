@@ -12,17 +12,21 @@ import ContentModal from "./components/ContentModal";
 
 function App() {
   return (
-    <div className="FullPage">
-      <div className="background" />
+    <div id="FullPage">
+      <div className="background"/>
       <div style={{ height: "50px" }}></div>
       <Header />
       <ContentModal
         isFlipped={true}
-        content={<div style={{ height: "300px" }}>Content</div>}
+        content={<AboutMe />}
       />
       <ContentModal
         isFlipped={false}
-        content={<div style={{ height: "300px" }}>Content</div>}
+        content={<Resume />}
+      />
+      <ContentModal
+        isFlipped={true}
+        content={<ContactMe />}
       />
       <Footer />
     </div>

@@ -43,6 +43,13 @@
   grid-row-end: 3;
 }
 
+.innerContentArea{
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-bg-color);
+  color: var(--main-text-color);
+}
+
 .circleHolder {
   grid-column-start: 3;
   grid-column-end: 4;
