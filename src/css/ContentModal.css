@@ -11,7 +11,7 @@
 }
 
 .ModalArea.isMobile{
-  grid-template-columns: [col] 10px [col] 100px [col] 1fr [col] 100px [col] 10px [end];
+  grid-template-columns: [col] 10px [col] 75px [col] 1fr [col] 75px [col] 10px [end];
   grid-template-rows: [row] 1fr [row] 125px [row] 35px [end];
 }
 
@@ -20,7 +20,7 @@
 }
 
 .ModalArea.isMobile.flipped {
-  grid-template-columns: [col] 10px [col] 100px [col] 1fr [col] 100px [col] 10px[end];
+  grid-template-columns: [col] 10px [col] 75px [col] 1fr [col] 75px [col] 10px[end];
 }
 
 .ModalArea.noConnector{
@@ -112,7 +112,8 @@
 
 .ModalArea.isMobile .circleHolder .outerCircle{
   border-radius: 0%;
-  margin-left: -140%;
+  width: 50px;
+  margin-left: -15px;
 }
 
 .outerCircle.flipped {
@@ -120,7 +121,8 @@
 }
 
 .ModalArea.isMobile .circleHolder .outerCircle.flipped{
-  margin-left: 40%;
+  width: 50px;
+  margin-left: 50px;
 }
 
 .innerCircle {
@@ -134,6 +136,7 @@
 }
 
 .ModalArea.isMobile .circleHolder .outerCircle .innerCircle{
+  display: none;
   border-radius: 0%;
 }
 
