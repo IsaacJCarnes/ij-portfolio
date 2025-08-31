@@ -1,5 +1,8 @@
 import "../css/ContentModal.css";
 
+import "../components/Helpers.js"
+import { useIsMobile } from "../components/Helpers.js";
+
 export default function ContentModal({
   content,
   isFlipped = false,
@@ -35,7 +38,7 @@ export default function ContentModal({
     return isFlipped ? " flipped" : "";
   };
   return (
-    <div className={"ModalArea" + getClassName()}>
+    <div className={"ModalArea" + getClassName() + (useIsMobile() ? " isMobile" : "")}>
       <div className={"ContentArea" + (isFlipped ? " flipped" : "") +  (hasConnector? "" : " noBorder")}>
         <div className="innerContentArea">{content}</div>
       </div>

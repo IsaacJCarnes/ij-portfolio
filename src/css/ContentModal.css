@@ -10,8 +10,17 @@
   grid-template-rows: [row] 1fr [row] 125px [row] 25px [end];
 }
 
+.ModalArea.isMobile{
+  grid-template-columns: [col] 10px [col] 100px [col] 1fr [col] 100px [col] 10px [end];
+  grid-template-rows: [row] 1fr [row] 125px [row] 35px [end];
+}
+
 .ModalArea.flipped {
   grid-template-columns: [col] 100px [col] 1fr [col] 10px[end];
+}
+
+.ModalArea.isMobile.flipped {
+  grid-template-columns: [col] 10px [col] 100px [col] 1fr [col] 100px [col] 10px[end];
 }
 
 .ModalArea.noConnector{
@@ -45,6 +54,12 @@
   border-radius: 20px 0px 20px 20px;
 }
 
+.ModalArea.isMobile .ContentArea{
+  grid-column-start: 2;
+  grid-column-end: 5;
+  border-radius: 20px 20px 20px 20px;
+}
+
 .ContentArea.noBorder {
   border-radius: 20px 20px 20px 20px;
 }
@@ -69,11 +84,21 @@
   z-index: 0;
 }
 
+.ModalArea.isMobile .circleHolder{
+  grid-column-start: 4;
+  grid-column-end: 5;
+
+}
+
 .circleHolder.flipped {
   grid-column-start: 1;
   grid-column-end: 1;
 }
 
+.ModalArea.isMobile .circleHolder.flipped{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 
 .outerCircle {
   position: relative;
@@ -85,8 +110,17 @@
   background-color: var(--main-text-color);
 }
 
+.ModalArea.isMobile .circleHolder .outerCircle{
+  border-radius: 0%;
+  margin-left: -140%;
+}
+
 .outerCircle.flipped {
   margin-left: 10%;
+}
+
+.ModalArea.isMobile .circleHolder .outerCircle.flipped{
+  margin-left: 40%;
 }
 
 .innerCircle {
@@ -97,6 +131,10 @@
   height: 80%;  
   top: 78%;
   z-index: 0;
+}
+
+.ModalArea.isMobile .circleHolder .outerCircle .innerCircle{
+  border-radius: 0%;
 }
 
 .outerCircle.flipped .innerCircle {
