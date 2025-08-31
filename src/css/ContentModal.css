@@ -30,6 +30,7 @@
   padding: 10px;
   font-size: 20px;
   width: 100%;
+  border-radius: 0px 20px 20px 20px;
   color: var(--main-bg-color);
   background-color: var(--main-text-color);
   min-width: fit-content;
@@ -41,6 +42,11 @@
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
+  border-radius: 20px 0px 20px 20px;
+}
+
+.ContentArea.noBorder {
+  border-radius: 20px 20px 20px 20px;
 }
 
 .innerContentArea{
@@ -48,6 +54,7 @@
   height: 100%;
   background-color: var(--modal-bg-color);
   color: var(--main-text-color);
+  border-radius: 20px;
 }
 
 .circleHolder {
@@ -74,7 +81,7 @@
   height: 100%;
   margin-top: 25%;
   margin-left: -110%;
-  border-radius: 130px 130px 0% 0%;
+  border-radius: var(--border-radius) var(--border-radius) 0% 0%;
   background-color: var(--main-text-color);
 }
 
@@ -84,11 +91,11 @@
 
 .innerCircle {
   position: sticky;
-  border-radius: 80px 80px 0% 0%;
+  border-radius: var(--border-radius) var(--border-radius) 0% 0%;
   background-color: var(--main-bg-color);
   width: 80%;
   height: 80%;  
-  top: 90%;
+  top: 78%;
   z-index: 0;
 }
 

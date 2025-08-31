@@ -3,7 +3,8 @@ import "../css/ContentModal.css";
 export default function ContentModal({
   content,
   isFlipped = false,
-  isConnector = true,
+  hasConnector = true, //connector from previous
+  isConnector = true, //connector to next
 }) {
   const getCircle = () => {
     if (!isConnector) {
@@ -35,7 +36,7 @@ export default function ContentModal({
   };
   return (
     <div className={"ModalArea" + getClassName()}>
-      <div className={"ContentArea" + (isFlipped ? " flipped" : "")}>
+      <div className={"ContentArea" + (isFlipped ? " flipped" : "") +  (hasConnector? "" : " noBorder")}>
         <div className="innerContentArea">{content}</div>
       </div>
       {getCircle()}
