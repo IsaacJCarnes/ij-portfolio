@@ -1,25 +1,12 @@
 .ContactContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 95vw;
-  height: auto;
-  max-height: 60vh;
-  margin: 5px;
-}
-
-.ContactContainer h1 {
-  color: var(--main-text-color);
-  font-size: 6.4vmin;
-  font-family: Playfair, 'Courier New', Courier, monospace;
+  padding-bottom: 40px;
 }
 
 .ContactContainer p {
   color: var(--background-text-color);
   position: absolute;
-  right: 5vw;
-  bottom: 10vh;
+  right: 20px;
+  bottom: 0px;
   font-size: 2.5vmin;
 }
 
@@ -62,6 +49,7 @@
 }
 
 .ContactForm button {
+  margin-top: 10px;
   border-radius: 2vmin 2vmin;
   width: fit-content;
   min-width: 5vw;

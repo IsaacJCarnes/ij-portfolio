@@ -7,8 +7,8 @@
 }
 
 .header h1{
-  position: relative;
-  font-size: 1fr;
-  min-width: fit-content;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3.5cqmax;
+  color: var(--main-text-color);
+  margin-bottom: 2vh;
+  font-family: Playfair, 'Courier New', Courier, monospace;
 }

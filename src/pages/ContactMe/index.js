@@ -10,8 +10,8 @@ export default function Contact(){
     }
 
     return (
-        <section id="contact" className='ContactContainer'>
-            <h1 id="contact-header">Contact</h1>
+        <section id="contact" className='ContactContainer sectionContainer'>
+            <h1 id="contact-header" className='sectionHeader'>Contact Me</h1>
             <form onSubmit={handleSubmit} className='ContactForm'>
             
             <div>

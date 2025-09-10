@@ -1,34 +1,15 @@
-.AboutContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: fit-content;
-  margin: 0px;
-}
-
-.AboutContainer h3 {
-  font-size: 5cqmax;
-  color: var(--main-text-color);
-  margin-bottom: 2vh;
-  font-family: Playfair, 'Courier New', Courier, monospace;
-
-}
-
-.AboutContainer h3:after {
+/*.AboutContainer h1:after {
   display: inline-block;
   position: relative;
   content: "";
   right: -2vw;
   top: 3.5vmin;
-  width: 10vmin;
-  height: 12vmin;
   background: url('../../assets/me.jpg') no-repeat;
   background-size: 110%;
   border-radius: 50%;
   background-position: 50% 30%;
   border: 2px var(--main-border-color) solid;
-}
+}*/
 
 
 .AboutContainer p {
@@ -37,10 +18,7 @@
 }
 
 @media only screen and (min-width: 810px) { /*Big Screens*/
-    .AboutContainer h3 {
-        font-size: 5vmin;
-    }
-    .AboutContainer h3:after {
+    .AboutContainer h1:after {
       width: 8vmin;
       height: 10vmin;
     }

@@ -2,8 +2,8 @@ import "./About.css";
 
 const AboutMe = () => {
   return (
-    <div className="AboutContainer">
-      <h3>About Me</h3>
+    <div className="AboutContainer sectionContainer">
+      <h1 className="sectionHeader">About Me</h1>
       <p className="text-center">
         Hi I'm Isaac Joshua, a full stack developer from Pittsburgh,
         Pennsylvania. My interests include but are not limited to, 3D modeling,

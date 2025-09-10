@@ -66,3 +66,25 @@ code {
   background-repeat: repeat;
   background-size: 256px 256px;
 }
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  margin: 0px;
+}
+
+.sectionHeader{
+  font-size: 5cqmax;
+  color: var(--main-text-color);
+  margin-bottom: 2vh;
+  font-family: Playfair, 'Courier New', Courier, monospace;
+}
+
+@media only screen and (min-width: 810px) { /*Big Screens*/
+    .sectionHeader {
+        font-size: 5vmin;
+    }
+}

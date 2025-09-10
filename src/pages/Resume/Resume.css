@@ -1,0 +1,20 @@
+.sectionContainer {
+  margin: 5px;
+}
+
+#PdfHolder {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+#PdfHolder object {
+  height: 50vh;
+}
+
+@media only screen and (min-width: 810px) {
+  /*Big Screens*/
+  #PdfHolder object {
+    height: 1101px;
+  }
+}
