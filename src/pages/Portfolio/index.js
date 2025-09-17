@@ -14,7 +14,10 @@ export default function Portfolio() {
   const pickProject = (e) => {
     //get index on chosen image and set selectedProject equal to it
     e.preventDefault();
-    if (e.target.nodeName === "IMG" && Number(e.target.dataset.index) !== selectedProject) {
+    if (
+      e.target.nodeName === "IMG" &&
+      Number(e.target.dataset.index) !== selectedProject
+    ) {
       setLastProject(selectedProject);
       selectProject(Number(e.target.dataset.index));
       let lastName = document.getElementById("LastName");
@@ -40,13 +43,15 @@ export default function Portfolio() {
       item,
       i //Creates clickable images for each project
     ) => (
-      <div className={i !== selectedProject ? "SelectorBorder inactiveSelector" : "SelectorBorder activeSelector"} key={i}>
+      <div key={i} className="projectItem">
         <img
           data-index={i}
           src={item.photo}
           alt={item.altTxt}
-          className="SelectorImg"
-        ></img>
+          className="projectPicture"
+        />
+        <h2 className="projectTitle">{item.name}</h2>
+        <div className="projectSummary">{item.summaryDesc} {item.techDesc}</div>
       </div>
     )
   );
@@ -117,9 +122,11 @@ export default function Portfolio() {
     if (lastProject !== null) {
       return (
         <div id="DescHolder" style={{ display: imageShown ? "none" : "block" }}>
-          <div id="ProjDesc" 
-          style={{ display: imageShown ? "none" : "block" }}
-          onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}>
+          <div
+            id="ProjDesc"
+            style={{ display: imageShown ? "none" : "block" }}
+            onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}
+          >
             <p
               className="descText"
               style={{ fontFamily: "'Courier New', Courier, monospace" }}
@@ -155,44 +162,44 @@ export default function Portfolio() {
             </div>
           </div>
           <div
-                id="LastDesc"
-                style={{ display: imageShown ? "none" : "block" }}
-                onAnimationEnd={(e) => e.target.classList.remove("FadeOut")}
+            id="LastDesc"
+            style={{ display: imageShown ? "none" : "block" }}
+            onAnimationEnd={(e) => e.target.classList.remove("FadeOut")}
+          >
+            <p
+              className="descText"
+              style={{ fontFamily: "'Courier New', Courier, monospace" }}
+            >
+              {projectData[lastProject].summaryDesc}
+            </p>
+            <p
+              className="descText"
+              style={{ fontFamily: "'Courier New', Courier, monospace" }}
+            >
+              {projectData[lastProject].techDesc}
+            </p>
+            <div className="ButtonContainer">
+              <button
+                className="styledButton"
+                type="button"
+                onClick={(e) => {
+                  openRepositoryLink(e);
+                }}
               >
-                <p
-                  className="descText"
-                  style={{ fontFamily: "'Courier New', Courier, monospace" }}
-                >
-                  {projectData[lastProject].summaryDesc}
-                </p>
-                <p
-                  className="descText"
-                  style={{ fontFamily: "'Courier New', Courier, monospace" }}
-                >
-                  {projectData[lastProject].techDesc}
-                </p>
-                <div className="ButtonContainer">
-                  <button
-                    className="styledButton"
-                    type="button"
-                    onClick={(e) => {
-                      openRepositoryLink(e);
-                    }}
-                  >
-                    Repository
-                  </button>
+                Repository
+              </button>
 
-                  <button
-                    className="styledButton"
-                    type="button"
-                    onClick={(e) => {
-                      openDeployedLink(e);
-                    }}
-                  >
-                    Deployed
-                  </button>
-                </div>
-              </div>
+              <button
+                className="styledButton"
+                type="button"
+                onClick={(e) => {
+                  openDeployedLink(e);
+                }}
+              >
+                Deployed
+              </button>
+            </div>
+          </div>
         </div>
       );
     }
@@ -265,46 +272,5 @@ export default function Portfolio() {
     window.open(projectData[selectedProject].deployedLink);
   };
 
-  return (
-    <div className="PortfolioContainer">
-      <div
-        className="SelectorContainer"
-        onClick={(e) => {
-          pickProject(e);
-        }}
-      >
-        {projectList}
-      </div>
-
-      <div className="ProjectDisplay">
-        <div id="ProjectNameContainer">
-          <div id="ProjectName"
-          onAnimationEnd={(e) => e.target.classList.remove("FadeIn")}>
-            {projectData[selectedProject].name}
-          </div>
-          <div id="LastName"
-          onAnimationEnd={(e) => e.target.classList.remove("FadeOut")}>
-            {projectData[lastProject].name}
-          </div>
-        </div>
-        <div
-          id="ProjectContentContainer"
-          onClick={(e) => {
-            e.preventDefault();
-            if (e.target.type !== "button") {
-              ContentChange();
-            }
-          }}
-          onAnimationEnd={(e) => {
-            e.preventDefault();
-            SwapContent();
-          }}
-        >
-          {ProjImg()}
-          {ProjDescription()}
-        </div>
-      </div>
-      {HelpText()}
-    </div>
-  );
+  return <div id="PortfolioContainer">{projectList}</div>;
 }

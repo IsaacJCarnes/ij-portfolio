@@ -26,7 +26,7 @@ export const projectData = [
       { CardGraphix }.CardGraphix,
       "Card Building Website",
       "Used for creating and customizing buisness cards and exporting the design to a pdf.",
-      "Built using Apollo, Bootsrap, Express, JavaScript, React JS and Mongoose. Hosted on Firebase and also uses the Cloudinary API for uploading images to the site."
+      "Built using Apollo, Bootstrap, Express, JavaScript, React JS and Mongoose. Hosted on Firebase and also uses the Cloudinary API for uploading images to the site."
     ),
     new Project(
       "The Dog Endorsement Website",

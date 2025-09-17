@@ -20,12 +20,13 @@ function App() {
         isFlipped={true}
         content={<AboutMe />}
       />
+      <ContentModal content={<Portfolio />}/>
       <ContentModal
-        isFlipped={false}
+        isFlipped={true}
         content={<Resume />}
       />
       <ContentModal
-        isFlipped={true}
+        isFlipped={false}
         content={<ContactMe />}
       />
       <Footer />

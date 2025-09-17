@@ -20,6 +20,7 @@ export default function Footer() {
   return (
     <ContentModal
       isConnector={false}
+      isFlipped={true}
       content={
         <div className="FooterContainer">
           <button
