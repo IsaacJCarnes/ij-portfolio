@@ -1,6 +1,17 @@
-export const ProfilePic = require('./me.jpg');
-export const EndorsementWebsite = require('./endorsementWebsite.png');
-export const MazeGen = require('./mazeGen.png');
-export const ScaredyCat = require('./scaredyCat.png');
-export const WeatherDash = require('./weatherDash.png');
-export const CardGraphix = require('./cardGraphix.png');
+import tilemapCompiler from './tilemapCompiler.png';
+import EndorsementWebsite from './endorsementWebsite.png';
+import ProfilePic from './me.jpg';
+import MazeGen from './mazeGen.png';
+import CardGraphix from './cardGraphix.png';
+import WeatherDash from './weatherDash.png';
+
+
+export {
+    tilemapCompiler,
+    EndorsementWebsite,
+    ProfilePic,
+    MazeGen,
+    CardGraphix,
+    WeatherDash
+
+}

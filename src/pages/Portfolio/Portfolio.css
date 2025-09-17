@@ -1,23 +1,36 @@
-#PortfolioContainer{
+#PortfolioContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  padding: 10px;
 }
 
-.projectItem{
+.projectItem {
   width: 100%;
   display: block;
+  margin-bottom: 10px;
 }
 
-.projectPicture{
+.projectPicture {
+  border-radius: 20px;
   float: left;
-  height: 10vmin;
+  height: 100px;
   width: auto;
+  margin-right: 10px;
 }
 
-.projectTitle{
-
+.projectTitle {
+  padding-left: 10px;
 }
 
-.projectSummary{
+.projectSummary {
+}
 
+@media only screen and (min-width: 810px) {
+  /*Big Screens*/
+  #PortfolioContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projectPicture {
+    height: 10vmin;
+  }
 }
