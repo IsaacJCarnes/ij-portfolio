@@ -55,15 +55,15 @@ code {
 }
 
 .background{
-  margin-top: -2.5%;
-  margin-left: -2.5%;
-  opacity: 25%;
+  margin-top: -64px;
+  margin-left: -16px;
+  opacity: 20%;
   z-index: 0;
-  width: 105%;
-  height: 105%;
+  width: calc(100% + 128px);
+  height: calc(100% + 128px);
   position: fixed;
   background-image: url(./assets/background.svg);
-  background-repeat: repeat;
+  background-repeat: round;
   background-size: 256px 256px;
 }
 
