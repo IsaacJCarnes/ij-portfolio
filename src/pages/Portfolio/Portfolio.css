@@ -1,7 +1,13 @@
 #PortfolioContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+#ProjectsContainer{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  padding: 10px;
 }
 
 .projectItem {
@@ -23,11 +29,12 @@
 }
 
 .projectSummary {
+  padding-left: 020px;
 }
 
 @media only screen and (min-width: 810px) {
   /*Big Screens*/
-  #PortfolioContainer {
+  #ProjectsContainer {
     grid-template-columns: repeat(2, 1fr);
   }
   .projectPicture {

@@ -51,7 +51,9 @@ export default function Portfolio() {
           className="projectPicture"
         />
         <h2 className="projectTitle">{item.name}</h2>
-        <div className="projectSummary">{item.summaryDesc} {item.techDesc}</div>
+        <div className="projectSummary">
+          {item.summaryDesc} {item.techDesc}
+        </div>
       </div>
     )
   );
@@ -272,5 +274,12 @@ export default function Portfolio() {
     window.open(projectData[selectedProject].deployedLink);
   };
 
-  return <div id="PortfolioContainer">{projectList}</div>;
+  return (
+    <div id="PortfolioContainer">
+      <h1 className="sectionHeader">
+        Projects
+      </h1>
+      <div id="ProjectsContainer">{projectList}</div>
+    </div>
+  );
 }

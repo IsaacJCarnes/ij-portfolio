@@ -2,7 +2,7 @@
 Page Background: #2A0C4E
 Component Background: #51355A
 */
-@font-face {
+/*@font-face {
   font-family: Delius;
   src: url(../assets/Delius-Regular.ttf);
 }
@@ -64,7 +64,7 @@ Component Background: #51355A
 .inactiveSelector{
   box-shadow: -5px -5px 0px 1px black;
   transform: translate(5px, 5px);
-}
+}*/
 
 .styledButton{
   box-shadow: -4px -4px 0px 1px black;

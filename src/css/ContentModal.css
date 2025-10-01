@@ -41,7 +41,7 @@
   width: 100%;
   border-radius: 0px 20px 20px 20px;
   color: var(--main-bg-color);
-  background-color: var(--main-text-color);
+  background-color: var(--main-border-color);
   min-width: fit-content;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -107,7 +107,7 @@
   margin-top: 25%;
   margin-left: -110%;
   border-radius: var(--border-radius) var(--border-radius) 0% 0%;
-  background-color: var(--main-text-color);
+  background-color: var(--main-border-color);
 }
 
 .ModalArea.isMobile .circleHolder .outerCircle{

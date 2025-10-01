@@ -9,10 +9,10 @@
 }*/
 
 :root{
-  --main-bg-color: #202020;
-  --main-border-color: #969A97;
-  --modal-bg-color: #2C4DDE;
-  --main-text-color: whitesmoke;
+  --main-bg-color: #121212;
+  --main-border-color: #E0E0E0;
+  --modal-bg-color: #444444;
+  --main-text-color: #E0E0E0;
   --alt-text-color: #d3d3d3;
   --nav-first-color: #3d3f3d;
   --nav-second-color: #e4e6d2;
@@ -57,7 +57,7 @@ code {
 .background{
   margin-top: -64px;
   margin-left: -16px;
-  opacity: 20%;
+  opacity: 40%;
   z-index: 0;
   width: calc(100% + 128px);
   height: calc(100% + 128px);
