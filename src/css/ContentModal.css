@@ -43,7 +43,6 @@
   color: var(--main-bg-color);
   background-color: var(--main-border-color);
   min-width: fit-content;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .ContentArea.flipped {
@@ -161,4 +160,14 @@
 
 .outerCircle.flipped .innerCircle {
   left: 80%;
+}
+
+.isMobile .sectionHeader{
+  align-self: flex-end;
+  margin-right: 15px;
+}
+
+.isMobile .flipped .sectionHeader{
+  align-self: flex-start;
+  margin-left: 15px;
 }

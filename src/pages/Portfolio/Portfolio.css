@@ -5,7 +5,7 @@
   padding: 10px;
 }
 
-#ProjectsContainer{
+#ProjectsContainer {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: 15px;
@@ -14,6 +14,8 @@
 .projectItem {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -24,12 +26,19 @@
   margin-right: 10px;
 }
 
+.mobile .projectPicture {
+  width: 75%;
+  height: auto;
+}
+
 .projectTitle {
-  padding-left: 10px;
+  padding-left: 0px;
+  text-align: center;
 }
 
 .projectSummary {
-  padding-left: 020px;
+  padding-left: 0px;
+  text-indent: 10px;
 }
 
 @media only screen and (min-width: 810px) {
@@ -39,7 +48,7 @@
     gap: 20px;
     row-gap: 10px;
   }
-  .projectItem{
+  .projectItem {
     display: block;
     margin-bottom: 10px;
   }
@@ -47,5 +56,13 @@
     float: left;
     height: 10vmin;
     margin-top: 10px;
+  }
+  .projectSummary {
+    padding-left: 20px;
+    text-indent: 0px;
+  }
+  .projectTitle {
+    padding-left: 10px;
+    text-align: left;
   }
 }

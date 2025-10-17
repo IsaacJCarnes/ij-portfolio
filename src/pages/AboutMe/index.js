@@ -5,7 +5,7 @@ const AboutMe = () => {
     <div className="AboutContainer sectionContainer">
       <h1 className="sectionHeader">About Me</h1>
       <p className="text-center">
-        Hi I'm Isaac Joshua, a full stack developer from Pittsburgh,
+        Hi, I'm Isaac Carnes. I'm a software engineer from Pittsburgh,
         Pennsylvania. My interests include but are not limited to, 3D modeling,
         sound design and coding as it relates to art. My interest in technology
         started at a young age. I spent several summers in elementary school in

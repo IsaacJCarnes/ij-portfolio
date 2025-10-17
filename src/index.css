@@ -87,16 +87,18 @@ code {
 }
 
 .sectionHeader {
-  font-size: 5cqmax;
+  font-size: 2.3rem;
   color: var(--main-text-color);
   margin-bottom: 2vh;
-  font-family: Playfair, "Courier New", Courier, monospace;
 }
 
 @media only screen and (min-width: 810px) {
   /*Big Screens*/
   .sectionHeader {
-    font-size: 5vmin;
+    align-self: unset;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 3.3rem;
   }
 
   .spacer {

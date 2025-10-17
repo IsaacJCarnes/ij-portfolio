@@ -11,7 +11,7 @@ export default function Portfolio() {
       item,
       i //Creates clickable images for each project
     ) => (
-      <div key={i} className={"projectItem" + isMobile ? ' mobile' : ''}>
+      <div key={i} className={isMobile ? 'projectItem mobile' : 'projectItem'}>
         {isMobile ? (
           <></>
         ) : (
