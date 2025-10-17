@@ -1,31 +1,45 @@
-import React from 'react';
-import { Link, useLocation } from "react-router-dom";
+import "../css/Nav.css";
 
-export default function Nav(){
-    const basePath = "ij-portfolio/";
-    function navbarItem(name, contentLink){  //Name and link for state variable
-        this.name = name;
-        this.contentLink = contentLink;
-    };
-
-    const navItems = [ //Items and their value
-     new navbarItem("About Me", basePath),
-     new navbarItem("Portfolio", basePath + "portfolio"),
-     new navbarItem("Contact Me", basePath + "contactMe"), 
-     new navbarItem("Resume", basePath + "resume")
-    ];
-
-    let location = useLocation().pathname;
-    if(location === "/ij-portfolio"){ //Makes nav bar selected when url opens to /ij-portfolio
-        location = "/ij-portfolio/";
-    }
-
-    //Creates h4 elements out of navItems that depend on nav state for their text color
-    const navList = navItems.map((item, i) => <Link to={'/' + item.contentLink} className={location === ("/" + item.contentLink) ? "TextSelected" : "TextNormal"} key={i}>{item.name}</Link>);
-
-    return (
-        <div className="NavBar">
-            {navList}
-        </div>
-    )
+export default function Nav() {
+  const scrollToTarget = (event, targetName) => {
+    event.preventDefault();
+    const element = document.getElementById(targetName);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+  
+  return (
+    <div className="navBar">
+      <div className="frostedGlass" />
+      <div className="content">
+        <button
+          onClick={(e) => {
+            scrollToTarget(e, "circle1");
+          }}
+        >
+          About Me
+        </button>
+        <button
+          onClick={(e) => {
+            scrollToTarget(e, "circle2");
+          }}
+        >
+          Portfolio
+        </button>
+        <button
+          onClick={(e) => {
+            scrollToTarget(e, "circle3");
+          }}
+        >
+          Resume
+        </button>
+        <button
+          onClick={(e) => {
+            scrollToTarget(e, "circle4");
+          }}
+        >
+          Contact Me
+        </button>
+      </div>
+    </div>
+  );
 }
