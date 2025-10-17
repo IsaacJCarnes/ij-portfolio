@@ -1,25 +1,38 @@
 import "./Portfolio.css";
 
-import React, { useState } from "react";
-
 import { projectData } from "./projectData.js";
+import { useIsMobile } from "../../components/Helpers.js";
 
 export default function Portfolio() {
-
+  const isMobile = useIsMobile();
 
   const projectList = projectData.map(
     (
       item,
       i //Creates clickable images for each project
     ) => (
-      <div key={i} className="projectItem">
-        <img
-          data-index={i}
-          src={item.photo}
-          alt={item.altTxt}
-          className="projectPicture"
-        />
+      <div key={i} className={"projectItem" + isMobile ? ' mobile' : ''}>
+        {isMobile ? (
+          <></>
+        ) : (
+          <img
+            data-index={i}
+            src={item.photo}
+            alt={item.altTxt}
+            className={"projectPicture"}
+          />
+        )}
         <h2 className="projectTitle">{item.name}</h2>
+        {isMobile ? (
+          <img
+            data-index={i}
+            src={item.photo}
+            alt={item.altTxt}
+            className={"projectPicture"}
+          />
+        ) : (
+          <></>
+        )}
         <div className="projectSummary">
           {item.summaryDesc} {item.techDesc}
         </div>
@@ -29,9 +42,7 @@ export default function Portfolio() {
 
   return (
     <div id="PortfolioContainer">
-      <h1 className="sectionHeader">
-        Projects
-      </h1>
+      <h1 className="sectionHeader">Projects</h1>
       <div id="ProjectsContainer">{projectList}</div>
     </div>
   );

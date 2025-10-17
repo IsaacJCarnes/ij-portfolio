@@ -8,17 +8,17 @@
 #ProjectsContainer{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  row-gap: 15px;
 }
 
 .projectItem {
   width: 100%;
-  display: block;
+  display: flex;
   margin-bottom: 10px;
 }
 
 .projectPicture {
   border-radius: 20px;
-  float: left;
   height: 100px;
   width: auto;
   margin-right: 10px;
@@ -36,8 +36,15 @@
   /*Big Screens*/
   #ProjectsContainer {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    row-gap: 10px;
+  }
+  .projectItem{
+    display: block;
+    margin-bottom: 10px;
   }
   .projectPicture {
+    float: left;
     height: 10vmin;
   }
 }
