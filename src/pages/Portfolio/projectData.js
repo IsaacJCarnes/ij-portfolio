@@ -2,7 +2,7 @@ import {
     MazeGen,
     EndorsementWebsite,
     tilemapCompiler,
-    WeatherDash,
+    TilesetViewer,
     CardGraphix,
   } from "../../assets/index.js";
 
@@ -20,6 +20,24 @@ import {
 export const projectData = [
     //Project array
     new Project(
+      "Tileset Viewer",
+      "https://isaacjcarnes.github.io/TilesetViewer/",
+      "https://github.com/IsaacJCarnes/TilesetViewer",
+      TilesetViewer,
+      "Tileset Viewer",
+      "",
+      "Tilset viewer displays a grid of tessellating tiles that I designed to seamlessly connect in any arrangement. Each tile is randomly selected from a set of unique designs and displayed with varying rotations/orientations, creating unique patterns between the tiles."
+    ),
+    new Project(
+      "Tilemap Compiler",
+      "",
+      "https://github.com/IsaacJCarnes/Tilemap-Compiler",
+      tilemapCompiler,
+      "Tilemap Compiler project made in Godot.",
+      "Tilemap Compiler is a small application made in Godot to assist with assembling the tileset for Tileset Viewer. The application creates a tilemap from a list of image files, allowing for easy frequent updates to the tilemap. This allows me to quickly add and modify the tiles in the tilemap for Tileset Viewer.",
+      ""
+    ),
+    new Project(
       "Card Graphix",
       "https://card-graphix.web.app/",
       "https://github.com/IsaacJCarnes/card-graphix-firebase",
@@ -36,32 +54,5 @@ export const projectData = [
       "The Dog Endorsement Website",
       "Used for finding adoptable dogs around a zipcode, with the added option for dog breed preference.",
       "Built using Handlebars.js and Bootstrap, hosted using Github Pages. Uses the Petfinder API to get the animal search data."
-    ),
-    new Project(
-      "Maze Runner",
-      "https://isaacjcarnes.github.io/MazeGen/",
-      "https://github.com/IsaacJCarnes/MazeGen",
-      MazeGen,
-      "The Maze Runner",
-      "Several mazes for the user to try and get their best time on.",
-      "Built using UIkit, hosted on Github Pages. Uses the Giphy and ACNH Apis."
-    ),
-    new Project(
-      "Weather Dashboard",
-      "https://isaacjcarnes.github.io/weather-dash-ij/",
-      "https://github.com/IsaacJCarnes/weather-dash-ij",
-      WeatherDash,
-      "Weather Dashboard",
-      "Used for looking at 7 day forecast for a specfic city.",
-      "Built using Open Weather API and hosted on Github Pages."
-    ),
-    new Project(
-      "Tilemap Compiler",
-      "",
-      "https://github.com/IsaacJCarnes/Tilemap-Compiler",
-      tilemapCompiler,
-      "Tilemap Compiler project made in Godot.",
-      "Tilemap Compiler is a small application made in Godot to assist with creating tilesets for Tileset Viewer.",
-      ""
-    ),
+    ),    
   ];

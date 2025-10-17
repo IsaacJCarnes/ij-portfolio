@@ -3,7 +3,7 @@ import EndorsementWebsite from './endorsementWebsite.png';
 import ProfilePic from './me.jpg';
 import MazeGen from './mazeGen.png';
 import CardGraphix from './cardGraphix.png';
-import WeatherDash from './weatherDash.png';
+import TilesetViewer from './TilesetViewer.png';
 
 
 export {
@@ -12,6 +12,5 @@ export {
     ProfilePic,
     MazeGen,
     CardGraphix,
-    WeatherDash
-
+    TilesetViewer
 }

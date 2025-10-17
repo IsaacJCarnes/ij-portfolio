@@ -46,5 +46,6 @@
   .projectPicture {
     float: left;
     height: 10vmin;
+    margin-top: 10px;
   }
 }
