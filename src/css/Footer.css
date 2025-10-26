@@ -6,8 +6,8 @@
     justify-content: space-around;
 }
 .FooterContainer button{
-    width: 45px;
-    height: 45px;
+    width: 3em;
+    height: 3em;
     border-style: none;
     background-color: unset;
 }

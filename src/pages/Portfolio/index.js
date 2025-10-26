@@ -41,7 +41,7 @@ export default function Portfolio() {
   );
 
   return (
-    <div id="PortfolioContainer">
+    <div className="sectionContainer" id="PortfolioContainer">
       <h1 className="sectionHeader">Projects</h1>
       <div id="ProjectsContainer">{projectList}</div>
     </div>

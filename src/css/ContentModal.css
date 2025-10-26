@@ -4,10 +4,14 @@
   padding: 0px;
   margin: 0px;
   display: grid;
-  width: 100vw;
+  max-width: 100dvw;
   z-index: 1;
   grid-template-columns: [col] 10px [col] 1fr [col] 100px [end];
   grid-template-rows: [row] 1fr [row] 125px [row] 25px [end];
+}
+
+.ModalArea.noConnector {
+  grid-template-columns: [col] 10px [col] 1fr [col] 10px[end];
 }
 
 .ModalArea.isMobile {
@@ -21,10 +25,6 @@
 
 .ModalArea.isMobile.flipped {
   grid-template-columns: [col] 10px [col] 75px [col] 1fr [col] 75px [col] 10px[end];
-}
-
-.ModalArea.noConnector {
-  grid-template-columns: [col] 10px [col] 1fr [col] 10px[end];
 }
 
 .ContentArea {
