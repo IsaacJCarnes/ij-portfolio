@@ -7,20 +7,6 @@
   --text-highlight-color: #e9e1d8;
   --background-text-color: #fff8f09c;
 }*/
-
-:root {
-  --main-bg-color: #121212;
-  --main-border-color: #e0e0e0;
-  --modal-bg-color: #444444;
-  --main-text-color: #e0e0e0;
-  --alt-text-color: #d3d3d3;
-  --nav-first-color: #3d3f3d;
-  --nav-second-color: #e4e6d2;
-  --nav-third-color: #da20d0;
-  --text-highlight-color: #7f837f;
-  --background-text-color: #7c7b7a;
-  --border-radius: 100px;
-}
 /*  --main-bg-color: #dddddd;
   --main-border-color: #08070a;
   --main-text-color: #08070a;
@@ -64,6 +50,7 @@ code {
   height: calc(100% + 128px);
   position: fixed;
   z-index: 0;
+  background-color: var(--main-bg-color);
 }
 
 .background {
