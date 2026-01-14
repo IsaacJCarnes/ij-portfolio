@@ -30,9 +30,25 @@
   height: auto;
 }
 
+.titleButtonBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0px;
+}
+
+.titleButtonBox button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+
 .projectTitle {
   padding-left: 0px;
   text-align: center;
+  margin: 0px;
 }
 
 .projectSummary {

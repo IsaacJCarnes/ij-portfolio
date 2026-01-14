@@ -3,8 +3,16 @@ import "./Portfolio.css";
 import { projectData } from "./projectData.js";
 import { useIsMobile } from "../../components/Helpers.js";
 
+import { FaGithub } from "react-icons/fa";
+import { CiGlobe } from "react-icons/ci";
+
 export default function Portfolio() {
   const isMobile = useIsMobile();
+
+
+  const openLink = (url) => {
+    window.open(url, "_blank");
+  }
 
   const projectList = projectData.map(
     (
@@ -22,7 +30,7 @@ export default function Portfolio() {
             className={"projectPicture"}
           />
         )}
-        <h2 className="projectTitle">{item.name}</h2>
+        <div className="titleButtonBox"><h2 className="projectTitle">{item.name}</h2>{item.projectLink !== "" && <button onClick={(e) => {e.preventDefault(); openLink(item.projectLink)}}><FaGithub color="white"/></button>}{item.deployedLink !== "" && <button onClick={(e) => {e.preventDefault(); openLink(item.deployedLink)}}><CiGlobe color={"white"}/></button>}</div>
         {isMobile ? (
           <img
             data-index={i}
