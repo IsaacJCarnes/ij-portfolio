@@ -6,7 +6,6 @@ import ContactMe from "./pages/ContactMe";
 import Resume from "./pages/Resume";
 import WildPage from "./pages/WildPage";
 
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav"
 import ContentModal from "./components/ContentModal";
@@ -36,7 +35,6 @@ function App() {
       </div>
       <Nav />
       <div className="spacer"></div>
-      <Header />
       <ContentModal isFlipped={true} content={<AboutMe />} circleName="circle2"/>
       <ContentModal content={<Portfolio />} circleName="circle3"/>
       <ContentModal isFlipped={true} content={<Resume />} circleName="circle4"/>
