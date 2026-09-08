@@ -1,10 +1,11 @@
 import "./Resume.css";
 import Pdf from "../../assets/resumeCarnes.pdf";
+import FabricBackground from "../../components/FabricBackground";
 
 
 export default function Resume() {
   return (
-    <div className="sectionContainer">
+    <section className="sectionContainer">
       <h1 className="sectionHeader">Resume</h1>
       <div id="PdfHolder">
         <object
@@ -21,8 +22,8 @@ export default function Resume() {
             </a>
           </p>
         </object>
-        
       </div>
-    </div>
+      <FabricBackground />
+    </section>
   );
 }

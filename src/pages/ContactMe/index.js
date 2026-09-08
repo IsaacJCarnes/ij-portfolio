@@ -1,7 +1,6 @@
 import './Contact.css';
-
-import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import FabricBackground from '../../components/FabricBackground';
 
 export default function Contact(){
     const [state, handleSubmit] = useForm("mknybvql");
@@ -35,6 +34,7 @@ export default function Contact(){
             <button className="styledButton" disabled={state.submitting}>Submit</button>
             </form>
             <p>Or email me directly at <a href="mailto:isaacjdeveloper@gmail.com">IsaacJDeveloper@gmail.com</a></p>
+            <FabricBackground />
         </section>
       );
 }

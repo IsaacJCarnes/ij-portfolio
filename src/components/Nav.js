@@ -1,4 +1,5 @@
 import "../css/Nav.css";
+import FabricBackground from "./FabricBackground";
 
 export default function Nav() {
   const scrollToTarget = (event, targetName) => {
@@ -9,12 +10,7 @@ export default function Nav() {
 
   return (
     <header>
-      <div className="fabric">
-        <div className="custom-dash-border dash-top dash-horizontal" />
-        <div className="custom-dash-border dash-right dash-vertical" />
-        <div className="custom-dash-border dash-bottom dash-horizontal" />
-        <div className="custom-dash-border dash-left dash-vertical" />
-      </div>
+      <FabricBackground />
 
       <div className="content">
         <h1>Isaac Carnes' Portfolio</h1>
