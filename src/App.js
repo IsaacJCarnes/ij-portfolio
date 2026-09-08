@@ -4,35 +4,14 @@ import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
 import ContactMe from "./pages/ContactMe";
 import Resume from "./pages/Resume";
-import WildPage from "./pages/WildPage";
 
 import Footer from "./components/Footer";
 import Nav from "./components/Nav"
 import ContentModal from "./components/ContentModal";
-import GradientContainer from "./components/GradientContainer";
-
-import { useState, useEffect } from "react";
 
 function App() {
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const onScroll = () => setOffset(window.scrollY / 10);
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <div id="FullPage">
-
-      <div className="backgroundContainer">
-        <div
-          className="background"
-          style={{ backgroundPositionX: offset + "px" }}
-        />          
-        <GradientContainer />
-      </div>
+    <main>
       <Nav />
       <div className="spacer"></div>
       <ContentModal isFlipped={true} content={<AboutMe />} circleName="circle2"/>
@@ -40,7 +19,7 @@ function App() {
       <ContentModal isFlipped={true} content={<Resume />} circleName="circle4"/>
       <ContentModal isFlipped={false} content={<ContactMe />} circleName="circle5"/>
       <Footer />      
-    </div>
+    </main>
   );
 }
 
