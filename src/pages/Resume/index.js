@@ -2,12 +2,15 @@ import "./Resume.css";
 import Pdf from "../../assets/resumeCarnes.pdf";
 import FabricBackground from "../../components/FabricBackground";
 
-
 export default function Resume() {
   return (
     <section className="sectionContainer">
-      <h1 className="sectionHeader">Resume</h1>
-      <div id="PdfHolder">
+      <div className="fabric-container">
+        <FabricBackground />
+        <h1 className="sectionHeader">Resume</h1>
+      </div>
+      <div id="PdfHolder" className="fabric-container">
+        <FabricBackground />
         <object
           className="d-flex justify-content-center flex-column"
           data={Pdf}
@@ -23,7 +26,6 @@ export default function Resume() {
           </p>
         </object>
       </div>
-      <FabricBackground />
     </section>
   );
 }

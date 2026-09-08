@@ -9,9 +9,9 @@ const AboutMe = () => {
         <h1 className="sectionHeader">About Me</h1>
         <FabricBackground />
       </div>
-      <div class="fabric-container">
+      <div className="fabric-container">
         <FabricBackground />
-       <p className="text-center">{textContent}</p>
+        <p className="text-center">{textContent}</p>
       </div>
     </section>
   );
