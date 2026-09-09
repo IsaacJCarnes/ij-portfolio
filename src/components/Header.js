@@ -1,7 +1,7 @@
-import "../css/Nav.css";
+import "../css/Header.css";
 import FabricBackground from "./FabricBackground";
 
-export default function Nav() {
+export default function Header() {
   const scrollToTarget = (event, targetName) => {
     event.preventDefault();
     const element = document.getElementById(targetName);

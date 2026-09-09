@@ -6,7 +6,7 @@ import ContactMe from "./pages/ContactMe";
 import Resume from "./pages/Resume";
 
 import Footer from "./components/Footer";
-import Nav from "./components/Nav";
+import Nav from "./components/Header";
 
 function App() {
   return (

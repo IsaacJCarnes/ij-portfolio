@@ -1,16 +1,47 @@
-.header h1{
-  text-align: right;
-  font-size: 2.5rem;
+header {
+  margin: 0px 10px;
+  width: calc(100vw - 20px);
+  height: 100%;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+nav {
+  z-index: 1;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
   color: var(--main-text-color);
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin: 2px;
+  margin-right: 10px;
+}
+
+nav button {
+  background: none;
+  border: none;
+  width: fit-content;
+  color: var(--main-text-color);
+  font-size: 0.9rem;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em black,
+    0 0 0.2em black;
 }
 
 @media only screen and (min-width: 810px) {
-  .header h1{
-    text-align: left;
-    font-size: 2.5rem;
-    margin-right: 0px;
-    font-size: 4.5rem;
+  /*Big Screens*/
+  nav {
+    margin: 10px;
+    width: fit-content;
+    margin-right: 50px;
+  }
+  nav button {
+    font-size: 1.75rem;
+  }
+
+  header {
+    height: 150px;
   }
 }
