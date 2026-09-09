@@ -2,10 +2,16 @@ header {
   margin: 0px 10px;
   width: calc(100vw - 20px);
   height: 100%;
+  padding: 20px;
   z-index: 2;
   position: relative;
   display: flex;
   flex-direction: row-reverse;
+}
+
+header h1{
+  font-weight: 600;
+  color: var(--main-text-color);
 }
 
 nav {
@@ -19,16 +25,12 @@ nav {
 }
 
 nav a{
-  margin: 20px;
   background: none;
   border: none;
   width: fit-content;
   color: var(--main-text-color);
   font-size: 0.9rem;
-  text-shadow:
-    1px 1px 2px black,
-    0 0 1em black,
-    0 0 0.2em black;
+  font-weight: 600;
   text-decoration: none;
 }
 

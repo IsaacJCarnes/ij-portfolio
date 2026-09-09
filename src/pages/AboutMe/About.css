@@ -11,17 +11,38 @@
   border: 2px var(--main-border-color) solid;
 }*/
 
-.AboutContainer p {
+#About {
+  /*top corner is about 25px away from previous border*/
+  margin-top: 105px;
+}
+
+#AboutTitle {
+  z-index: 2;
+  position: absolute;
+  left: 20%;
+  top: -90px;
+  transform: rotate(-3deg);
+  padding: 14px;
+}
+
+#AboutTitle h1 {
+  transform: rotate(3deg);
+  color: var(--main-text-color);
+}
+
+#About p {
+  margin: 20px;
   color: var(--main-text-color);
   width: 100%;
 }
 
-@media only screen and (min-width: 810px) { /*Big Screens*/
-    .AboutContainer h1:after {
+@media only screen and (min-width: 810px) {
+  /*Big Screens*/
+  /*#About h1:after {
       width: 8vmin;
       height: 10vmin;
-    }
-    .AboutContainer p{
-        font-size: 1cqmax;
-    }
+    }*/
+  #About p {
+    font-size: 1cqmax;
+  }
 }

@@ -7,7 +7,7 @@ export default function Contact() {
   if (state.succeeded) {
     window.location.href = "/ij-portfolio/";
   }
-
+   //Create sticky note visual for reminder p tag
   return (
     <section id="Contact" className="ContactContainer sectionContainer">
       <div className="fabric-container section-title">

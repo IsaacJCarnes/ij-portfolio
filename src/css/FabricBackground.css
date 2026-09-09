@@ -5,9 +5,44 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../assets/textures/orange-fabric.jpg);
   background-repeat: repeat;
   justify-self: center;
+}
+
+.shaded-area {
+  padding: 10px 10px;
+  background-clip: content-box; 
+  background-color: rgba(51, 50, 50, 0.3);
+  height: 100%;
+  width: 100%;
+}
+
+.bg-burlap{
+  background-image: url(../assets/textures/burlap-fabric.jpg);
+}
+
+.bg-charcoal{
+  background-image: url(../assets/textures/charcoal-fabric.jpg);
+}
+
+.bg-gold{
+  background-image: url(../assets/textures/gold-fabric.jpg);
+}
+
+.bg-white{
+  background-image: url(../assets/textures/white-fabric.jpg);
+}
+
+.bg-green{
+  background-image: url(../assets/textures/green-fabric.jpg);
+}
+
+.bg-orange{
+  background-image: url(../assets/textures/orange-fabric.jpg);
+}
+
+.bg-blue{
+  background-image: url(../assets/textures/blue-fabric.jpg);
 }
 
 .custom-dash-border {
