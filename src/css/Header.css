@@ -12,13 +12,14 @@ nav {
   z-index: 1;
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 150px);
   color: var(--main-text-color);
   margin: 2px;
   margin-right: 10px;
 }
 
-nav button {
+nav a{
+  margin: 20px;
   background: none;
   border: none;
   width: fit-content;
@@ -28,6 +29,7 @@ nav button {
     1px 1px 2px black,
     0 0 1em black,
     0 0 0.2em black;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 810px) {
@@ -37,7 +39,7 @@ nav button {
     width: fit-content;
     margin-right: 50px;
   }
-  nav button {
+  nav a{
     font-size: 1.75rem;
   }
 

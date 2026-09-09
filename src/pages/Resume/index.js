@@ -4,8 +4,8 @@ import FabricBackground from "../../components/FabricBackground";
 
 export default function Resume() {
   return (
-    <section className="sectionContainer">
-      <div className="fabric-container">
+    <section id="Resume">
+      <div className="fabric-container section-title">
         <FabricBackground />
         <h1 className="sectionHeader">Resume</h1>
       </div>

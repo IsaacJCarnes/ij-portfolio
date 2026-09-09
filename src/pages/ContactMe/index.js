@@ -9,8 +9,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="ContactContainer sectionContainer">
-      <div className="fabric-container">
+    <section id="Contact" className="ContactContainer sectionContainer">
+      <div className="fabric-container section-title">
         <FabricBackground />
         <h1 id="contact-header" className="sectionHeader">
           Contact Me

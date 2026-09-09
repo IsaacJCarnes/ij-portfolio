@@ -1,9 +1,3 @@
-#PortfolioContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #ProjectsContainer {
   display: grid;
   grid-template-columns: repeat(1, 1fr);

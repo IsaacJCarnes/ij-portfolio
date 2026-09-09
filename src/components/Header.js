@@ -2,12 +2,6 @@ import "../css/Header.css";
 import FabricBackground from "./FabricBackground";
 
 export default function Header() {
-  const scrollToTarget = (event, targetName) => {
-    event.preventDefault();
-    const element = document.getElementById(targetName);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <header>
       <FabricBackground />
@@ -15,34 +9,10 @@ export default function Header() {
       <div className="content">
         <h1>Isaac Carnes' Portfolio</h1>
         <nav>
-          <button
-            onClick={(e) => {
-              scrollToTarget(e, "circle1");
-            }}
-          >
-            About Me
-          </button>
-          <button
-            onClick={(e) => {
-              scrollToTarget(e, "circle2");
-            }}
-          >
-            Portfolio
-          </button>
-          <button
-            onClick={(e) => {
-              scrollToTarget(e, "circle3");
-            }}
-          >
-            Resume
-          </button>
-          <button
-            onClick={(e) => {
-              scrollToTarget(e, "circle4");
-            }}
-          >
-            Contact Me
-          </button>
+          <a href="#About">About</a>
+          <a href="#Portfolio">Portfolio</a>
+          <a href="#Resume">Resume</a>
+          <a href="#Contact">Contact</a>
         </nav>
       </div>
     </header>

@@ -12,7 +12,6 @@ function App() {
   return (
     <main>
       <Nav />
-      <div className="spacer"></div>
       <AboutMe />
       <Portfolio />
       <Resume />

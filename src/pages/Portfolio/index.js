@@ -72,15 +72,14 @@ export default function Portfolio() {
   );
 
   return (
-    <section className="sectionContainer" id="PortfolioContainer">
-      <div class="fabric-container">
+    <section id="Portfolio">
+      <div className="fabric-container section-title">
         <FabricBackground />
         <h1 className="sectionHeader">Projects</h1>
       </div>
-      <div class="fabric-container">
+      <div className="fabric-container">
         <div id="ProjectsContainer">{projectList}</div>
       </div>
-      
     </section>
   );
 }
