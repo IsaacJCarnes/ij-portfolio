@@ -6,7 +6,7 @@ export default function Resume() {
   return (
     <section id="Resume">
       <div className="fabric-container section-title">
-        <FabricBackground />
+        <FabricBackground bgClass="bg-orange initial"/>
         <h1 className="sectionHeader">Resume</h1>
       </div>
       <div id="PdfHolder" className="fabric-container">

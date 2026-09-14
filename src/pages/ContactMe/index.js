@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <section id="Contact" className="ContactContainer sectionContainer">
       <div className="fabric-container section-title">
-        <FabricBackground />
+        <FabricBackground bgClass="bg-orange initial"/>
         <h1 id="contact-header" className="sectionHeader">
           Contact Me
         </h1>

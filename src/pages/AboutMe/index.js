@@ -7,7 +7,7 @@ const AboutMe = () => {
     <section className="AboutContainer" id="About">
       <div className="fabric-container section-title" id="AboutTitle">
         <h1 className="sectionHeader">About Me</h1>
-        <FabricBackground />
+        <FabricBackground bgClass="bg-orange initial"/>
       </div>
       <div className="fabric-container">
         <FabricBackground bgClass="bg-green" />

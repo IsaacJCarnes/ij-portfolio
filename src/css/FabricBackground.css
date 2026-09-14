@@ -35,14 +35,20 @@
 
 .bg-green{
   background-image: url(../assets/textures/green-fabric.jpg);
+  background-size: 512px;
 }
 
 .bg-orange{
   background-image: url(../assets/textures/orange-fabric.jpg);
+  background-size: 512px;
 }
 
 .bg-blue{
   background-image: url(../assets/textures/blue-fabric.jpg);
+}
+
+.initial{
+  background-size: initial !important;
 }
 
 .custom-dash-border {
