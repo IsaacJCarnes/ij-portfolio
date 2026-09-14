@@ -7,16 +7,16 @@ export default function Contact() {
   if (state.succeeded) {
     window.location.href = "/ij-portfolio/";
   }
-   //Create sticky note visual for reminder p tag
+
   return (
     <section id="Contact" className="ContactContainer sectionContainer">
       <div className="fabric-container section-title">
-        <FabricBackground bgClass="bg-orange initial"/>
+        <FabricBackground bgClass="bg-orange initial" />
         <h1 id="contact-header" className="sectionHeader">
           Contact Me
         </h1>
       </div>
-      <div className="fabric-container">
+      <div id="FormContainer" className="fabric-container">
         <FabricBackground />
         <form onSubmit={handleSubmit} className="ContactForm">
           <div>
@@ -64,12 +64,15 @@ export default function Contact() {
             Submit
           </button>
         </form>
-        <p>
-          Or email me directly at{" "}
-          <a href="mailto:isaacjdeveloper@gmail.com">
-            IsaacJDeveloper@gmail.com
-          </a>
-        </p>
+        <aside id="ContactNote">
+          <div id="NoteShadow"/>
+          <p>
+            Or email me <br/>directly at<br/>
+            <a href="mailto:isaacjdeveloper@gmail.com">
+              IsaacJDeveloper<br/>@gmail.com
+            </a>
+          </p>
+        </aside>
       </div>
     </section>
   );
