@@ -7,7 +7,7 @@ const AboutMe = () => {
     <section id="AboutContainer">
       <div className="fabric-container section-title" id="About">
         <h1 className="sectionHeader perfectOutline" data-text="About Me">About Me</h1>
-        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3}/>
+        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3} shadeAmount={0.4}/>
       </div>
       <div className="fabric-container">
         <FabricBackground bgClass="bg-green" borderClass="hidden" shadedMargin={3} shadeAmount={0.6}/>

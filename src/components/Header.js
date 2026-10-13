@@ -9,7 +9,7 @@ export default function Header() {
           <FabricBackground
             bgClass="bg-orange initial"
             borderClass=""
-            shadedMargin={5}
+            shadedMargin={5} shadeAmount={0.4}
           />
           <span className="perfectOutline" data-text="Isaac Carnes' Portfolio">
             Isaac Carnes' Portfolio

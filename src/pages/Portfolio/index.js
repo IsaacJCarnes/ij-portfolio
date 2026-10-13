@@ -74,7 +74,7 @@ export default function Portfolio() {
   return (
     <section id="Projects">
       <div className="fabric-container section-title">
-        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3}/>
+        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3} shadeAmount={0.4}/>
         <h1 className="sectionHeader perfectOutline" data-text="Projects">Projects</h1>
       </div>
       <div>
