@@ -6,13 +6,13 @@ export default function Header() {
     <header>
       <FabricBackground />
 
-      <div className="content">
-        <h1>Isaac Carnes' Portfolio</h1>
+      <div id="header-content">
+        <h1 className="perfectOutline" data-text="Isaac Carnes' Portfolio">Isaac Carnes' Portfolio</h1>
         <nav>
-          <a href="#About">About</a>
-          <a href="#Portfolio">Portfolio</a>
-          <a href="#Resume">Resume</a>
-          <a href="#Contact">Contact</a>
+          <a href="#About" className="perfectOutline" data-text="About">About</a>
+          <a href="#Portfolio" className="perfectOutline" data-text="Portfolio">Portfolio</a>
+          <a href="#Resume" className="perfectOutline" data-text="Resume">Resume</a>
+          <a href="#Contact" className="perfectOutline" data-text="Contact">Contact</a>
         </nav>
       </div>
     </header>

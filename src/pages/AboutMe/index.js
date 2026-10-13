@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <section className="AboutContainer" id="About">
       <div className="fabric-container section-title" id="AboutTitle">
-        <h1 className="sectionHeader">About Me</h1>
+        <h1 className="sectionHeader perfectOutline" data-text="About Me">About Me</h1>
         <FabricBackground bgClass="bg-orange initial"/>
       </div>
       <div className="fabric-container">

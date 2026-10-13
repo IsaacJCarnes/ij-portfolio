@@ -12,7 +12,7 @@ export default function Contact() {
     <section id="Contact" className="ContactContainer sectionContainer">
       <div className="fabric-container section-title">
         <FabricBackground bgClass="bg-orange initial" />
-        <h1 id="contact-header" className="sectionHeader">
+        <h1 id="contact-header" className="sectionHeader perfectOutline" data-text="Contact Me">
           Contact Me
         </h1>
       </div>
@@ -20,7 +20,7 @@ export default function Contact() {
         <FabricBackground />
         <form onSubmit={handleSubmit} className="ContactForm">
           <div>
-            <label className="contact-label" htmlFor="email">
+            <label className="contact-label perfectOutline" htmlFor="email" data-text="Name:">
               Name:
             </label>
             <input id="name" type="name" name="name" required="required" />
@@ -29,7 +29,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="contact-label" htmlFor="email">
+            <label className="contact-label perfectOutline" htmlFor="email" data-text="Email Address:">
               Email Address:
             </label>
             <input id="email" type="email" name="email" required="required" />
@@ -42,7 +42,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <label className="contact-label" htmlFor="message">
+            <label className="contact-label perfectOutline" htmlFor="message" data-text="Message:">
               Message:
             </label>
             <textarea
@@ -60,8 +60,9 @@ export default function Contact() {
             />
           </div>
 
-          <button className="styledButton" disabled={state.submitting}>
-            Submit
+          <button className="styledButton fabric-container" disabled={state.submitting}>
+            <FabricBackground bgClass="bg-green" borderClass="hidden"/>
+            <span className="perfectOutline" data-text="Submit">Submit</span>
           </button>
         </form>
         <aside id="ContactNote">

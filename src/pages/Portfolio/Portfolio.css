@@ -78,4 +78,8 @@
     padding-left: 10px;
     text-align: left;
   }
+
+  .projectTitle.perfectOutline::after{
+    padding-left: 10px;
+  }
 }

@@ -1,4 +1,5 @@
 .fabric-background {
+  --unshaded-margin: 10px;
   z-index: -2;
   position: absolute;
   display: flex;
@@ -7,10 +8,11 @@
   height: 100%;
   background-repeat: repeat;
   justify-self: center;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.6);
 }
 
 .shaded-area {
-  padding: 10px 10px;
+  padding: var(--unshaded-margin) var(--unshaded-margin);
   background-clip: content-box; 
   background-color: rgba(51, 50, 50, 0.3);
   height: 100%;
@@ -61,18 +63,22 @@
   border: none;
 }
 
+.custom-dash-border.hidden{
+  visibility: hidden;
+}
+
 .dash-vertical {
   background-size: 2px 25px; /* 25px total width (15px dash + 10px gap), 2px thickness */
   background-repeat: space;
-  margin: 10px 0px;
+  margin: var(--unshaded-margin) 0px;
   width: 3px;
-  height: calc(100% - 20px);
+  height: calc(100% - 2 * var(--unshaded-margin));
 }
 
 .dash-horizontal {
   background-size: 25px 2px; /* 25px total width (15px dash + 10px gap), 2px thickness */
-  margin: 0px 10px;
-  width: calc(100% - 20px);
+  margin: 0px var(--unshaded-margin);
+  width: calc(100% - 2 * var(--unshaded-margin));
   height: 3px;
 }
 
@@ -82,7 +88,7 @@
     #333 60%,
     rgba(255, 255, 255, 0) 0%
   );
-  top: 10px;
+  top: var(--unshaded-margin);
 }
 
 .dash-bottom {
@@ -91,7 +97,7 @@
     #333 60%,
     rgba(255, 255, 255, 0) 0%
   );
-  top: calc(100% - 10px);
+  top: calc(100% - var(--unshaded-margin));
 }
 .dash-right {
   background-image: linear-gradient(
@@ -99,7 +105,7 @@
     #333 60%,
     rgba(255, 255, 255, 0) 0%
   );
-  left: calc(100% - 10px);
+  left: calc(100% - var(--unshaded-margin));
 }
 .dash-left {
   background-image: linear-gradient(
@@ -107,5 +113,5 @@
     #333 60%,
     rgba(255, 255, 255, 0) 0%
   );
-  left: 10px;
+  left: var(--unshaded-margin);
 }

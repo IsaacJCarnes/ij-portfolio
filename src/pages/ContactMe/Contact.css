@@ -46,14 +46,14 @@
 }
 
 .ContactForm button {
-  margin-top: 10px;
-  border-radius: 2vmin 2vmin;
+  position: relative;
+  margin-top: 20px;
   width: fit-content;
   min-width: 5vw;
-  background-color: #333333;
-  color: white;
-  border: 0px;
-  border: 1px solid black;
+  background-color: unset;
+  color: var(--main-text-color);
+  border: unset;
+  font-weight: 700;
 }
 
 #ContactNote {

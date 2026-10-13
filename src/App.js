@@ -1,5 +1,3 @@
-import "./css/App.css";
-
 import AboutMe from "./pages/AboutMe";
 import Portfolio from "./pages/Portfolio";
 import ContactMe from "./pages/ContactMe";

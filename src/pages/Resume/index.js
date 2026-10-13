@@ -1,5 +1,5 @@
 import "./Resume.css";
-import Pdf from "../../assets/resumeCarnes.pdf";
+import Pdf from "../../assets/IsaacCarnes_Resume.pdf";
 import FabricBackground from "../../components/FabricBackground";
 
 export default function Resume() {
@@ -7,7 +7,7 @@ export default function Resume() {
     <section id="Resume">
       <div className="fabric-container section-title">
         <FabricBackground bgClass="bg-orange initial"/>
-        <h1 className="sectionHeader">Resume</h1>
+        <h1 className="sectionHeader perfectOutline" data-text="Resume">Resume</h1>
       </div>
       <div id="PdfHolder" className="fabric-container">
         <FabricBackground />

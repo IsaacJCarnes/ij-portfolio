@@ -22,7 +22,7 @@
   left: 20%;
   top: -90px;
   transform: rotate(-3deg);
-  padding: 14px;
+  padding: 14px 16px;
 }
 
 #AboutTitle h1 {
@@ -34,15 +34,4 @@
   margin: 20px;
   color: var(--main-text-color);
   width: 100%;
-}
-
-@media only screen and (min-width: 810px) {
-  /*Big Screens*/
-  /*#About h1:after {
-      width: 8vmin;
-      height: 10vmin;
-    }*/
-  #About p {
-    font-size: 1cqmax;
-  }
 }

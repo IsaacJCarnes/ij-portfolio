@@ -2,7 +2,7 @@
   --main-bg-color: #121212;
   --main-border-color: #e0e0e0;
   --modal-bg-color: #444444;
-  --main-text-color: #d3d3d3;
+  --main-text-color: #e6e6e6;
   --alt-text-color: #0e0e0e;
   --nav-first-color: #3d3f3d;
   --nav-second-color: #e4e6d2;
@@ -14,22 +14,6 @@
     --main-bg-color
   ); /* You can use color names, hex codes (#RRGGBB), or RGB values (rgb(R,G,B)) */
 }
-/*:root {
-  --main-bg-color: #1d1d1d;
-  --main-border-color: #fff8f0;
-  --main-text-color: #fff8f0;
-  --alt-text-color: #FFFFFF;
-  --nav-selected-color: rgb(176, 179, 0);
-  --text-highlight-color: #e9e1d8;
-  --background-text-color: #fff8f09c;
-}*/
-/*  --main-bg-color: #dddddd;
-  --main-border-color: #08070a;
-  --main-text-color: #08070a;
-  --alt-text-color: #FFFFFF;
-  --nav-selected-color: rgb(143, 0, 179);
-  --text-highlight-color: #604570;
-  --background-text-color: #5858579c;*/
 
 * {
   margin: 0px;
@@ -111,6 +95,21 @@ main footer {
 
 .section-title {
   margin-bottom: 10px;
+}
+
+.perfectOutline {
+  position: relative;
+  z-index: 1;
+}
+
+.perfectOutline::after {
+  content: attr(data-text); 
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1; 
+  -webkit-text-stroke: 6px rgba(0, 0, 0, 0.25);
+  -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (min-width: 810px) {

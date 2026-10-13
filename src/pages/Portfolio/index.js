@@ -31,7 +31,7 @@ export default function Portfolio() {
           />
         )}
         <div className="titleButtonBox">
-          <h2 className="projectTitle">{item.name}</h2>
+          <h2 className="projectTitle perfectOutline" data-text={item.name}>{item.name}</h2>
           {item.projectLink !== "" && (
             <button
               onClick={(e) => {
@@ -75,9 +75,9 @@ export default function Portfolio() {
     <section id="Portfolio">
       <div className="fabric-container section-title">
         <FabricBackground bgClass="bg-orange initial"/>
-        <h1 className="sectionHeader">Projects</h1>
+        <h1 className="sectionHeader perfectOutline" data-text="Projects">Projects</h1>
       </div>
-      <div className="fabric-container">
+      <div>
         <div id="ProjectsContainer">{projectList}</div>
       </div>
     </section>
