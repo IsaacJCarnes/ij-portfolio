@@ -10,7 +10,7 @@ const AboutMe = () => {
         <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3}/>
       </div>
       <div className="fabric-container">
-        <FabricBackground bgClass="bg-green" borderClass="hidden" shadedMargin={3}/>
+        <FabricBackground bgClass="bg-green" borderClass="hidden" shadedMargin={3} shadeAmount={0.6}/>
           <p className="text-center">{textContent}</p>
       </div>
     </section>

@@ -1,8 +1,8 @@
 import "../css/FabricBackground.css";
 
-export default function FabricBackground({bgClass = "bg-orange", borderClass="", shadedMargin=10}) {
+export default function FabricBackground({bgClass = "bg-orange", borderClass="", shadeAmount=0.3, shadedMargin=10}) {
   return (
-      <div style={{"--unshaded-margin": `${shadedMargin}px`}}className={"fabric-background " + bgClass}>
+      <div style={{"--unshaded-margin": `${shadedMargin}px`, "--shade-amount": shadeAmount}}className={"fabric-background " + bgClass}>
         <div className={"custom-dash-border dash-top dash-horizontal "+borderClass} />
         <div className={"custom-dash-border dash-right dash-vertical "+borderClass} />
         <div className={"custom-dash-border dash-bottom dash-horizontal "+borderClass} />

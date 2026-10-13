@@ -15,7 +15,7 @@
 .shaded-area {
   padding: var(--unshaded-margin) var(--unshaded-margin);
   background-clip: content-box; 
-  background-color: rgba(51, 50, 50, 0.3);
+  background-color: rgba(51, 50, 50, var(--shade-amount));
   height: 100%;
   width: 100%;
 }
