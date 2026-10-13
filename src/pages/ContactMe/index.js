@@ -11,13 +11,13 @@ export default function Contact() {
   return (
     <section id="Contact" className="ContactContainer sectionContainer">
       <div className="fabric-container section-title">
-        <FabricBackground bgClass="bg-orange initial" />
+        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3}/>
         <h1 id="contact-header" className="sectionHeader perfectOutline" data-text="Contact Me">
           Contact Me
         </h1>
       </div>
       <div id="FormContainer" className="fabric-container">
-        <FabricBackground />
+        <FabricBackground borderClass="hidden" shadedMargin={3}/>
         <form onSubmit={handleSubmit} className="ContactForm">
           <div>
             <label className="contact-label perfectOutline" htmlFor="email" data-text="Name:">

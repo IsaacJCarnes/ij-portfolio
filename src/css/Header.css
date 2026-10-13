@@ -3,7 +3,6 @@ header {
   width: calc(100vw - 20px);
   height: 100%;
   padding: 20px;
-  z-index: 2;
   position: relative;
   display: flex;
   flex-direction: row-reverse;
@@ -15,20 +14,19 @@ header {
   align-items: center;
 }
 
-header h1{
+header h1.fabric-container{
   font-weight: 600;
   color: var(--main-text-color);
-  width: fit-content;
+  padding: 10px 20px;
+  font-size: 45px;
 }
 
 nav {
-  z-index: 1;
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(4, 150px);
+  display: flex;
+  gap: 25px;
+  width: fit-content;
   color: var(--main-text-color);
-  margin: 2px;
-  margin-right: 10px;
+  align-items: center;
 }
 
 nav a{
@@ -43,11 +41,6 @@ nav a{
 
 @media only screen and (min-width: 810px) {
   /*Big Screens*/
-  nav {
-    margin: 10px;
-    width: fit-content;
-    margin-right: 50px;
-  }
   nav a{
     font-size: 1.75rem;
   }
@@ -55,4 +48,12 @@ nav a{
   header {
     height: 150px;
   }
+}
+
+.rotate-left{
+  transform: rotate(3deg);
+}
+
+.rotate-right{
+  transform: rotate(-3deg);
 }

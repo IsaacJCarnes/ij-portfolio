@@ -62,7 +62,7 @@ export default function Footer() {
           />
         </svg>
       </button>
-      <FabricBackground />
+      <FabricBackground shadedMargin={3}/>
     </footer>
   );
 }

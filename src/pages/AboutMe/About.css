@@ -11,12 +11,12 @@
   border: 2px var(--main-border-color) solid;
 }*/
 
-#About {
+#AboutContainer {
   /*top corner is about 25px away from previous border*/
   margin-top: 105px;
 }
 
-#AboutTitle {
+#About {
   z-index: 2;
   position: absolute;
   left: 20%;
@@ -25,12 +25,12 @@
   padding: 14px 16px;
 }
 
-#AboutTitle h1 {
+#About h1 {
   transform: rotate(3deg);
   color: var(--main-text-color);
 }
 
-#About p {
+#AboutContainer p {
   margin: 20px;
   color: var(--main-text-color);
   width: 100%;

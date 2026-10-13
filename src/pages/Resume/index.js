@@ -6,11 +6,11 @@ export default function Resume() {
   return (
     <section id="Resume">
       <div className="fabric-container section-title">
-        <FabricBackground bgClass="bg-orange initial"/>
+        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3}/>
         <h1 className="sectionHeader perfectOutline" data-text="Resume">Resume</h1>
       </div>
       <div id="PdfHolder" className="fabric-container">
-        <FabricBackground />
+        <FabricBackground borderClass="hidden" shadedMargin={3}/>
         <object
           className="d-flex justify-content-center flex-column"
           data={Pdf}

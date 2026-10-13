@@ -66,15 +66,15 @@ export default function Portfolio() {
         <div className="projectSummary">
           {item.summaryDesc} {item.techDesc}
         </div>
-        <FabricBackground />
+        <FabricBackground borderClass="hidden" shadedMargin={3}/>
       </div>
     ),
   );
 
   return (
-    <section id="Portfolio">
+    <section id="Projects">
       <div className="fabric-container section-title">
-        <FabricBackground bgClass="bg-orange initial"/>
+        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3}/>
         <h1 className="sectionHeader perfectOutline" data-text="Projects">Projects</h1>
       </div>
       <div>
