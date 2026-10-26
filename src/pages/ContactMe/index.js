@@ -9,12 +9,12 @@ export default function Contact() {
   }
 
   return (
-    <section id="Contact" className="ContactContainer sectionContainer">
-      <div className="fabric-container section-title">
+    <section id="Contact" className="ContactContainer section-area">
+      <div className="fabric-container section-title right">
         <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3} shadeAmount={0.4}/>
-        <h1 id="contact-header" className="sectionHeader perfectOutline" data-text="Contact Me">
+        <h3 id="contact-header" className="perfectOutline" data-text="Contact Me">
           Contact Me
-        </h1>
+        </h3>
       </div>
       <div id="FormContainer" className="fabric-container">
         <FabricBackground borderClass="hidden" shadedMargin={3}/>

@@ -4,10 +4,10 @@ import FabricBackground from "../../components/FabricBackground";
 
 export default function Resume() {
   return (
-    <section id="Resume">
+    <section id="Resume"className="section-area">
       <div className="fabric-container section-title">
         <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3} shadeAmount={0.4}/>
-        <h1 className="sectionHeader perfectOutline" data-text="Resume">Resume</h1>
+        <h3 className="perfectOutline" data-text="Resume">Resume</h3>
       </div>
       <div id="PdfHolder" className="fabric-container">
         <FabricBackground borderClass="hidden" shadedMargin={3}/>
@@ -15,8 +15,9 @@ export default function Resume() {
           className="d-flex justify-content-center flex-column"
           data={Pdf}
           type="application/pdf"
+          max-width="800px"
           width="100%"
-          height="100%"
+          height="600px"
         >
           <p className="ResumeText EasyText text-center">
             External link to{" "}

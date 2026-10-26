@@ -26,7 +26,7 @@
 
 .ContactForm input {
   width: 60vw;
-  height: 5vh;
+  height: 50px;
   font-family: "Courier New", Courier, monospace;
   border-radius: 2vmin 2vmin;
   padding: 0px 2vmin 0px 2vmin;
@@ -36,8 +36,10 @@
 
 .ContactForm textarea {
   width: 60vw;
-  height: 8vh;
-  max-height: 12vh;
+  resize: vertical;
+  height: 150px;
+  min-height: 150px;
+  max-height: 300px;
   font-family: "Courier New", Courier, monospace;
   border-radius: 2vmin 2vmin;
   padding: 0px 2vmin 0px 2vmin;

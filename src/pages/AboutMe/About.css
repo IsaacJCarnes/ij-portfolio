@@ -11,27 +11,9 @@
   border: 2px var(--main-border-color) solid;
 }*/
 
-#AboutContainer {
-  /*top corner is about 25px away from previous border*/
-  margin-top: 105px;
-}
-
-#About {
-  z-index: 2;
-  position: absolute;
-  left: 20%;
-  top: -90px;
-  transform: rotate(-3deg);
-  padding: 14px 16px;
-}
-
-#About h1 {
-  transform: rotate(3deg);
-  color: var(--main-text-color);
-}
-
 #AboutContainer p {
   margin: 20px;
   color: var(--main-text-color);
   width: 100%;
+  line-height: 30px;
 }

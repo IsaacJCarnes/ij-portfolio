@@ -72,10 +72,10 @@ export default function Portfolio() {
   );
 
   return (
-    <section id="Projects">
-      <div className="fabric-container section-title">
+    <section id="Projects" className="section-area">
+      <div className="fabric-container section-title right">
         <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3} shadeAmount={0.4}/>
-        <h1 className="sectionHeader perfectOutline" data-text="Projects">Projects</h1>
+        <h3 className="sectionHeader perfectOutline" data-text="Projects">Projects</h3>
       </div>
       <div>
         <div id="ProjectsContainer">{projectList}</div>

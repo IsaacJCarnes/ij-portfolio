@@ -1,4 +1,6 @@
 footer {
+  width: 80%;
+  max-width: 1200px;
   padding: 20px 15px;
   flex-direction: row;
   justify-content: space-around;
