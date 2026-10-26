@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <section id="Contact" className="ContactContainer section-area">
       <div className="fabric-container section-title right">
-        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3} shadeAmount={0.4}/>
+        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3}/>
         <h3 id="contact-header" className="perfectOutline" data-text="Contact Me">
           Contact Me
         </h3>

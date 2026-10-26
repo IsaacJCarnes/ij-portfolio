@@ -6,7 +6,7 @@ export default function Resume() {
   return (
     <section id="Resume"className="section-area">
       <div className="fabric-container section-title">
-        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3} shadeAmount={0.4}/>
+        <FabricBackground bgClass="bg-orange initial" borderClass="" shadedMargin={3}/>
         <h3 className="perfectOutline" data-text="Resume">Resume</h3>
       </div>
       <div id="PdfHolder" className="fabric-container">

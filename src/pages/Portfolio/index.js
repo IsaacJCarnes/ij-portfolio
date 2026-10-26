@@ -57,7 +57,10 @@ export default function Portfolio() {
         <div className="projectSummary">
           {item.summaryDesc} {item.techDesc}
         </div>
-        <FabricBackground borderClass="hidden" shadedMargin={3} />
+        <FabricBackground
+          borderClass="hidden"
+          shadedMargin={3}
+        />
       </div>
     ),
   );
@@ -69,7 +72,6 @@ export default function Portfolio() {
           bgClass="bg-orange initial"
           borderClass=""
           shadedMargin={3}
-          shadeAmount={0.4}
         />
         <h3 className="sectionHeader perfectOutline" data-text="Projects">
           Projects
