@@ -12,7 +12,6 @@ header h1.fabric-container {
   color: var(--main-text-color);
   font-size: clamp(1.75rem, 6vw, 2.8rem);
   padding: 1rem 1.25rem;
-  font-size: 2.3rem;
 }
 
 nav {
@@ -34,6 +33,12 @@ nav a {
   font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
+  filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.25));
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+nav a:hover, nav a:focus-visible {
+  filter: drop-shadow(0 0.4rem 0.35rem rgba(0, 0, 0, 0.35));
 }
 
 @media only screen and (min-width: 810px) {
@@ -61,4 +66,14 @@ nav a {
 
 .rotate-right {
   transform: rotate(-3deg);
+}
+
+.rotate-left:hover,
+.rotate-left:focus-visible {
+  transform: rotate(1deg) translateY(-2px);
+}
+
+.rotate-right:hover,
+.rotate-right:focus-visible {
+  transform: rotate(-1deg) translateY(-2px);
 }

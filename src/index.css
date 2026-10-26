@@ -15,7 +15,7 @@
   --section-spacing: 6rem;
   background-color: var(
     --main-bg-color
-  ); /* You can use color names, hex codes (#RRGGBB), or RGB values (rgb(R,G,B)) */
+  );
 }
 
 * {
