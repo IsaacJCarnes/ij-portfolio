@@ -1,13 +1,12 @@
 footer {
-  width: 80%;
-  max-width: 1200px;
-  padding: 20px 15px;
+  gap: 1rem;
+  padding: 1rem 0;
   flex-direction: row;
   justify-content: space-around;
 }
 footer button {
-  width: 3em;
-  height: 3em;
+  width: 3rem;
+  height: 3rem;
   border-style: none;
   background-color: unset;
 }

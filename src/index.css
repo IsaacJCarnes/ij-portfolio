@@ -10,23 +10,27 @@
   --text-highlight-color: #7f837f;
   --background-text-color: #7c7b7a;
   --border-radius: 100px;
+  --content-max-width: 1100px;
+  --content-padding: 1rem;
+  --section-spacing: 6rem;
   background-color: var(
     --main-bg-color
   ); /* You can use color names, hex codes (#RRGGBB), or RGB values (rgb(R,G,B)) */
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  outline: 0px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 }
 
 body,
 html {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,51 +40,45 @@ html {
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-size: 256px;
+  background-color: var(--main-bg-color);
+  background-image: url(./assets/textures/charcoal-fabric.jpg);
+  background-repeat: repeat;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: fit-content;
-  padding: 10px;
-  margin: 0px;
-
+  gap: 1rem;
+  min-height: 100vh;
+  padding: var(--content-padding);
   z-index: 0;
   position: relative;
   width: 100%;
-  height: 100%;
-  background-size:  256px;
-  background-color: var(--main-bg-color);
-  background-image: url(./assets/textures/charcoal-fabric.jpg);
-  background-repeat: repeat;
 }
 
-main section,
-main header {
-  flex-direction: column;
-}
-
-main section,
-main header,
-main footer {
-  position: relative;
+main > section,
+main > header,
+main > footer {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;  
   display: flex;
   align-items: center;
+  position: relative;
   height: fit-content;
-  margin: 10px 10px;
 }
 
 .spacer {
-  height: 50px;
+  height: 3rem;
 }
 
 .fabric-container {
-  margin: 0px;
   position: relative;
   width: fit-content;
   height: fit-content;
-  padding: 10px 10px;
+  padding: 0.625rem;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -92,35 +90,36 @@ main footer {
 }
 
 .perfectOutline::after {
-  content: attr(data-text); 
+  content: attr(data-text);
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -1; 
+  z-index: -1;
   -webkit-text-stroke: 6px rgba(0, 0, 0, 0.25);
   -webkit-text-fill-color: transparent;
 }
 
-.section-area{
-  margin-top: 95px;
+.section-area {
+  margin-top: var(--section-spacing);
 }
 
 .section-title {
   z-index: 2;
   position: absolute;
   left: 20%;
-  top: -90px;
+  top: -4rem;
   transform: rotate(-3deg);
-  padding: 14px 16px;  
+  padding: 0.875rem 1rem;
 }
 
-.section-title.right{
+.section-title.right {
   left: unset;
   right: 20%;
   transform: rotate(3deg);
 }
 
 .section-title h3 {
+  font-weight: 600;
   font-size: 2.3rem;
   transform: rotate(3deg);
   color: var(--main-text-color);
@@ -131,13 +130,11 @@ main footer {
 }
 
 @media only screen and (min-width: 810px) {
-  /*Big Screens*/
-  .section-title  h3{
+  .section-title{
+    top: -5.5rem;
+  }
+  .section-title h3 {
     align-self: unset;
     font-size: 3.3rem;
-  }
-
-  .spacer {
-    height: 75px;
   }
 }

@@ -1,19 +1,25 @@
 #Resume{
   width: 100%;
-  max-width: 1000px;
+  max-width: var(--content-max-width);
   justify-self: center;
 }
 
 #PdfHolder {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 0.75rem;
   width: 100%;
+  max-width: 1000px;
   height: fit-content;
 }
 
+#PdfHolder object {
+  display: block;
+  width: 100%;
+  height: min(70vh, 900px);
+}
+
 @media only screen and (min-width: 810px) {
-  /*Big Screens*/
   #PdfHolder object {
     height: 1101px;
   }

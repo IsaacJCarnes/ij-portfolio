@@ -16,7 +16,6 @@ export default function Footer() {
   return (
     <footer>
       <button
-        className=""
         type="button"
         onClick={(e) => {
           openGithub(e);
@@ -62,7 +61,7 @@ export default function Footer() {
           />
         </svg>
       </button>
-      <FabricBackground shadedMargin={3}/>
+      <FabricBackground shadedMargin={3} />
     </footer>
   );
 }

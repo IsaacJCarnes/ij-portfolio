@@ -15,9 +15,6 @@ export default function Resume() {
           className="d-flex justify-content-center flex-column"
           data={Pdf}
           type="application/pdf"
-          max-width="800px"
-          width="100%"
-          height="600px"
         >
           <p className="ResumeText EasyText text-center">
             External link to{" "}
