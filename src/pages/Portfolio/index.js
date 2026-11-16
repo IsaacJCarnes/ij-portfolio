@@ -69,7 +69,7 @@ export default function Portfolio() {
     <section id="Projects" className="section-area">
       <div className="fabric-container section-title right">
         <FabricBackground
-          bgClass="bg-orange initial"
+          bgClass="bg-orange initial sectionHeading"
           borderClass=""
           shadedMargin={3}
         />

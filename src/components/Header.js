@@ -6,7 +6,7 @@ export default function Header() {
     <header id="header-content">
       <h1 className="fabric-container">
         <FabricBackground
-          bgClass="bg-orange initial"
+          bgClass="bg-orange initial sectionHeading"
           borderClass=""
           shadedMargin={5}
         />
@@ -17,26 +17,26 @@ export default function Header() {
 
       <nav>
         <a href="#About" className="fabric-container rotate-left">
-          <FabricBackground borderClass="hidden" shadedMargin={3} />
+          <FabricBackground bgClass="initial" borderClass="hidden" shadedMargin={3} />
           <span className="perfectOutline" data-text="About">
             About
           </span>
         </a>
 
         <a href="#Projects" className="fabric-container rotate-right">
-          <FabricBackground borderClass="hidden" shadedMargin={3} />
+          <FabricBackground  bgClass="initial" borderClass="hidden" shadedMargin={3} />
           <span className="perfectOutline" data-text="Projects">
             Projects
           </span>
         </a>
         <a href="#Resume" className="fabric-container rotate-left">
-          <FabricBackground borderClass="hidden" shadedMargin={3} />
+          <FabricBackground  bgClass="initial" borderClass="hidden" shadedMargin={3} />
           <span className="perfectOutline" data-text="Resume">
             Resume
           </span>
         </a>
         <a href="#Contact" className="fabric-container rotate-right">
-          <FabricBackground borderClass="hidden" shadedMargin={3} />
+          <FabricBackground  bgClass="initial" borderClass="hidden" shadedMargin={3} />
           <span className="perfectOutline" data-text="Contact">
             Contact
           </span>

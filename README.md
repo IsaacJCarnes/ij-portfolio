@@ -17,5 +17,8 @@ Here is a link to the [deployed site](https://isaacjcarnes.github.io/ij-portfoli
 
 ![Portfolio for React Portfolio](./public/portfolioPage.jpg)
 
+## Attributions
+Textures from [Subtle Patterns](http://www.subtlepatterns.com/) at [Toptal.com](https://www.toptal.com/designers)
+
 ## Questions
 You can find me on [Github](https://github.com/IsaacJCarnes)

@@ -9,6 +9,7 @@ import Nav from "./components/Header";
 function App() {
   return (
     <main>
+      <div id="PageBackground"></div>
       <Nav />
       <AboutMe />
       <Portfolio />

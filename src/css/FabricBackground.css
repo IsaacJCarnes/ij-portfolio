@@ -1,6 +1,6 @@
 .fabric-background {
   --dash-color-1: rgba(51, 51, 51, 0.7);
-  --dash-color-2:rgba(255,255,255,0); 
+  --dash-color-2: rgba(255, 255, 255, 0);
   z-index: -2;
   position: absolute;
   display: flex;
@@ -14,43 +14,43 @@
 
 .shaded-area {
   padding: var(--unshaded-margin) var(--unshaded-margin);
-  background-clip: content-box; 
+  background-clip: content-box;
   background-color: rgba(51, 50, 50, var(--shade-amount));
   height: 100%;
   width: 100%;
 }
 
-.bg-burlap{
-  background-image: url(../assets/textures/burlap-fabric.jpg);
+.bg-burlap {
+  background-image: url(../assets/textures/tweed.png);
 }
 
-.bg-charcoal{
-  background-image: url(../assets/textures/charcoal-fabric.jpg);
+.bg-charcoal {
+  background-image: url(../assets/textures/tweed.png);
 }
 
-.bg-gold{
-  background-image: url(../assets/textures/gold-fabric.jpg);
+.bg-gold {
+  background-image: url(../assets/textures/tweed.png);
 }
 
-.bg-white{
-  background-image: url(../assets/textures/white-fabric.jpg);
+.bg-white {
+  background-image: url(../assets/textures/tweed.png);
 }
 
-.bg-green{
-  background-image: url(../assets/textures/green-fabric.jpg);
+.bg-green {
+  background-image: url(../assets/textures/tweed.png);
   background-size: 512px;
 }
 
-.bg-orange{
-  background-image: url(../assets/textures/orange-fabric.jpg);
+.bg-orange {
+  background-image: url(../assets/textures/tweed.png);
   background-size: 512px;
 }
 
-.bg-blue{
-  background-image: url(../assets/textures/blue-fabric.jpg);
+.bg-blue {
+  background-image: url(../assets/textures/tweed.png);
 }
 
-.initial{
+.initial {
   background-size: initial !important;
 }
 
@@ -64,7 +64,7 @@
   border: none;
 }
 
-.custom-dash-border.hidden{
+.custom-dash-border.hidden {
   visibility: hidden;
 }
 

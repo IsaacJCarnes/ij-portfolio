@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: #121212;
+  --main-bg-color: #000000;
   --main-border-color: #e0e0e0;
   --modal-bg-color: #444444;
   --main-text-color: #e6e6e6;
@@ -11,11 +11,22 @@
   --background-text-color: #7c7b7a;
   --border-radius: 100px;
   --content-max-width: 1100px;
+  --content-background-margin: 50px;
   --content-padding: 1rem;
   --section-spacing: 6rem;
-  background-color: var(
-    --main-bg-color
-  );
+
+  --bg-picture: url(./assets/textures/xv.png);
+  --bg-color: #000000;
+  --page-picture: url(./assets/textures/tweed.png);
+  --page-color: #000000;
+  --section-area-picture: url("/src/assets/textures/debut-light.png");
+  --section-area-color: #000000;
+  --section-title-picture: url("/src/assets/textures/debut-light.png");
+  --section-title-color: #000000;
+  --h-p: url("/src/assets/textures/debut-light.png");
+  --h-c: #000000;
+
+  background-color: var(--main-bg-color);
 }
 
 * {
@@ -40,10 +51,6 @@ html {
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-size: 256px;
-  background-color: var(--main-bg-color);
-  background-image: url(./assets/textures/charcoal-fabric.jpg);
-  background-repeat: repeat;
 }
 
 main {
@@ -55,7 +62,24 @@ main {
   padding: var(--content-padding);
   z-index: 0;
   position: relative;
-  width: 100%;
+  width: 100vw;
+  padding: 0px 10px;
+  background-size: 256px;
+  background-color: var(--bg-color); /* Your solid color */
+  background-image: var(--bg-picture);
+}
+
+#PageBackground {
+  position: absolute;
+  z-index: -3;
+  width: 100vw;
+  max-width: calc(
+    var(--content-max-width) + var(--content-background-margin) * 2
+  );
+  background-size: 256px;
+  background-color: var(--page-color); /* Your solid color */
+  background-image: var(--page-picture);
+  height: 100%;
 }
 
 main > section,
@@ -63,15 +87,11 @@ main > header,
 main > footer {
   width: 100%;
   max-width: var(--content-max-width);
-  margin: 0 auto;  
+  margin: 0 auto;
   display: flex;
   align-items: center;
   position: relative;
   height: fit-content;
-}
-
-.spacer {
-  height: 3rem;
 }
 
 .fabric-container {
@@ -129,12 +149,32 @@ main > footer {
   transform: rotate(-3deg);
 }
 
+.section-area .fabric-background {
+  background-image: var(--section-area-picture);
+  background-color: var(--section-area-color);
+}
+
+.section-title > .fabric-background {
+  background-image: var(--section-title-picture);
+  background-color: var(--section-title-color);
+}
+
+footer .fabric-background {
+  background-image: var(--h-p);
+  background-color: var(--h-c);
+}
+
 @media only screen and (min-width: 810px) {
-  .section-title{
+  .section-title {
     top: -5.5rem;
   }
   .section-title h3 {
     align-self: unset;
     font-size: 3.3rem;
+  }
+
+  #PageBackground {
+    border: 1px solid rgb(39, 39, 39);
+    border-width: 0px 2px;
   }
 }
